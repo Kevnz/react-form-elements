@@ -11,7 +11,7 @@ export default class TextBox extends Component {
         this.setState({value: event.target.value});
     }
     getValue() {
-        return this.state ? this.state.value : '';
+        return this.state ? this.state.value : this.props.defaultValue;
     }
     render() {
         return (
@@ -23,5 +23,5 @@ export default class TextBox extends Component {
         );
     }
 }
-TextBox.propTypes = { label: PropTypes.string, type: PropTypes.string };
-TextBox.defaultProps = { type: 'text', label: 'label' };
+TextBox.propTypes = { defaultValue: PropTypes.string, label: PropTypes.string, type: PropTypes.string };
+TextBox.defaultProps = { defaultValue: '', type: 'text', label: 'label' };
