@@ -1,23 +1,11 @@
 'use strict';
 import React from 'react';
 import { Component, PropTypes } from 'react';
+import TextBox from './textbox';
 
-export default class TextBox extends Component {
+export default class Telephone extends TextBox {
     constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
+        super(props); 
     }
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-    getValue() {
-        return this.state ? this.state.value : '';
-    }
-    render() {
-        return (
-            <input {...this.props} ref="textbox" onChange={this.handleChange} />
-        );
-    }
-}
-TextBox.propTypes = { type: PropTypes.string };
-TextBox.defaultProps = { type: 'tel' };
+} 
+Telephone.defaultProps = { type: 'tel', label: 'Telephone Number' };
