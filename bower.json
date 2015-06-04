@@ -1,0 +1,29 @@
+{
+  "name": "react-form-elements",
+  "version": "0.0.0",
+  "description": "ReactFormElements",
+  "main": "dist/react-form-elements.min.js",
+  "homepage": "https://github.com/kevnz/react-form-elements",
+  "authors": [
+    "Kevin Isom"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}
