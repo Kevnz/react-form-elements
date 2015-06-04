@@ -30,7 +30,7 @@ npm install react-form-elements --save
 
 ## Usage
 
-__EXPLAIN USAGE HERE__
+__In Use__
 
 ```
 import React from 'react';
