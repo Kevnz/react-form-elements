@@ -23,10 +23,12 @@ var App = React.createClass({
         this.showModal();
     },
     showModal() {
+        this.refs.shim.getDOMNode().classList.remove('hidden');
         this.refs.modal.getDOMNode().classList.remove('hidden');
     },
     hideModal(e) {
         e.preventDefault();
+        this.refs.shim.getDOMNode().classList.add('hidden');
         this.refs.modal.getDOMNode().classList.add('hidden');
         this.refs.modalInner.getDOMNode().innerHTML = '';
     },
@@ -43,6 +45,8 @@ var App = React.createClass({
                     <Telephone ref="seventh" />
                     <button onClick={this.handleClick}>Test</button>
                 </form>
+                <div className="modal-shim hidden" ref="shim">
+                </div>
                 <div className="modal hidden" ref="modal">
                     <div ref="modalInner">
                     </div>
