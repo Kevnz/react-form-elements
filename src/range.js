@@ -11,13 +11,15 @@ export default class Range extends Component {
         this.setState({value: event.target.value});
     }
     getValue() {
-        return this.state ? this.state.value : '';
+        return this.state ? this.state.value : (this.props.value || this.props.defaultValue);
     }
     render() {
+        let currentVal = this.getValue();
         return (
             <div className="form-row_container">
                 <label>{this.props.label || ''}
-                    <input type="range" {...this.props} ref="slider" onChange={this.handleChange} />
+                    <input type="range" {...this.props} ref="slider" onChange={this.handleChange} /> 
+                    <span>{currentVal}</span>
                 </label>
             </div>
         );
@@ -25,4 +27,4 @@ export default class Range extends Component {
 }
 
 Range.propTypes = { label: PropTypes.string, max: PropTypes.number, min: PropTypes.number, step: PropTypes.number };
-Range.defaultProps = { label: 'label', max: 100, min: 0, step: 1 };
+Range.defaultProps = { defaultValue: 50, label: 'label', max: 100, min: 0, step: 1 };
