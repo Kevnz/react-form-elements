@@ -174,11 +174,12 @@ var Range = (function (_Component) {
     }, {
         key: 'getValue',
         value: function getValue() {
-            return this.state ? this.state.value : '';
+            return this.state ? this.state.value : this.props.value || this.props.defaultValue;
         }
     }, {
         key: 'render',
         value: function render() {
+            var currentVal = this.getValue();
             return _react2['default'].createElement(
                 'div',
                 { className: 'form-row_container' },
@@ -186,7 +187,12 @@ var Range = (function (_Component) {
                     'label',
                     null,
                     this.props.label || '',
-                    _react2['default'].createElement('input', _extends({ type: 'range' }, this.props, { ref: 'slider', onChange: this.handleChange }))
+                    _react2['default'].createElement('input', _extends({ type: 'range' }, this.props, { ref: 'slider', onChange: this.handleChange })),
+                    _react2['default'].createElement(
+                        'span',
+                        null,
+                        currentVal
+                    )
                 )
             );
         }
@@ -198,7 +204,7 @@ var Range = (function (_Component) {
 exports['default'] = Range;
 
 Range.propTypes = { label: _react.PropTypes.string, max: _react.PropTypes.number, min: _react.PropTypes.number, step: _react.PropTypes.number };
-Range.defaultProps = { label: 'label', max: 100, min: 0, step: 1 };
+Range.defaultProps = { defaultValue: 50, label: 'label', max: 100, min: 0, step: 1 };
 module.exports = exports['default'];
 
 },{"react":undefined}],4:[function(require,module,exports){
@@ -207,10 +213,6 @@ Object.defineProperty(exports, '__esModule', {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -223,43 +225,28 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var TextBox = (function (_Component) {
-    function TextBox(props) {
-        _classCallCheck(this, TextBox);
+var _textbox = require('./textbox');
 
-        _get(Object.getPrototypeOf(TextBox.prototype), 'constructor', this).call(this, props);
-        this.handleChange = this.handleChange.bind(this);
+var _textbox2 = _interopRequireDefault(_textbox);
+
+var Telephone = (function (_TextBox) {
+    function Telephone(props) {
+        _classCallCheck(this, Telephone);
+
+        _get(Object.getPrototypeOf(Telephone.prototype), 'constructor', this).call(this, props);
     }
 
-    _inherits(TextBox, _Component);
+    _inherits(Telephone, _TextBox);
 
-    _createClass(TextBox, [{
-        key: 'handleChange',
-        value: function handleChange(event) {
-            this.setState({ value: event.target.value });
-        }
-    }, {
-        key: 'getValue',
-        value: function getValue() {
-            return this.state ? this.state.value : '';
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2['default'].createElement('input', _extends({}, this.props, { ref: 'textbox', onChange: this.handleChange }));
-        }
-    }]);
+    return Telephone;
+})(_textbox2['default']);
 
-    return TextBox;
-})(_react.Component);
+exports['default'] = Telephone;
 
-exports['default'] = TextBox;
-
-TextBox.propTypes = { type: _react.PropTypes.string };
-TextBox.defaultProps = { type: 'tel' };
+Telephone.defaultProps = { type: 'tel', label: 'Telephone Number' };
 module.exports = exports['default'];
 
-},{"react":undefined}],5:[function(require,module,exports){
+},{"./textbox":5,"react":undefined}],5:[function(require,module,exports){
 'use strict';
 Object.defineProperty(exports, '__esModule', {
     value: true
@@ -299,7 +286,7 @@ var TextBox = (function (_Component) {
     }, {
         key: 'getValue',
         value: function getValue() {
-            return this.state ? this.state.value : '';
+            return this.state ? this.state.value : this.props.defaultValue;
         }
     }, {
         key: 'render',
@@ -322,8 +309,8 @@ var TextBox = (function (_Component) {
 
 exports['default'] = TextBox;
 
-TextBox.propTypes = { label: _react.PropTypes.string, type: _react.PropTypes.string };
-TextBox.defaultProps = { type: 'text', label: 'label' };
+TextBox.propTypes = { defaultValue: _react.PropTypes.string, label: _react.PropTypes.string, type: _react.PropTypes.string };
+TextBox.defaultProps = { defaultValue: '', type: 'text', label: 'label' };
 module.exports = exports['default'];
 
 },{"react":undefined}],"react-form-elements":[function(require,module,exports){
