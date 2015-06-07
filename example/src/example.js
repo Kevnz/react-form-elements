@@ -36,7 +36,7 @@ var App = React.createClass({
         return (
             <div>
                 <form>
-                    <TextBox ref="first" label="MyTextbox" required="true" />
+                    <TextBox ref="first" label="MyTextbox" required="true" defaultValue="test" />
                     <TextBox ref="second" label="MyOtherTextbox" placeholder="placeholder text" />
                     <DropDown ref="third" label="Please Choose" />
                     <TextBox ref="fourth" />
