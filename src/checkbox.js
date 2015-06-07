@@ -13,6 +13,9 @@ export default class CheckBox extends Component {
     getValue() {
         return this.state ? this.state.value : '';
     }
+    isValid() {
+        return true;
+    }
     render() {
         return (
             <input type="checkbox" {...this.props} ref="checkbox" onChange={this.handleChange} />
