@@ -14,10 +14,11 @@ export default class TextBox extends Component {
         return this.state ? this.state.value : this.props.defaultValue;
     }
     render() {
+        let val = this.getValue();
         return (
             <div className="form-row_container">
                 <label>{this.props.label || ''}
-                    <input {...this.props} ref="textbox" onChange={this.handleChange} />
+                    <input {...this.props} ref="textbox" onChange={this.handleChange} value={val} />
                 </label>
             </div>
         );
