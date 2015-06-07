@@ -296,6 +296,7 @@ var TextBox = (function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var val = this.getValue();
             return _react2['default'].createElement(
                 'div',
                 { className: 'form-row_container' },
@@ -303,7 +304,7 @@ var TextBox = (function (_Component) {
                     'label',
                     null,
                     this.props.label || '',
-                    _react2['default'].createElement('input', _extends({}, this.props, { ref: 'textbox', onChange: this.handleChange }))
+                    _react2['default'].createElement('input', _extends({}, this.props, { ref: 'textbox', onChange: this.handleChange, value: val }))
                 )
             );
         }

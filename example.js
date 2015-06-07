@@ -41,7 +41,7 @@ var App = React.createClass({
             React.createElement(
                 'form',
                 null,
-                React.createElement(TextBox, { ref: 'first', label: 'MyTextbox', required: 'true' }),
+                React.createElement(TextBox, { ref: 'first', label: 'MyTextbox', required: 'true', defaultValue: 'test' }),
                 React.createElement(TextBox, { ref: 'second', label: 'MyOtherTextbox', placeholder: 'placeholder text' }),
                 React.createElement(DropDown, { ref: 'third', label: 'Please Choose' }),
                 React.createElement(TextBox, { ref: 'fourth' }),
