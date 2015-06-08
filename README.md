@@ -7,16 +7,6 @@ Simplify form element management.
 
 Live demo: [kevnz.github.io/react-form-elements](http://kevnz.github.io/react-form-elements/)
 
-To build the examples locally, run:
-
-```
-npm install
-npm start
-```
-
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
-
-
 ## Installation
 
 The easiest way to use react-form-elements is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
@@ -29,8 +19,6 @@ npm install react-form-elements --save
 
 
 ## Usage
-
-__In Use__
 
 ```
 import React from 'react';
@@ -78,6 +66,16 @@ var App = React.createClass({
 
 __Still in Development__
 
+## Demo & Examples local
+
+To build the examples locally, run:
+
+```
+npm install
+npm start
+```
+
+Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
 ## Development (`src`, `lib` and the build process)
 
