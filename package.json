@@ -35,7 +35,7 @@
     "publish:site": "gulp publish:examples",
     "release": "gulp release",
     "start": "gulp dev",
-    "test": "echo \"no tests yet\" && exit 0",
+    "test": "mocha --compilers js:babel/register --recursive",
     "watch": "gulp watch:lib"
   },
   "keywords": [
