@@ -2,7 +2,7 @@
 import React from 'react';
 import { Component, PropTypes } from 'react';
 
-export default class TextBox extends Component {
+export default class TextArea extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
@@ -11,18 +11,20 @@ export default class TextBox extends Component {
         this.setState({value: event.target.value});
     }
     getValue() {
-        return this.state ? this.state.value : this.props.defaultValue;
+        return this.state ? this.state.value : this.props.children;
     }
     render() {
         let val = this.getValue();
         return (
             <div className="form-row_container">
                 <label>{this.props.label || ''}
-                    <input {...this.props} ref="textbox" onChange={this.handleChange} value={val} />
+                    <textarea {...this.props} ref="textarea" onChange={this.handleChange} >
+                    {this.props.children}
+                    </textarea>
                 </label>
             </div>
         );
     }
 }
-TextBox.propTypes = { defaultValue: PropTypes.string, label: PropTypes.string, type: PropTypes.string };
-TextBox.defaultProps = { defaultValue: '', type: 'text', label: 'label' };
+TextArea.propTypes = { defaultValue: PropTypes.string, label: PropTypes.string, type: PropTypes.string };
+TextArea.defaultProps = {  type: 'text', label: 'label' };

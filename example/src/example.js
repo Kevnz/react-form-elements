@@ -1,13 +1,13 @@
 'use strict';
 var React = window.React = require('react');
-var ReactFormElements = require('react-form-elements');
+var ReactFormElements = require('../../src');
 
 var TextBox = ReactFormElements.TextBox;
 var DropDown = ReactFormElements.DropDown;
 var Range = ReactFormElements.Range;
 var Telephone = ReactFormElements.Telephone;
-
-
+var TextArea = ReactFormElements.TextArea;
+console.log(TextArea);
 var App = React.createClass({
     handleClick (e) {
         e.preventDefault();
@@ -18,6 +18,7 @@ var App = React.createClass({
         modalText = modalText + '<br />Fifth::' + this.refs.fifth.getValue();
         modalText = modalText + '<br />Sixth::' + this.refs.sixth.getValue();
         modalText = modalText + '<br />Seventh::' + this.refs.seventh.getValue();
+        modalText = modalText + '<br />Eighth::' + this.refs.eighth.getValue();
         console.log(modalText);
         this.refs.modalInner.getDOMNode().innerHTML = modalText;
         this.showModal();
@@ -43,6 +44,9 @@ var App = React.createClass({
                     <DropDown ref="fifth" />
                     <Range ref="sixth" min={0} max={20} step={2} />
                     <Telephone ref="seventh" />
+                    <TextArea ref="eighth" cols="32" rows="6">
+                        Test this out please
+                    </TextArea>
                     <button onClick={this.handleClick}>Test</button>
                 </form>
                 <div className="modal-shim hidden" ref="shim">
