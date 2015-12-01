@@ -13,14 +13,14 @@ The easiest way to use react-form-elements is to install it from NPM and include
 
 You can also use the standalone build by including `dist/react-form-elements.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
 
-```
+```bash
 npm install react-form-elements --save
 ```
 
 
 ## Usage
 
-```
+```js
 import React from 'react';
 import {TextBox, DropDown, Range} import 'react-form-elements';
 
@@ -70,7 +70,7 @@ __Still in Development__
 
 To build the examples locally, run:
 
-```
+```bash
 npm install
 npm start
 ```
