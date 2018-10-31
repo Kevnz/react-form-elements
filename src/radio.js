@@ -1,17 +1,22 @@
-'use strict'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-export default class TextBox extends Component {
+
+export default class Radio extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: props.initialValue }
     this.handleChange = this.handleChange.bind(this)
+    this.state = {
+      checked: props.initialValue,
+    }
   }
   handleChange(event) {
-    this.setState({ value: event.target.value })
+    this.setState({ checked: !this.state.checked })
   }
   getValue() {
-    return this.state.value
+    return this.state ? this.state.checked : false
+  }
+  isValid() {
+    return true
   }
   render() {
     const { label, initialValue, ...otherProps } = this.props
@@ -20,18 +25,16 @@ export default class TextBox extends Component {
         <label>
           {label || ''}
           <input
+            type="radio"
+            {...otherProps}
+            checked={this.state.checked}
             onChange={this.handleChange}
             value={this.state.value}
-            {...otherProps}
           />
         </label>
       </div>
     )
   }
 }
-TextBox.propTypes = {
-  initialValue: PropTypes.string,
-  label: PropTypes.string,
-  type: PropTypes.string,
-}
-TextBox.defaultProps = { initialValue: '', type: 'text', label: 'label' }
+Radio.propTypes = { label: PropTypes.string, initialValue: PropTypes.bool }
+Radio.defaultProps = { label: 'label', initialValue: false }
