@@ -1,30 +1,48 @@
-'use strict';
-import React from 'react';
-import { Component, PropTypes } from 'react';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 export default class Range extends Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-    getValue() {
-        return this.state ? this.state.value : (this.props.value || this.props.defaultValue);
-    }
-    render() {
-        let currentVal = this.getValue();
-        return (
-            <div className="form-row_container">
-                <label>{this.props.label || ''}
-                    <input type="range" {...this.props} ref="slider" onChange={this.handleChange} /> 
-                    <span>{currentVal}</span>
-                </label>
-            </div>
-        );
-    }
+  constructor(props) {
+    super(props)
+    this.state = { value: props.initialValue }
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange(event) {
+    this.setState({ value: event.target.value })
+  }
+  getValue() {
+    return this.state.value
+  }
+  render() {
+    const { label, initialValue, ...otherProps } = this.props
+    return (
+      <div className="form-row_container">
+        <label>
+          {label || ''}
+          <input
+            type="range"
+            onChange={this.handleChange}
+            value={this.state.value}
+            {...otherProps}
+          />
+        </label>
+        <span>{this.state.value}</span>
+      </div>
+    )
+  }
 }
 
-Range.propTypes = { label: PropTypes.string, max: PropTypes.number, min: PropTypes.number, step: PropTypes.number };
-Range.defaultProps = { defaultValue: 50, label: 'label', max: 100, min: 0, step: 1 };
+Range.propTypes = {
+  label: PropTypes.string,
+  max: PropTypes.number,
+  min: PropTypes.number,
+  step: PropTypes.number,
+}
+
+Range.defaultProps = {
+  initialValue: 50,
+  label: 'label',
+  max: 100,
+  min: 0,
+  step: 1,
+}

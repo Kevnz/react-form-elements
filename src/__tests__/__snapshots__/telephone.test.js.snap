@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Telephone component The Rendered HTML should have a label 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Telephone Label
+    <input
+      type="tel"
+      value=""
+    />
+  </label>
+</div>
+`;
+
+exports[`Telephone component handling input should set a value when passed in 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Label
+    <input
+      type="tel"
+      value="0800121212"
+    />
+  </label>
+</div>
+`;
