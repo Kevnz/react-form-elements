@@ -1,7 +1,7 @@
 'use strict'
 
 import Radio from './radio'
-import DateTime from './date'
+import DateTime from './datetime'
 import TextBox from './textbox'
 import TextArea from './textarea'
 import DropDown from './dropdown'
