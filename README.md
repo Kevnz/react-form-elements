@@ -22,7 +22,7 @@ npm install react-form-elements --save
 
 ```js
 import React, { Component, createRef } from 'react'
-import { TextBox, Checkbox, Range, Date, Telephone } from 'react-form-elements'
+import { TextBox, Checkbox, Range, DateTime, Telephone } from 'react-form-elements'
 
 export default class App extends Component {
   constructor(props) {
@@ -53,7 +53,7 @@ export default class App extends Component {
             ref={this.references.checkBox}
             initialValue={true}
           />
-          <Date label="My Date" ref={this.references.date} />
+          <DateTime label="My Date" ref={this.references.date} />
           <Range label="My Range" ref={this.references.range} />
           <Telephone label="Telephone" ref={this.references.telephone} />
           <button
