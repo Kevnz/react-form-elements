@@ -18,6 +18,7 @@
     "react": "^16.5.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
@@ -27,11 +28,13 @@
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.0",
     "eslint": "^5.7.0",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "parcel-bundler": "^1.10.3",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
+    "react-syntax-highlighter": "^9.0.1",
     "react-testing-library": "^5.2.0",
     "regenerator-runtime": "^0.12.1",
     "style-loader": "^0.23.1",
@@ -40,12 +43,14 @@
     "webpack-dev-server": "^3.1.10"
   },
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --mode production",
+    "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development",
-    "examples": "gulp dev:server",
+    "examples": "webpack --config ./webpack/webpack.config.publish.js --mode production",
     "lint": "eslint ./src",
-    "publish:site": "do something",
+    "publish:site": "node ./scripts/publish.js",
     "release": "do something to release",
+    "transpile": "babel src -d lib --copy-files",
+    "posttranspile": "jest ./lib",
     "test": "jest"
   },
   "keywords": [
