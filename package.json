@@ -1,8 +1,8 @@
 {
   "name": "react-form-elements",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React Form Elements",
-  "main": "lib/ReactFormElements.js",
+  "main": "lib/index.js",
   "files": [
     "/lib"
   ],
