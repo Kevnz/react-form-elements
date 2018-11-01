@@ -21,37 +21,54 @@ npm install react-form-elements --save
 ## Usage
 
 ```js
-import React from 'react';
-import {TextBox, DropDown, Range} import 'react-form-elements';
+import React, { Component, createRef } from 'react'
+import { TextBox, Checkbox, Range, Date, Telephone } from 'react-form-elements'
 
-var TextBox = ReactFormElements.TextBox;
-var DropDown = ReactFormElements.DropDown;
-var Range = ReactFormElements.Range;
-
-var App = React.createClass({
-    handleClick (e) {
-        e.preventDefault();
-        console.log(this.refs.first.getValue());
-        console.log(this.refs.third.getValue());
-        console.log(this.refs.sixth.getValue());
-    },
-    render () {
-        return (
-            <div>
-                <form>
-                    <TextBox ref="first" label="MyTextbox" />
-                    <TextBox ref="second" label="MyOtherTextbox" placeholder="placeholder text" />
-                    <DropDown ref="third" label="Please Choose" />
-                    <TextBox ref="forth" />
-                    <DropDown ref="fifth" />
-                    <Range ref="sixth" min={0} max={20} step={2} />
-                    <Range ref="seventh" />
-                    <button onClick={this.handleClick}>Test</button>
-                </form>
-            </div>
-        );
+export default class App extends Component {
+  constructor(props) {
+    const references = {
+      modal: createRef(),
+      shim: createRef(),
+      textBox: createRef(),
+      checkBox: createRef(),
+      range: createRef(),
+      date: createRef(),
+      telephone: createRef(),
     }
-});
+    super(props)
+    this.references = references
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Example Code</h2>
+        <SyntaxHighlighter language="jsx" style={darcula}>
+          {codeString}
+        </SyntaxHighlighter>
+        <form>
+          <TextBox label="My Label" ref={this.references.textBox} />
+          <Checkbox
+            label="My Checkbox"
+            ref={this.references.checkBox}
+            initialValue={true}
+          />
+          <Date label="My Date" ref={this.references.date} />
+          <Range label="My Range" ref={this.references.range} />
+          <Telephone label="Telephone" ref={this.references.telephone} />
+          <button
+            onClick={e => {
+              e.preventDefault()
+              // this.references.textBox.current.getValue()
+            }}
+          >
+            Check
+          </button>
+        </form>
+      </div>
+    )
+  }
+}
 ```
 
 ### Properties
@@ -75,7 +92,7 @@ npm install
 npm start
 ```
 
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
+Then open [`localhost:8080`](http://localhost:8080) in a browser.
 
 ## Development (`src`, `lib` and the build process)
 

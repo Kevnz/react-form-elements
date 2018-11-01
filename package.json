@@ -1,8 +1,11 @@
 {
   "name": "react-form-elements",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "ReactFormElements",
   "main": "lib/ReactFormElements.js",
+  "files": [
+    "/lib"
+  ],
   "author": "Kevin Isom",
   "homepage": "https://github.com/kevnz/react-form-elements",
   "repository": {
