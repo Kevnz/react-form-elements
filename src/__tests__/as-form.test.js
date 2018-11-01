@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent, cleanup } from 'react-testing-library'
 
-import { TextBox, Checkbox, Range, Date, Telephone } from '../index'
+import { TextBox, Checkbox, Range, DateTime, Telephone } from '../index'
 
 class App extends React.Component {
   constructor(props) {
@@ -46,14 +46,14 @@ class App extends React.Component {
             ref={this.references.checkBox}
             initialValue={true}
           />
-          <Date label="My Date" ref={this.references.date} />
+          <DateTime label="My Date" ref={this.references.date} />
           <Range label="My Range" ref={this.references.range} />
           <Telephone label="Telephone" ref={this.references.telephone} />
-          <Date label="My DateTime" type="datetime" />
-          <Date label="My Month" type="month" />
-          <Date label="My Week" type="week" />
-          <Date label="My DateTime" type="datetime-local" />
-          <Date label="My Time" type="time" />
+          <DateTime label="My DateTime" type="datetime" />
+          <DateTime label="My Month" type="month" />
+          <DateTime label="My Week" type="week" />
+          <DateTime label="My DateTime" type="datetime-local" />
+          <DateTime label="My Time" type="time" />
           <button
             onClick={e => {
               e.preventDefault()

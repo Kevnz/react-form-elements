@@ -4,7 +4,7 @@ import './style.css'
 import TextBox from '../src/textbox'
 import Checkbox from '../src/checkbox'
 import Range from '../src/range'
-import Date from '../src/date'
+import DateTime from '../src/date'
 import Telephone from '../src/telephone'
 
 const ref = React.createRef()
@@ -19,14 +19,14 @@ class App extends React.Component {
         <h1>React Form Elements</h1>
         <TextBox label="My Label" ref={ref} />
         <Checkbox label="My Checkbox" ref={checkRef} initialValue={true} />
-        <Date label="My Date" ref={dateRef} />
+        <DateTime label="My Date" ref={dateRef} />
         <Range label="My Range" ref={rangeRef} />
         <Telephone label="Telephone" ref={telephoneRef} />
-        <Date label="My DateTime" type="datetime" />
-        <Date label="My Month" type="month" />
-        <Date label="My Week" type="week" />
-        <Date label="My DateTime" type="datetime-local" />
-        <Date label="My Time" type="time" />
+        <DateTime label="My DateTime" type="datetime" />
+        <DateTime label="My Month" type="month" />
+        <DateTime label="My Week" type="week" />
+        <DateTime label="My DateTime" type="datetime-local" />
+        <DateTime label="My Time" type="time" />
         <button
           onClick={e => {
             console.log('click')

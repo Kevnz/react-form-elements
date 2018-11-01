@@ -2,7 +2,7 @@ import React, { Component, createRef } from 'react'
 import classNames from 'classnames'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
 import darcula from 'react-syntax-highlighter/styles/prism/darcula'
-import { TextBox, Checkbox, Range, Date, Telephone } from '../../src'
+import { TextBox, Checkbox, Range, DateTime, Telephone } from '../../src'
 
 export default class App extends Component {
   constructor(props) {
@@ -86,14 +86,14 @@ export default class App extends Component {
             ref={this.references.checkBox}
             initialValue={true}
           />
-          <Date label="My Date" ref={this.references.date} />
+          <DateTime label="My Date" ref={this.references.date} />
           <Range label="My Range" ref={this.references.range} />
           <Telephone label="Telephone" ref={this.references.telephone} />
-          <Date label="My DateTime" type="datetime" />
-          <Date label="My Month" type="month" />
-          <Date label="My Week" type="week" />
-          <Date label="My DateTime" type="datetime-local" />
-          <Date label="My Time" type="time" />
+          <DateTime label="My DateTime" type="datetime" />
+          <DateTime label="My Month" type="month" />
+          <DateTime label="My Week" type="week" />
+          <DateTime label="My DateTime" type="datetime-local" />
+          <DateTime label="My Time" type="time" />
           <button
             onClick={e => {
               e.preventDefault()

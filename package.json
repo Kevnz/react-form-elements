@@ -1,7 +1,7 @@
 {
   "name": "react-form-elements",
-  "version": "1.0.0",
-  "description": "ReactFormElements",
+  "version": "1.0.2",
+  "description": "React Form Elements",
   "main": "lib/ReactFormElements.js",
   "files": [
     "/lib"
@@ -54,7 +54,9 @@
     "release": "do something to release",
     "transpile": "babel src -d lib --copy-files",
     "posttranspile": "jest ./lib",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run examples",
+    "postpublish": "npm run publish:site"
   },
   "keywords": [
     "react",

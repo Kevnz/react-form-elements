@@ -1,7 +1,7 @@
 'use strict'
 
 import Radio from './radio'
-import Date from './date'
+import DateTime from './date'
 import TextBox from './textbox'
 import TextArea from './textarea'
 import DropDown from './dropdown'
@@ -17,6 +17,6 @@ export {
   Telephone,
   Range,
   Radio,
-  Date,
+  DateTime,
   Checkbox as CheckBox,
 }
