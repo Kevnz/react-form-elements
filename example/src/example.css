@@ -1,4 +1,4 @@
-/* 
+/*
 // Examples Stylesheet
 // -------------------
 */
@@ -47,7 +47,6 @@ label {
 	font-size: 0.85em;
 	font-weight: bold;
 	margin: 1em 0;
-	text-transform: uppercase;
 }
 
 .hint {
@@ -62,8 +61,8 @@ label {
 .form-row_container label span {
 	padding-left: 10px;
 }
-.modal-shim { 
-	position: absolute; 
+.modal-shim {
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -73,7 +72,7 @@ label {
 	opacity: .7;
 }
 .modal {
-	position: absolute; 
+	position: absolute;
 	top: 10%;
 	left:10%;
 	right:10%;
