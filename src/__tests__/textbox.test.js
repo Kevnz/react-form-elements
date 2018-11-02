@@ -38,15 +38,5 @@ describe('TextBox component', () => {
       expect(input.value).toBe('Updated Value')
       expect(container.firstChild).toMatchSnapshot()
     })
-    it('should return the updated value when changed', () => {
-      const { getByLabelText, container } = render(
-        <TextBox label="My Label" initialValue="My Input Value" />
-      )
-      const input = getByLabelText('My Label')
-
-      fireEvent.change(input, { target: { value: 'Updated Value' } })
-      expect(input.value).toBe('Updated Value')
-      expect(container.firstChild).toMatchSnapshot()
-    })
   })
 })

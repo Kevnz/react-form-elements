@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDown component The Rendered HTML should allow a mix of OptionGroups and Options 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    Drop Down
+    <select
+      data-testid="dd1"
+    >
+      <optgroup
+        label="First Group"
+      >
+        <option
+          value="1"
+        >
+          First
+        </option>
+        <option
+          value="2"
+        >
+          Second
+        </option>
+        <option
+          value="3"
+        >
+          Third
+        </option>
+      </optgroup>
+      <optgroup
+        label="Second Group"
+      >
+        <option
+          value="11"
+        >
+          Second First
+        </option>
+        <option
+          value="12"
+        >
+          Second Second
+        </option>
+        <option
+          value="13"
+        >
+          Second Third
+        </option>
+      </optgroup>
+      <option
+        value="21"
+      >
+        Third First
+      </option>
+      <option
+        value="22"
+      >
+        Third Second
+      </option>
+      <option
+        value="23"
+      >
+        Third Third
+      </option>
+    </select>
+  </label>
+</div>
+`;
+
+exports[`DropDown component The Rendered HTML should not need the OptionGroup 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    Drop Down
+    <select>
+      <option
+        value="1"
+      >
+        First
+      </option>
+      <option
+        value="2"
+      >
+        Second
+      </option>
+      <option
+        value="3"
+      >
+        Third
+      </option>
+      <option
+        value="11"
+      >
+        Second First
+      </option>
+      <option
+        value="12"
+      >
+        Second Second
+      </option>
+      <option
+        value="13"
+      >
+        Second Third
+      </option>
+      <option
+        value="21"
+      >
+        Third First
+      </option>
+      <option
+        value="22"
+      >
+        Third Second
+      </option>
+      <option
+        value="23"
+      >
+        Third Third
+      </option>
+    </select>
+  </label>
+</div>
+`;
+
+exports[`DropDown component The Rendered HTML should render the full tree 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    Drop Down
+    <select>
+      <optgroup
+        label="First Group"
+      >
+        <option
+          value="1"
+        >
+          First
+        </option>
+        <option
+          value="2"
+        >
+          Second
+        </option>
+        <option
+          value="3"
+        >
+          Third
+        </option>
+      </optgroup>
+      <optgroup
+        label="Second Group"
+      >
+        <option
+          value="11"
+        >
+          Second First
+        </option>
+        <option
+          value="12"
+        >
+          Second Second
+        </option>
+        <option
+          value="13"
+        >
+          Second Third
+        </option>
+      </optgroup>
+      <optgroup
+        label="Third Group"
+      >
+        <option
+          value="21"
+        >
+          Third First
+        </option>
+        <option
+          value="22"
+        >
+          Third Second
+        </option>
+        <option
+          value="23"
+        >
+          Third Third
+        </option>
+      </optgroup>
+    </select>
+  </label>
+</div>
+`;
