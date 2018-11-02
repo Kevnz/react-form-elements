@@ -5,7 +5,7 @@ Simplify form element management.
 
 ## Demo & Examples
 
-Live demo: [kevnz.github.io/react-form-elements](http://kevnz.github.io/react-form-elements/)
+Live demo: [kevinisom.info/react-form-elements](http://kevinisom.info/react-form-elements/)
 
 ## Installation
 
@@ -22,7 +22,7 @@ npm install react-form-elements --save
 
 ```js
 import React, { Component, createRef } from 'react'
-import { TextBox, Checkbox, Range, DateTime, Telephone } from 'react-form-elements'
+import { TextBox, Checkbox, Range, DateTime, Telephone, DropDown, Option, OptionGroup } from 'react-form-elements'
 
 export default class App extends Component {
   constructor(props) {
@@ -34,6 +34,8 @@ export default class App extends Component {
       range: createRef(),
       date: createRef(),
       telephone: createRef(),
+      dropdown: createRef()
+
     }
     super(props)
     this.references = references
@@ -56,6 +58,17 @@ export default class App extends Component {
           <DateTime label="My Date" ref={this.references.date} />
           <Range label="My Range" ref={this.references.range} />
           <Telephone label="Telephone" ref={this.references.telephone} />
+          <DropDown
+            label="My Drop Down"
+            initialValue="2"
+            ref={this.references.dropdown}
+          >
+            <OptionGroup label="First Group">
+              <Option initialValue="1">First</Option>
+              <Option initialValue="2">Second</Option>
+              <Option initialValue="3" label="Third" />
+            </OptionGroup>
+          </DropDown>
           <button
             onClick={e => {
               e.preventDefault()
@@ -75,9 +88,12 @@ export default class App extends Component {
 
 * TextBox
 * DropDown
+* Option
+* OptionGroup
 * Range
 * CheckBox
 * Telephone
+
 
 ### Notes
 
