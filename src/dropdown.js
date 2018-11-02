@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 export default class DropDown extends Component {
   constructor(props) {
     super(props)
+    this.state = { value: props.initialValue }
     this.handleChange = this.handleChange.bind(this)
   }
   handleChange(event) {
@@ -12,18 +13,19 @@ export default class DropDown extends Component {
     return this.state.value
   }
   render() {
-    // var { options, ...otherProps } = this.props;
-    let opts = this.props.children || <option>Nope</option>
+    const { label, initialValue, ...otherProps } = this.props
+
     return (
       <div className="form-row_container">
         <label>
           {this.props.label}
           <select
-            {...this.props}
             onChange={this.handleChange}
             onSelect={this.handleChange}
+            value={this.state.value}
+            {...otherProps}
           >
-            {opts}
+            {this.props.children}
           </select>
         </label>
       </div>
@@ -31,5 +33,9 @@ export default class DropDown extends Component {
   }
 }
 
-DropDown.propTypes = { children: PropTypes.node, label: PropTypes.string }
-DropDown.defaultProps = { label: 'label' }
+DropDown.propTypes = {
+  children: PropTypes.node,
+  label: PropTypes.string,
+  initialValue: PropTypes.string,
+}
+DropDown.defaultProps = { label: 'label', initialValue: '' }
