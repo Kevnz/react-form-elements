@@ -2,7 +2,16 @@ import React, { Component, createRef } from 'react'
 import classNames from 'classnames'
 import SyntaxHighlighter from 'react-syntax-highlighter/prism'
 import darcula from 'react-syntax-highlighter/styles/prism/darcula'
-import { TextBox, Checkbox, Range, DateTime, Telephone } from '../../src'
+import {
+  TextBox,
+  Checkbox,
+  Range,
+  DateTime,
+  Telephone,
+  DropDown,
+  Option,
+  OptionGroup,
+} from '../../src'
 
 export default class App extends Component {
   constructor(props) {
@@ -14,6 +23,7 @@ export default class App extends Component {
       range: createRef(),
       date: createRef(),
       telephone: createRef(),
+      dropdown: createRef(),
     }
     super(props)
     this.references = references
@@ -54,6 +64,7 @@ export default class App extends Component {
         range: '',
         date: '',
         telephone: '',
+        dropdown: '',
       }
     return {
       textBox: this.references.textBox.current.getValue(),
@@ -61,6 +72,7 @@ export default class App extends Component {
       range: this.references.range.current.getValue(),
       date: this.references.date.current.getValue(),
       telephone: this.references.telephone.current.getValue(),
+      dropdown: this.references.dropdown.current.getValue(),
     }
   }
 
@@ -94,6 +106,27 @@ export default class App extends Component {
           <DateTime label="My Week" type="week" />
           <DateTime label="My DateTime" type="datetime-local" />
           <DateTime label="My Time" type="time" />
+          <DropDown
+            label="Drop Down"
+            initialValue="2"
+            ref={this.references.dropdown}
+          >
+            <OptionGroup label="First Group">
+              <Option initialValue="1">First</Option>
+              <Option initialValue="2">Second</Option>
+              <Option initialValue="3" label="Third" />
+            </OptionGroup>
+            <OptionGroup label="Second Group">
+              <Option initialValue="11">Second First</Option>
+              <Option initialValue="12">Second Second</Option>
+              <Option initialValue="13" label="Second Third" />
+            </OptionGroup>
+            <OptionGroup label="Third Group">
+              <Option initialValue="21">Third First</Option>
+              <Option initialValue="22">Third Second</Option>
+              <Option initialValue="23" label="Third Third" />
+            </OptionGroup>
+          </DropDown>
           <button
             onClick={e => {
               e.preventDefault()
