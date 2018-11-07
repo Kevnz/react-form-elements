@@ -1,40 +1,51 @@
-import React, { Component } from 'react'
+import React, {
+  forwardRef,
+  useState,
+  useRef,
+  useImperativeMethods,
+} from 'react'
 import PropTypes from 'prop-types'
 
-export default class Radio extends Component {
-  constructor(props) {
-    super(props)
-    this.handleChange = this.handleChange.bind(this)
-    this.state = {
-      checked: props.initialValue,
-    }
+const Radio = forwardRef(({ initialValue, label, checked: isChecked }, ref) => {
+  const [value, setValue] = useState(initialValue)
+  const [checked, setChecked] = useState(isChecked)
+  const handleChange = e => {
+    setValue(e.target.value)
+    setChecked(!checked)
   }
-  handleChange(event) {
-    this.setState({ checked: !this.state.checked })
-  }
-  getValue() {
-    return this.state ? this.state.checked : false
-  }
-  isValid() {
-    return true
-  }
-  render() {
-    const { label, initialValue, ...otherProps } = this.props
-    return (
-      <div className="form-row_container">
-        <label>
-          {label || ''}
-          <input
-            type="radio"
-            {...otherProps}
-            checked={this.state.checked}
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        </label>
-      </div>
-    )
-  }
+  const inputRef = useRef()
+  useImperativeMethods(ref, () => ({
+    getValue: () => inputRef.current.checked,
+  }))
+
+  return (
+    <div className="form-row_container">
+      <label>
+        {label || ''}
+        <input
+          ref={inputRef}
+          onChange={handleChange}
+          value={value}
+          type="radio"
+          {...(checked ? { checked: 'checked' } : {})}
+        />
+      </label>
+    </div>
+  )
+})
+
+Radio.propTypes = {
+  label: PropTypes.string,
+  initialValue: PropTypes.string,
+  checked: PropTypes.bool,
 }
-Radio.propTypes = { label: PropTypes.string, initialValue: PropTypes.bool }
-Radio.defaultProps = { label: 'label', initialValue: false }
+
+Radio.defaultProps = {
+  label: 'label',
+  initialValue: '',
+  checked: false,
+}
+
+Radio.displayName = 'Radio'
+
+export default Radio

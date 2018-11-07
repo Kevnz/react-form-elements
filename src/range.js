@@ -1,36 +1,36 @@
-import React, { Component } from 'react'
+import React, {
+  forwardRef,
+  useRef,
+  useState,
+  useImperativeMethods,
+} from 'react'
 import PropTypes from 'prop-types'
 
-export default class Range extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { value: props.initialValue }
-    this.handleChange = this.handleChange.bind(this)
-  }
-  handleChange(event) {
-    this.setState({ value: event.target.value })
-  }
-  getValue() {
-    return this.state.value
-  }
-  render() {
-    const { label, initialValue, ...otherProps } = this.props
+const Range = forwardRef(
+  ({ initialValue, label, type, ...otherProps }, ref) => {
+    const [value, setValue] = useState(initialValue)
+    const handleChange = e => setValue(e.target.value)
+    const inputRef = useRef()
+    useImperativeMethods(ref, () => ({
+      getValue: () => inputRef.current.value,
+    }))
     return (
       <div className="form-row_container">
         <label>
           {label || ''}
           <input
+            ref={inputRef}
             type="range"
-            onChange={this.handleChange}
-            value={this.state.value}
+            onChange={handleChange}
+            value={value}
             {...otherProps}
           />
         </label>
-        <span>{this.state.value}</span>
+        <span>{value}</span>
       </div>
     )
   }
-}
+)
 
 Range.propTypes = {
   label: PropTypes.string,
@@ -46,3 +46,7 @@ Range.defaultProps = {
   min: 0,
   step: 1,
 }
+
+Range.displayName = 'Range'
+
+export default Range

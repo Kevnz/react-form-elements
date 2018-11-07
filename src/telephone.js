@@ -1,5 +1,10 @@
-import TextBox from './textbox'
+import React, { forwardRef } from 'react'
+import { TextBox } from './'
 
-export default class Telephone extends TextBox {}
+const Telephone = forwardRef((props, ref) => <TextBox {...props} ref={ref} />)
 
 Telephone.defaultProps = { type: 'tel', label: 'Telephone Number' }
+
+Telephone.displayName = 'Telephone'
+
+export default Telephone

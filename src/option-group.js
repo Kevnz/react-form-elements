@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-export default class OptionGroup extends Component {
-  render() {
-    const { label } = this.props
-    return <optgroup label={label}>{this.props.children}</optgroup>
-  }
+const OptionGroup = props => {
+  const { label, children } = props
+  return <optgroup label={label}>{children}</optgroup>
 }
 OptionGroup.propTypes = {
   label: PropTypes.string,
 }
 OptionGroup.defaultProps = { label: '' }
+OptionGroup.displayName = 'OptionGroup'
+export default OptionGroup

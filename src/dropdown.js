@@ -1,41 +1,46 @@
-import React, { Component } from 'react'
+import React, {
+  useState,
+  useRef,
+  useImperativeMethods,
+  forwardRef,
+} from 'react'
 import PropTypes from 'prop-types'
-export default class DropDown extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { value: props.initialValue }
-    this.handleChange = this.handleChange.bind(this)
-  }
-  handleChange(event) {
-    this.setState({ value: event.target.value })
-  }
-  getValue() {
-    return this.state.value
-  }
-  render() {
-    const { label, initialValue, ...otherProps } = this.props
 
+const DropDown = forwardRef(
+  ({ initialValue, label, children, ...otherProps }, ref) => {
+    const [value, setValue] = useState(initialValue)
+    const handleChange = e => setValue(e.target.value)
+    const inputRef = useRef()
+    useImperativeMethods(ref, () => ({
+      getValue: () => inputRef.current.value,
+    }))
     return (
       <div className="form-row_container">
         <label>
-          {this.props.label}
+          {label}
           <select
-            onChange={this.handleChange}
-            onSelect={this.handleChange}
-            value={this.state.value}
+            ref={inputRef}
+            onChange={handleChange}
+            onSelect={handleChange}
+            value={value}
             {...otherProps}
           >
-            {this.props.children}
+            {children}
           </select>
         </label>
       </div>
     )
   }
-}
+)
 
 DropDown.propTypes = {
   children: PropTypes.node,
   label: PropTypes.string,
   initialValue: PropTypes.string,
 }
+
 DropDown.defaultProps = { label: 'label', initialValue: '' }
+
+DropDown.displayName = 'DropDown'
+
+export default DropDown
