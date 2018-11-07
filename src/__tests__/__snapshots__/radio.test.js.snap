@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`d component The Rendered HTML should have a label 1`] = `
+exports[`Radio component The Rendered HTML should have a label 1`] = `
 <div
   class="form-row_container"
 >
@@ -14,30 +14,65 @@ exports[`d component The Rendered HTML should have a label 1`] = `
 </div>
 `;
 
-exports[`d component handling input should set a value when passed in 1`] = `
+exports[`Radio component The Rendered HTML should not be checked 1`] = `
 <div
   class="form-row_container"
 >
   <label>
-    My Label
+    My Checkbox Label
     <input
-      checked=""
       type="radio"
-      value=""
+      value="The Value"
     />
   </label>
 </div>
 `;
 
-exports[`d component handling input should update a value when changed in 1`] = `
+exports[`Radio component The Rendered HTML should not be checked 2`] = `
+<input
+  type="radio"
+  value="The Value"
+/>
+`;
+
+exports[`Radio component The Rendered HTML should not be checked 3`] = `
 <div
   class="form-row_container"
 >
   <label>
-    My Label
+    My Checkbox Label
     <input
       type="radio"
-      value=""
+      value="The Value"
+    />
+  </label>
+</div>
+`;
+
+exports[`Radio component handling input should set a value when passed in 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Checkbox Label
+    <input
+      checked=""
+      type="radio"
+      value="The Value"
+    />
+  </label>
+</div>
+`;
+
+exports[`Radio component handling input should update a value when changed in 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Checkbox Label
+    <input
+      type="radio"
+      value="The Value"
     />
   </label>
 </div>

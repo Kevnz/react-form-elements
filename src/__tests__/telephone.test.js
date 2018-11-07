@@ -1,12 +1,13 @@
 import React from 'react'
 import { render, cleanup } from 'react-testing-library'
 
-import Telephone from '../telephone'
+import { Telephone } from '../'
 
 describe('Telephone component', () => {
   afterEach(() => {
     cleanup()
   })
+
   describe('The Rendered HTML', () => {
     it('should have a label', () => {
       const { getByText, container } = render(

@@ -14,7 +14,43 @@ exports[`Checkbox component The Rendered HTML should have a label 1`] = `
 </div>
 `;
 
-exports[`Checkbox component handling input should set a value when passed in 1`] = `
+exports[`Checkbox component should have checked attribute 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Checkbox Label
+    <input
+      checked=""
+      type="checkbox"
+      value="TheValue"
+    />
+  </label>
+</div>
+`;
+
+exports[`Checkbox component should not have checked attribute 1`] = `
+<div
+  class="form-row_container"
+>
+  <label>
+    My Checkbox Label
+    <input
+      type="checkbox"
+      value="The Value"
+    />
+  </label>
+</div>
+`;
+
+exports[`Checkbox component should not have checked attribute 2`] = `
+<input
+  type="checkbox"
+  value="The Value"
+/>
+`;
+
+exports[`handling input should set a value when passed in 1`] = `
 <div
   class="form-row_container"
 >
@@ -23,13 +59,13 @@ exports[`Checkbox component handling input should set a value when passed in 1`]
     <input
       checked=""
       type="checkbox"
-      value=""
+      value="The Value"
     />
   </label>
 </div>
 `;
 
-exports[`Checkbox component handling input should update a value when changed in 1`] = `
+exports[`handling input should update a value when changed in 1`] = `
 <div
   class="form-row_container"
 >
@@ -37,7 +73,7 @@ exports[`Checkbox component handling input should update a value when changed in
     My Label
     <input
       type="checkbox"
-      value=""
+      value="The Value"
     />
   </label>
 </div>
