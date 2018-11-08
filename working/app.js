@@ -10,62 +10,10 @@ import {
   Option,
   OptionGroup,
   Radio,
+  Form,
 } from '../src'
 
-const Form = ({ name, onSubmit, children }) => {
-  console.log('childred', children)
-
-  const mapped = children.map(child => {
-    const dname = child.type ? child.type.displayName : false
-    if (!dname) return child
-    return Object.assign({}, child, { ref: useRef(null) })
-  })
-  console.log('RFE', mapped)
-  console.log('childred', children)
-  const formElements = mapped.map(fel => ({
-    name: fel.props.name,
-    ref: fel.ref,
-  }))
-
-  return (
-    <form
-      name={name}
-      onSubmit={e => {
-        console.log('formElements', formElements)
-        const values = {}
-        formElements.forEach(el => {
-          if (!el.name) {
-            return
-          }
-          values[el.name] = el.ref.current.getValue()
-        })
-        e.preventDefault()
-        console.log('form values', values)
-        onSubmit(values)
-      }}
-    >
-      {' '}
-      {mapped}
-    </form>
-  )
-}
-
 const App = () => {
-  const references = {
-    textBox: useRef(null),
-    checkBox: useRef(null),
-    range: useRef(null),
-    date: useRef(null),
-    datetime: useRef(null),
-    month: useRef(null),
-    week: useRef(null),
-    datetimeLocal: useRef(null),
-    time: useRef(null),
-    telephone: useRef(null),
-    dropdown: useRef(null),
-    radio: useRef(null),
-  }
-
   const [values, setValues] = useState({})
 
   return (
@@ -74,9 +22,8 @@ const App = () => {
       <Form
         name="testForm"
         onSubmit={e => {
-          console.log('ON_SUBMIT', e)
-
           setValues(e)
+          // do something with values
         }}
       >
         <TextBox label="My Label" name="myTextBox" />
@@ -121,28 +68,19 @@ const App = () => {
             <Option initialValue="23" label="Third Third" />
           </OptionGroup>
         </DropDown>
-        <button
-          onClick={e => {
-            console.log('form values', e)
-            setValues(e)
-          }}
-        >
-          Check
-        </button>
+        <button onClick={e => {}}>Save</button>
       </Form>
       <div data-testid="ref-out">
         <ul>
-          <li data-testid="textbox">TextBox: {values.myTextBox}</li>
-          <li data-testid="checkbox">Checkbox: {values.myCheckBox}</li>
-          <li data-testid="range">Range: {values.myRange}</li>
-          <li data-testid="date">Date: {values.myDate}</li>
-          <li data-testid="datetime">DateTime: {values.myDateTime}</li>
-          <li data-testid="month">DateMonth: {values.myMonth}</li>
-          <li data-testid="week">DateWeek: {values.myWeek}</li>
-          <li data-testid="datetimeLocal">
-            DateTimeLocal: {values.myDateTimeLocal}
-          </li>
-          <li data-testid="telephone">DropDown: {values.myDropDown}</li>
+          <li>TextBox: {values.myTextBox}</li>
+          <li>Checkbox: {values.myCheckBox}</li>
+          <li>Range: {values.myRange}</li>
+          <li>Date: {values.myDate}</li>
+          <li>DateTime: {values.myDateTime}</li>
+          <li>DateMonth: {values.myMonth}</li>
+          <li>DateWeek: {values.myWeek}</li>
+          <li>DateTimeLocal: {values.myDateTimeLocal}</li>
+          <li>DropDown: {values.myDropDown}</li>
         </ul>
       </div>
     </div>
