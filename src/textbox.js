@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 
-const TextBox = forwardRef(({ initialValue, label, type }, ref) => {
+const TextBox = forwardRef(({ name, initialValue, label, type }, ref) => {
   const [value, setValue] = useState(initialValue)
   const handleChange = e => setValue(e.target.value)
   const inputRef = useRef()
@@ -19,6 +19,7 @@ const TextBox = forwardRef(({ initialValue, label, type }, ref) => {
         {label || ''}
         <input
           ref={inputRef}
+          name={name}
           onChange={handleChange}
           value={value}
           type={type}
@@ -28,13 +29,19 @@ const TextBox = forwardRef(({ initialValue, label, type }, ref) => {
   )
 })
 
-TextBox.displayName = 'TextBox'
+TextBox.displayName = 'ReactFormElements(TextBox)'
 export default TextBox
 
 TextBox.propTypes = {
+  name: PropTypes.string,
   initialValue: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
 }
 
-TextBox.defaultProps = { initialValue: '', type: 'text', label: 'label' }
+TextBox.defaultProps = {
+  name: 'TextBox',
+  initialValue: '',
+  type: 'text',
+  label: 'label',
+}

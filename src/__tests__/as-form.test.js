@@ -64,7 +64,6 @@ const App = () => {
         name="testForm"
         onSubmit={e => {
           e.target.preventDefault()
-          console.log('ON_SUBMIT')
         }}
       >
         <TextBox label="My Label" ref={references.textBox} />

@@ -8,5 +8,5 @@ OptionGroup.propTypes = {
   label: PropTypes.string,
 }
 OptionGroup.defaultProps = { label: '' }
-OptionGroup.displayName = 'OptionGroup'
+OptionGroup.displayName = 'ReactFormElements(OptionGroup)'
 export default OptionGroup

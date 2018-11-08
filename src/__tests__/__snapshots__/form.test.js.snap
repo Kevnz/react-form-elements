@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The form components as a form should render and change accordingly 1`] = `
+<form
+  name="testForm"
+>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Label
+      <input
+        name="myTextBox"
+        type="text"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Checkbox
+      <input
+        name="myCheckBox"
+        type="checkbox"
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Radio
+      <input
+        name="myRadio"
+        type="radio"
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Date
+      <input
+        name="myDate"
+        type="date"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Range
+      <input
+        max="100"
+        min="0"
+        name="myRange"
+        step="1"
+        type="range"
+        value="50"
+      />
+    </label>
+    <span>
+      50
+    </span>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      Telephone
+      <input
+        name="myTelephone"
+        type="tel"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My DateTime
+      <input
+        name="myDateTime"
+        type="datetime"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Month
+      <input
+        name="myMonth"
+        type="month"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Week
+      <input
+        name="myWeek"
+        type="week"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My DateTime
+      <input
+        name="myDateTimeLocal"
+        type="datetime-local"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Time
+      <input
+        name="myTime"
+        type="time"
+        value=""
+      />
+    </label>
+  </div>
+  <div
+    class="form-row_container"
+  >
+    <label>
+      My Drop Down
+      <select
+        data-testid="dd1"
+        name="myDropDown"
+      >
+        <optgroup
+          label="First Group"
+        >
+          <option
+            value="1"
+          >
+            First
+          </option>
+          <option
+            value="2"
+          >
+            Second
+          </option>
+          <option
+            value="3"
+          >
+            Third
+          </option>
+        </optgroup>
+        <optgroup
+          label="Second Group"
+        >
+          <option
+            value="11"
+          >
+            Second First
+          </option>
+          <option
+            value="12"
+          >
+            Second Second
+          </option>
+          <option
+            value="13"
+          >
+            Second Third
+          </option>
+        </optgroup>
+        <optgroup
+          label="Third Group"
+        >
+          <option
+            value="21"
+          >
+            Third First
+          </option>
+          <option
+            value="22"
+          >
+            Third Second
+          </option>
+          <option
+            value="23"
+          >
+            Third Third
+          </option>
+        </optgroup>
+      </select>
+    </label>
+  </div>
+  <button>
+    Save
+  </button>
+</form>
+`;

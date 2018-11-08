@@ -7,6 +7,7 @@ exports[`Telephone component The Rendered HTML should have a label 1`] = `
   <label>
     My Telephone Label
     <input
+      name="TextBox"
       type="tel"
       value=""
     />
@@ -21,6 +22,7 @@ exports[`Telephone component handling input should set a value when passed in 1`
   <label>
     My Label
     <input
+      name="TextBox"
       type="tel"
       value="0800121212"
     />

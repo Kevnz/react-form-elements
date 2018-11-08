@@ -7,8 +7,8 @@ exports[`Radio component The Rendered HTML should have a label 1`] = `
   <label>
     My Checkbox Label
     <input
+      name="radio"
       type="radio"
-      value=""
     />
   </label>
 </div>
@@ -21,8 +21,8 @@ exports[`Radio component The Rendered HTML should not be checked 1`] = `
   <label>
     My Checkbox Label
     <input
+      name="radio"
       type="radio"
-      value="The Value"
     />
   </label>
 </div>
@@ -30,8 +30,8 @@ exports[`Radio component The Rendered HTML should not be checked 1`] = `
 
 exports[`Radio component The Rendered HTML should not be checked 2`] = `
 <input
+  name="radio"
   type="radio"
-  value="The Value"
 />
 `;
 
@@ -42,8 +42,8 @@ exports[`Radio component The Rendered HTML should not be checked 3`] = `
   <label>
     My Checkbox Label
     <input
+      name="radio"
       type="radio"
-      value="The Value"
     />
   </label>
 </div>
@@ -57,8 +57,8 @@ exports[`Radio component handling input should set a value when passed in 1`] = 
     My Checkbox Label
     <input
       checked=""
+      name="radio"
       type="radio"
-      value="The Value"
     />
   </label>
 </div>
@@ -71,8 +71,8 @@ exports[`Radio component handling input should update a value when changed in 1`
   <label>
     My Checkbox Label
     <input
+      name="radio"
       type="radio"
-      value="The Value"
     />
   </label>
 </div>

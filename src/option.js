@@ -12,6 +12,6 @@ Option.propTypes = {
 
 Option.defaultProps = { initialValue: '', label: '' }
 
-Option.displayName = 'Option'
+Option.displayName = 'ReactFormElements(Option)'
 
 export default Option

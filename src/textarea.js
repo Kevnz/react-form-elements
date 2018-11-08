@@ -33,8 +33,9 @@ const TextArea = forwardRef(
 TextArea.propTypes = {
   defaultValue: PropTypes.string,
   label: PropTypes.string,
+  name: PropTypes.string,
 }
 
-TextArea.defaultProps = { label: 'label' }
-
+TextArea.defaultProps = { label: 'label', name: 'TextArea' }
+TextArea.displayName = 'ReactFormElements(TextArea)'
 export default TextArea

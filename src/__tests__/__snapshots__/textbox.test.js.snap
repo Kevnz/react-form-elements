@@ -7,6 +7,7 @@ exports[`TextBox component The Rendered HTML should have a label 1`] = `
   <label>
     My Label
     <input
+      name="TextBox"
       type="text"
       value=""
     />
@@ -21,6 +22,7 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
   <label>
     My Label
     <input
+      name="TextBox"
       type="text"
       value="My Input Value"
     />
@@ -35,6 +37,7 @@ exports[`TextBox component handling input should update a value when changed 1`]
   <label>
     My Label
     <input
+      name="TextBox"
       type="text"
       value="Updated Value"
     />

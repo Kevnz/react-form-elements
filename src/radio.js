@@ -6,12 +6,10 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 
-const Radio = forwardRef(({ initialValue, label, checked: isChecked }, ref) => {
-  const [value, setValue] = useState(initialValue)
-  const [checked, setChecked] = useState(isChecked)
+const Radio = forwardRef(({ name, label, checked: isChecked }, ref) => {
+  const [value, setValue] = useState(isChecked)
   const handleChange = e => {
-    setValue(e.target.value)
-    setChecked(!checked)
+    setValue(e.target.checked)
   }
   const inputRef = useRef()
   useImperativeMethods(ref, () => ({
@@ -24,10 +22,10 @@ const Radio = forwardRef(({ initialValue, label, checked: isChecked }, ref) => {
         {label || ''}
         <input
           ref={inputRef}
+          name={name}
           onChange={handleChange}
-          value={value}
           type="radio"
-          {...(checked ? { checked: 'checked' } : {})}
+          checked={value}
         />
       </label>
     </div>
@@ -36,16 +34,17 @@ const Radio = forwardRef(({ initialValue, label, checked: isChecked }, ref) => {
 
 Radio.propTypes = {
   label: PropTypes.string,
+  name: PropTypes.string,
   initialValue: PropTypes.string,
-  checked: PropTypes.bool,
 }
 
 Radio.defaultProps = {
   label: 'label',
+  name: 'radio',
   initialValue: '',
   checked: false,
 }
 
-Radio.displayName = 'Radio'
+Radio.displayName = 'ReactFormElements(Radio)'
 
 export default Radio

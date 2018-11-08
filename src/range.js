@@ -47,6 +47,6 @@ Range.defaultProps = {
   step: 1,
 }
 
-Range.displayName = 'Range'
+Range.displayName = 'ReactFormElements(Range)'
 
 export default Range

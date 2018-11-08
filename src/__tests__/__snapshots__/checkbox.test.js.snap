@@ -7,8 +7,8 @@ exports[`Checkbox component The Rendered HTML should have a label 1`] = `
   <label>
     My Checkbox Label
     <input
+      name="checkbox"
       type="checkbox"
-      value=""
     />
   </label>
 </div>
@@ -22,8 +22,8 @@ exports[`Checkbox component should have checked attribute 1`] = `
     My Checkbox Label
     <input
       checked=""
+      name="TheName"
       type="checkbox"
-      value="TheValue"
     />
   </label>
 </div>
@@ -36,8 +36,8 @@ exports[`Checkbox component should not have checked attribute 1`] = `
   <label>
     My Checkbox Label
     <input
+      name="TheName"
       type="checkbox"
-      value="The Value"
     />
   </label>
 </div>
@@ -45,8 +45,8 @@ exports[`Checkbox component should not have checked attribute 1`] = `
 
 exports[`Checkbox component should not have checked attribute 2`] = `
 <input
+  name="TheName"
   type="checkbox"
-  value="The Value"
 />
 `;
 
@@ -58,8 +58,8 @@ exports[`handling input should set a value when passed in 1`] = `
     My Label
     <input
       checked=""
+      name="checkbox"
       type="checkbox"
-      value="The Value"
     />
   </label>
 </div>
@@ -72,8 +72,8 @@ exports[`handling input should update a value when changed in 1`] = `
   <label>
     My Label
     <input
+      name="checkbox"
       type="checkbox"
-      value="The Value"
     />
   </label>
 </div>

@@ -6,7 +6,9 @@ exports[`TextBox component The Rendered HTML should have a label 1`] = `
 >
   <label>
     My Label
-    <textarea />
+    <textarea
+      name="TextArea"
+    />
   </label>
 </div>
 `;
@@ -17,7 +19,9 @@ exports[`TextBox component The Rendered HTML should support children 1`] = `
 >
   <label>
     My Label
-    <textarea>
+    <textarea
+      name="TextArea"
+    >
       This is my value
     </textarea>
   </label>
@@ -30,7 +34,9 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
 >
   <label>
     My Label
-    <textarea>
+    <textarea
+      name="TextArea"
+    >
       My Input Value
     </textarea>
   </label>
@@ -43,7 +49,9 @@ exports[`TextBox component handling input should update a value when changed 1`]
 >
   <label>
     My Label
-    <textarea>
+    <textarea
+      name="TextArea"
+    >
       Updated Value
     </textarea>
   </label>

@@ -19,7 +19,7 @@ describe('Checkbox component', () => {
   })
   it('should have checked attribute', () => {
     const { getByLabelText, container } = render(
-      <Checkbox label={LABEL} initialValue="TheValue" checked />
+      <Checkbox label={LABEL} name="TheName" checked />
     )
 
     expect(container.firstChild).toMatchSnapshot()
@@ -28,7 +28,7 @@ describe('Checkbox component', () => {
   })
   it('should not have checked attribute', () => {
     const { getByLabelText, container } = render(
-      <Checkbox label={LABEL} initialValue="The Value" />
+      <Checkbox label={LABEL} name="TheName" />
     )
 
     expect(container.firstChild).toMatchSnapshot()

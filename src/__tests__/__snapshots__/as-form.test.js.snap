@@ -15,6 +15,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My Label
         <input
+          name="TextBox"
           type="text"
           value=""
         />
@@ -26,8 +27,8 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My Checkbox
         <input
+          name="checkbox"
           type="checkbox"
-          value="{true}"
         />
       </label>
     </div>
@@ -37,6 +38,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My Date
         <input
+          name="datetime"
           type="date"
           value=""
         />
@@ -65,6 +67,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         Telephone
         <input
+          name="TextBox"
           type="tel"
           value=""
         />
@@ -76,6 +79,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime"
           value=""
         />
@@ -87,6 +91,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My Month
         <input
+          name="datetime"
           type="month"
           value=""
         />
@@ -98,6 +103,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My Week
         <input
+          name="datetime"
           type="week"
           value=""
         />
@@ -109,6 +115,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime-local"
           value=""
         />
@@ -120,6 +127,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       <label>
         My Time
         <input
+          name="datetime"
           type="time"
           value=""
         />
@@ -251,6 +259,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My Label
         <input
+          name="TextBox"
           type="text"
           value="Changed Value"
         />
@@ -262,8 +271,8 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My Checkbox
         <input
+          name="checkbox"
           type="checkbox"
-          value="{true}"
         />
       </label>
     </div>
@@ -273,6 +282,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My Date
         <input
+          name="datetime"
           type="date"
           value=""
         />
@@ -301,6 +311,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         Telephone
         <input
+          name="TextBox"
           type="tel"
           value=""
         />
@@ -312,6 +323,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime"
           value=""
         />
@@ -323,6 +335,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My Month
         <input
+          name="datetime"
           type="month"
           value=""
         />
@@ -334,6 +347,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My Week
         <input
+          name="datetime"
           type="week"
           value=""
         />
@@ -345,6 +359,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My DateTime
         <input
+          name="datetime"
           type="datetime-local"
           value=""
         />
@@ -356,6 +371,7 @@ exports[`The form components as a form should render and change accordingly 2`] 
       <label>
         My Time
         <input
+          name="datetime"
           type="time"
           value=""
         />
