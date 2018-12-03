@@ -32,3 +32,4 @@ TextArea.propTypes = {
 }
 
 TextArea.defaultProps = { type: 'text', label: 'label' }
+TextArea.displayName = 'ReactFormElements(TextArea)'

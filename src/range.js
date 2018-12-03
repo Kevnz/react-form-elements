@@ -46,3 +46,5 @@ Range.defaultProps = {
   min: 0,
   step: 1,
 }
+
+Range.displayName = 'ReactFormElements(Range)'

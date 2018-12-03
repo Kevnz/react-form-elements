@@ -44,3 +44,4 @@ DateTime.propTypes = {
   ]),
 }
 DateTime.defaultProps = { initialValue: '', type: 'date', label: 'label' }
+DateTime.displayName = 'ReactFormElements(DateTime)'

@@ -22,3 +22,4 @@ Option.propTypes = {
   label: PropTypes.string,
 }
 Option.defaultProps = { initialValue: '', label: '' }
+Option.displayName = 'ReactFormElements(Option)'

@@ -36,5 +36,6 @@ export default class CheckBox extends Component {
     )
   }
 }
+CheckBox.displayName = 'ReactFormElements(CheckBox)'
 CheckBox.propTypes = { label: PropTypes.string, initialValue: PropTypes.bool }
 CheckBox.defaultProps = { label: 'label', initialValue: false }

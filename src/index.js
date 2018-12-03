@@ -10,6 +10,7 @@ import OptionGroup from './option-group'
 import Checkbox from './checkbox'
 import Telephone from './telephone'
 import Range from './range'
+import Form from './form'
 
 export {
   TextBox,
@@ -24,4 +25,5 @@ export {
   Radio,
   DateTime,
   Checkbox as CheckBox,
+  Form,
 }

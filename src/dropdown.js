@@ -39,3 +39,4 @@ DropDown.propTypes = {
   initialValue: PropTypes.string,
 }
 DropDown.defaultProps = { label: 'label', initialValue: '' }
+DropDown.displayName = 'ReactFormElements(DropDown)'

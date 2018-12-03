@@ -38,3 +38,4 @@ export default class Radio extends Component {
 }
 Radio.propTypes = { label: PropTypes.string, initialValue: PropTypes.bool }
 Radio.defaultProps = { label: 'label', initialValue: false }
+Radio.displayName = 'ReactFormElements(Radio)'

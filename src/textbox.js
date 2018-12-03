@@ -35,3 +35,5 @@ TextBox.propTypes = {
   type: PropTypes.string,
 }
 TextBox.defaultProps = { initialValue: '', type: 'text', label: 'label' }
+
+TextBox.displayName = 'ReactFormElements(TextBox)'
