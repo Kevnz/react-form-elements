@@ -9,16 +9,19 @@ export default class TextArea extends Component {
     this.setState({ value: event.target.value })
   }
   getValue() {
-    return this.state ? this.state.value : this.props.children
+    return this.state ? this.state.value : this.props.initialValue
   }
   render() {
+    const { label, initialValue, ...otherProps } = this.props
     return (
       <div className="form-row_container">
         <label>
-          {this.props.label || ''}
-          <textarea {...this.props} onChange={this.handleChange}>
-            {this.props.children}
-          </textarea>
+          {label || ''}
+          <textarea
+            {...otherProps}
+            onChange={this.handleChange}
+            value={this.getValue()}
+          />
         </label>
       </div>
     )
@@ -26,7 +29,7 @@ export default class TextArea extends Component {
 }
 
 TextArea.propTypes = {
-  defaultValue: PropTypes.string,
+  initialValue: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
 }
