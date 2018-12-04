@@ -4,16 +4,19 @@ exports[`Range component The Rendered HTML should have a label 1`] = `
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-1-1"
+  >
     My Range Label
-    <input
-      max="100"
-      min="0"
-      step="1"
-      type="range"
-      value="50"
-    />
   </label>
+  <input
+    id="id-1-1"
+    max="100"
+    min="0"
+    step="1"
+    type="range"
+    value="50"
+  />
   <span>
     50
   </span>
@@ -24,16 +27,19 @@ exports[`Range component handling input should set a value when passed in 1`] = 
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-2-1"
+  >
     My Label
-    <input
-      max="100"
-      min="0"
-      step="1"
-      type="range"
-      value="23"
-    />
   </label>
+  <input
+    id="id-2-1"
+    max="100"
+    min="0"
+    step="1"
+    type="range"
+    value="23"
+  />
   <span>
     23
   </span>
@@ -44,16 +50,19 @@ exports[`Range component handling input should update a value when changed in 1`
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-3-1"
+  >
     My Label
-    <input
-      max="100"
-      min="0"
-      step="1"
-      type="range"
-      value="23"
-    />
   </label>
+  <input
+    id="id-3-1"
+    max="100"
+    min="0"
+    step="1"
+    type="range"
+    value="23"
+  />
   <span>
     23
   </span>

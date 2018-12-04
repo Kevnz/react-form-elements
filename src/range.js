@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import uniqueId from 'react-html-id'
 
 export default class Range extends Component {
   constructor(props) {
     super(props)
+    uniqueId.enableUniqueIds(this)
     this.state = { value: props.initialValue }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -17,15 +19,15 @@ export default class Range extends Component {
     const { label, initialValue, ...otherProps } = this.props
     return (
       <div className="form-row_container">
-        <label>
-          {label || ''}
-          <input
-            type="range"
-            onChange={this.handleChange}
-            value={this.state.value}
-            {...otherProps}
-          />
-        </label>
+        <label htmlFor={this.nextUniqueId()}>{label || ''}</label>
+        <input
+          id={this.lastUniqueId()}
+          type="range"
+          onChange={this.handleChange}
+          value={this.state.value}
+          {...otherProps}
+        />
+
         <span>{this.state.value}</span>
       </div>
     )

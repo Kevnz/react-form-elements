@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
+import uniqueId from 'react-html-id'
 export default class CheckBox extends Component {
   constructor(props) {
     super(props)
+    uniqueId.enableUniqueIds(this)
     this.handleChange = this.handleChange.bind(this)
     this.state = {
       checked: props.initialValue,
@@ -22,9 +23,10 @@ export default class CheckBox extends Component {
     const { label, initialValue, ...otherProps } = this.props
     return (
       <div className="form-row_container">
-        <label>
+        <label htmlFor={this.nextUniqueId()}>
           {label || ''}
           <input
+            id={this.lastUniqueId()}
             type="checkbox"
             {...otherProps}
             checked={this.state.checked}

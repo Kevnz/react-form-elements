@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import uniqueId from 'react-html-id'
 export default class DropDown extends Component {
   constructor(props) {
     super(props)
+    uniqueId.enableUniqueIds(this)
     this.state = { value: props.initialValue }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -17,17 +19,16 @@ export default class DropDown extends Component {
 
     return (
       <div className="form-row_container">
-        <label>
-          {this.props.label}
-          <select
-            onChange={this.handleChange}
-            onSelect={this.handleChange}
-            value={this.state.value}
-            {...otherProps}
-          >
-            {this.props.children}
-          </select>
-        </label>
+        <label htmlFor={this.nextUniqueId()}>{this.props.label}</label>
+        <select
+          id={this.lastUniqueId()}
+          onChange={this.handleChange}
+          onSelect={this.handleChange}
+          value={this.state.value}
+          {...otherProps}
+        >
+          {this.props.children}
+        </select>
       </div>
     )
   }

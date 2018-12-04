@@ -47,7 +47,6 @@ class App extends React.Component {
 
   render() {
     const formValues = this.getFormValues()
-    console.log('render')
     return (
       <div>
         <h1>React Form Elements</h1>

@@ -4,13 +4,16 @@ exports[`Telephone component The Rendered HTML should have a label 1`] = `
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-1-1"
+  >
     My Telephone Label
-    <input
-      type="tel"
-      value=""
-    />
   </label>
+  <input
+    id="id-1-1"
+    type="tel"
+    value=""
+  />
 </div>
 `;
 
@@ -18,12 +21,15 @@ exports[`Telephone component handling input should set a value when passed in 1`
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-2-1"
+  >
     My Label
-    <input
-      type="tel"
-      value="0800121212"
-    />
   </label>
+  <input
+    id="id-2-1"
+    type="tel"
+    value="0800121212"
+  />
 </div>
 `;

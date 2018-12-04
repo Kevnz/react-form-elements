@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import uniqueId from 'react-html-id'
 
 export default class Radio extends Component {
   constructor(props) {
     super(props)
+    uniqueId.enableUniqueIds(this)
     this.handleChange = this.handleChange.bind(this)
     this.state = {
       checked: props.initialValue,
@@ -22,16 +24,15 @@ export default class Radio extends Component {
     const { label, initialValue, ...otherProps } = this.props
     return (
       <div className="form-row_container">
-        <label>
-          {label || ''}
-          <input
-            type="radio"
-            {...otherProps}
-            checked={this.state.checked}
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        </label>
+        <label htmlFor={this.nextUniqueId()}>{label || ''}</label>
+        <input
+          id={this.lastUniqueId()}
+          type="radio"
+          {...otherProps}
+          checked={this.state.checked}
+          onChange={this.handleChange}
+          value={this.state.value}
+        />
       </div>
     )
   }

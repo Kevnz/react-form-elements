@@ -2,6 +2,7 @@ import React from 'react'
 import { render, fireEvent, cleanup } from 'react-testing-library'
 
 import {
+  Button,
   TextBox,
   Checkbox,
   Range,
@@ -64,7 +65,7 @@ const App = ({ onSubmit }) => {
           <Option initialValue="23" label="Third Third" />
         </OptionGroup>
       </DropDown>
-      <button>Save</button>
+      <Button>Save</Button>
     </Form>
   )
 }

@@ -4,12 +4,15 @@ exports[`TextBox component The Rendered HTML should have a label 1`] = `
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-1-1"
+  >
     My Label
-    <textarea
-      type="text"
-    />
   </label>
+  <textarea
+    id="id-1-1"
+    type="text"
+  />
 </div>
 `;
 
@@ -17,14 +20,17 @@ exports[`TextBox component The Rendered HTML should support children 1`] = `
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-2-1"
+  >
     My Label
-    <textarea
-      type="text"
-    >
-      This is my value
-    </textarea>
   </label>
+  <textarea
+    id="id-2-1"
+    type="text"
+  >
+    This is my value
+  </textarea>
 </div>
 `;
 
@@ -32,14 +38,17 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-3-1"
+  >
     My Label
-    <textarea
-      type="text"
-    >
-      My Input Value
-    </textarea>
   </label>
+  <textarea
+    id="id-3-1"
+    type="text"
+  >
+    My Input Value
+  </textarea>
 </div>
 `;
 
@@ -47,13 +56,16 @@ exports[`TextBox component handling input should update a value when changed 1`]
 <div
   class="form-row_container"
 >
-  <label>
+  <label
+    for="id-4-1"
+  >
     My Label
-    <textarea
-      type="text"
-    >
-      Updated Value
-    </textarea>
   </label>
+  <textarea
+    id="id-4-1"
+    type="text"
+  >
+    Updated Value
+  </textarea>
 </div>
 `;

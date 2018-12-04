@@ -11,8 +11,10 @@ import Checkbox from './checkbox'
 import Telephone from './telephone'
 import Range from './range'
 import Form from './form'
+import Button from './button'
 
 export {
+  Button,
   TextBox,
   TextArea,
   DropDown,

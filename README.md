@@ -1,4 +1,4 @@
-# ReactFormElements
+# React-Form-Elements
 
 Simplify form element management.
 
@@ -22,65 +22,63 @@ npm install react-form-elements --save
 
 ```js
 import React, { Component, createRef } from 'react'
-import { TextBox, Checkbox, Range, DateTime, Telephone, DropDown, Option, OptionGroup } from 'react-form-elements'
+import { Form, Button, TextBox, Checkbox, Range, DateTime, Telephone, DropDown, Option, OptionGroup } from 'react-form-elements'
 
-export default class App extends Component {
-  constructor(props) {
-    const references = {
-      modal: createRef(),
-      shim: createRef(),
-      textBox: createRef(),
-      checkBox: createRef(),
-      range: createRef(),
-      date: createRef(),
-      telephone: createRef(),
-      dropdown: createRef()
-
-    }
-    super(props)
-    this.references = references
-  }
-
-  render() {
-    return (
-      <div>
-        <h2>Example Code</h2>
-        <SyntaxHighlighter language="jsx" style={darcula}>
-          {codeString}
-        </SyntaxHighlighter>
-        <form>
-          <TextBox label="My Label" ref={this.references.textBox} />
-          <Checkbox
-            label="My Checkbox"
-            ref={this.references.checkBox}
-            initialValue={true}
-          />
-          <DateTime label="My Date" ref={this.references.date} />
-          <Range label="My Range" ref={this.references.range} />
-          <Telephone label="Telephone" ref={this.references.telephone} />
-          <DropDown
-            label="My Drop Down"
-            initialValue="2"
-            ref={this.references.dropdown}
-          >
-            <OptionGroup label="First Group">
-              <Option initialValue="1">First</Option>
-              <Option initialValue="2">Second</Option>
-              <Option initialValue="3" label="Third" />
-            </OptionGroup>
-          </DropDown>
-          <button
-            onClick={e => {
-              e.preventDefault()
-              // this.references.textBox.current.getValue()
-            }}
-          >
-            Check
-          </button>
-        </form>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <Form
+      name="testForm"
+      onSubmit={data => {
+        console.log(data)
+        // data.myTextBox
+        // data.<Name of Element>
+      }}
+    >
+      <TextBox label="My Label" name="myTextBox" />
+      <Checkbox
+        label="My Checkbox"
+        initialValue={false}
+        checked={false}
+        name="myCheckBox"
+      />
+      <Radio label="My Radio" name="myRadio" checked={false} />
+      <DateTime label="My Date" name="myDate" />
+      <Range label="My Range" name="myRange" />
+      <Telephone label="Telephone" name="myTelephone" />
+      <DateTime label="My DateTime" type="datetime" name="myDateTime" />
+      <DateTime label="My Month" type="month" name="myMonth" />
+      <DateTime label="My Week" type="week" name="myWeek" />
+      <DateTime
+        label="My DateTime"
+        type="datetime-local"
+        name="myDateTimeLocal"
+      />
+      <DateTime label="My Time" type="time" name="myTime" />
+      <DropDown
+        label="My Drop Down"
+        initialValue="2"
+        data-testid="dd1"
+        name="myDropDown"
+      >
+        <OptionGroup label="First Group">
+          <Option initialValue="1">First</Option>
+          <Option initialValue="2">Second</Option>
+          <Option initialValue="3" label="Third" />
+        </OptionGroup>
+        <OptionGroup label="Second Group">
+          <Option initialValue="11">Second First</Option>
+          <Option initialValue="12">Second Second</Option>
+          <Option initialValue="13" label="Second Third" />
+        </OptionGroup>
+        <OptionGroup label="Third Group">
+          <Option initialValue="21">Third First</Option>
+          <Option initialValue="22">Third Second</Option>
+          <Option initialValue="23" label="Third Third" />
+        </OptionGroup>
+      </DropDown>
+      <Button>Save</Button>
+    </Form>
+  )
 }
 ```
 
