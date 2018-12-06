@@ -5,8 +5,8 @@ Simplify form element management.
 
 ## Demo & Examples
 
-Live demo: [kevinisom.info/react-form-elements](http://kevinisom.info/react-form-elements/)
-
+* Live demo: [kevinisom.info/react-form-elements](http://kevinisom.info/react-form-elements/)
+* Code Sandbox: [Demo](https://codesandbox.io/s/ox8yvorvzq)
 ## Installation
 
 The easiest way to use react-form-elements is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
@@ -35,6 +35,7 @@ import { Form,
   } from 'react-form-elements'
 
 const App = () => {
+
   return (
     <Form
       name="testForm"
