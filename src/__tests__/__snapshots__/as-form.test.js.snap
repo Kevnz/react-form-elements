@@ -27,13 +27,13 @@ exports[`The form components as a form should render properly 1`] = `
         for="id-2-1"
       >
         My Checkbox
-        <input
-          checked=""
-          id="id-2-1"
-          type="checkbox"
-          value=""
-        />
       </label>
+      <input
+        checked=""
+        id="id-2-1"
+        type="checkbox"
+        value=""
+      />
     </div>
     <div
       class="form-row_container"
@@ -294,13 +294,13 @@ exports[`The form components as a form should render properly 2`] = `
         for="id-2-1"
       >
         My Checkbox
-        <input
-          checked=""
-          id="id-2-1"
-          type="checkbox"
-          value=""
-        />
       </label>
+      <input
+        checked=""
+        id="id-2-1"
+        type="checkbox"
+        value=""
+      />
     </div>
     <div
       class="form-row_container"

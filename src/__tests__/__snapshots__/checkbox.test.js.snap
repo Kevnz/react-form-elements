@@ -8,12 +8,12 @@ exports[`Checkbox component The Rendered HTML should have a label 1`] = `
     for="id-1-1"
   >
     My Checkbox Label
-    <input
-      id="id-1-1"
-      type="checkbox"
-      value=""
-    />
   </label>
+  <input
+    id="id-1-1"
+    type="checkbox"
+    value=""
+  />
 </div>
 `;
 
@@ -25,13 +25,13 @@ exports[`Checkbox component handling input should set a value when passed in 1`]
     for="id-2-1"
   >
     My Label
-    <input
-      checked=""
-      id="id-2-1"
-      type="checkbox"
-      value=""
-    />
   </label>
+  <input
+    checked=""
+    id="id-2-1"
+    type="checkbox"
+    value=""
+  />
 </div>
 `;
 
@@ -43,11 +43,11 @@ exports[`Checkbox component handling input should update a value when changed in
     for="id-3-1"
   >
     My Label
-    <input
-      id="id-3-1"
-      type="checkbox"
-      value=""
-    />
   </label>
+  <input
+    id="id-3-1"
+    type="checkbox"
+    value=""
+  />
 </div>
 `;

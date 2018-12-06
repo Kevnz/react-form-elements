@@ -23,17 +23,15 @@ export default class CheckBox extends Component {
     const { label, initialValue, ...otherProps } = this.props
     return (
       <div className="form-row_container">
-        <label htmlFor={this.nextUniqueId()}>
-          {label || ''}
-          <input
-            id={this.lastUniqueId()}
-            type="checkbox"
-            {...otherProps}
-            checked={this.state.checked}
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        </label>
+        <label htmlFor={this.nextUniqueId()}>{label || ''}</label>
+        <input
+          id={this.lastUniqueId()}
+          type="checkbox"
+          {...otherProps}
+          checked={this.state.checked}
+          onChange={this.handleChange}
+          value={this.state.value}
+        />
       </div>
     )
   }

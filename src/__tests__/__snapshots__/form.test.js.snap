@@ -26,13 +26,13 @@ exports[`The form components as a form should render and change accordingly 1`] 
       for="id-2-1"
     >
       My Checkbox
-      <input
-        id="id-2-1"
-        name="myCheckBox"
-        type="checkbox"
-        value=""
-      />
     </label>
+    <input
+      id="id-2-1"
+      name="myCheckBox"
+      type="checkbox"
+      value=""
+    />
   </div>
   <div
     class="form-row_container"
