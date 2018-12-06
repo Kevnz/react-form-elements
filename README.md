@@ -21,8 +21,18 @@ npm install react-form-elements --save
 ## Usage
 
 ```js
-import React, { Component, createRef } from 'react'
-import { Form, Button, TextBox, Checkbox, Range, DateTime, Telephone, DropDown, Option, OptionGroup } from 'react-form-elements'
+import React from 'react'
+import { Form,
+  Button,
+  TextBox,
+  Checkbox,
+  Range,
+  DateTime,
+  Telephone,
+  DropDown,
+  Option,
+  OptionGroup
+  } from 'react-form-elements'
 
 const App = () => {
   return (

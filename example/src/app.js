@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react'
 import classNames from 'classnames'
-import SyntaxHighlighter from 'react-syntax-highlighter/prism'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import darcula from 'react-syntax-highlighter/styles/prism/darcula'
 import {
   TextBox,
