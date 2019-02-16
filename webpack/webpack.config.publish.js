@@ -22,7 +22,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../', '/dist'),
-    publicPath: '/react-form-elements/',
+    publicPath: 'http://kevinisom.info/react-form-elements/',
     filename: 'bundle.js',
   },
   plugins: [
