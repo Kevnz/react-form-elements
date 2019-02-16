@@ -7,24 +7,24 @@ export default () => {
   return (
     <Fragment>
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/react-form-elements">Home</Link>
         <span>Examples</span>
-        <Link to="contact" className="sublink">
+        <Link to="react-form-elements/contact" className="sublink">
           Contact Form
         </Link>
-        <Link to="inputs" className="sublink">
+        <Link to="react-form-elements/inputs" className="sublink">
           Text Inputs
         </Link>
-        <Link to="attributes" className="sublink">
+        <Link to="react-form-elements/attributes" className="sublink">
           Element Attributes
         </Link>
-        <Link to="selectors" className="sublink">
+        <Link to="react-form-elements/selectors" className="sublink">
           Selectors
         </Link>
-        <Link to="others" className="sublink">
+        <Link to="react-form-elements/others" className="sublink">
           Other Elements
         </Link>
-        <Link to="styling" className="sublink">
+        <Link to="react-form-elements/styling" className="sublink">
           Styling
         </Link>
       </nav>

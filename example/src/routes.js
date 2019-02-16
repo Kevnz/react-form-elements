@@ -10,7 +10,7 @@ const Others = React.lazy(() => import('./examples/others'))
 const Styling = React.lazy(() => import('./examples/styling'))
 export default () => {
   return (
-    <Router>
+    <Router basepath="/react-form-elements">
       <Home path="/" />
       <Styling path="/styling" />
       <TextInputs path="/inputs" />

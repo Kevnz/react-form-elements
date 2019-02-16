@@ -24,8 +24,9 @@ module.exports = {
     },
   },
   output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/',
+    path: path.join(__dirname, '../', '/dist'),
+    publicPath: 'http://kevinisom.info/react-form-elements/',
+
     filename: 'bundle.js',
   },
   plugins: [

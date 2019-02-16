@@ -6,7 +6,7 @@ Simplify form elements and form management.
 ## Demo & Examples
 
 * Live demo: [kevinisom.info/react-form-elements](http://kevinisom.info/react-form-elements/)
-* Code Sandbox: [Demo](https://codesandbox.io/s/ox8yvorvzq)
+* Code Sandbox: [Demo](https://codesandbox.io/s/8yw4mk7jj8)
 
 ## Installation
 

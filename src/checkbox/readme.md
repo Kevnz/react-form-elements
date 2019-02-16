@@ -7,7 +7,7 @@ Basic usage:
 ```jsx static
 import React from 'react'
 import { CheckBox } from 'react-form-elements'
-  <Checkbox
+  <CheckBox
     label="My Checkbox"
     isChecked={true}
     name="check"
@@ -18,7 +18,7 @@ import { CheckBox } from 'react-form-elements'
 
 ```jsx
 import { CheckBox } from 'react-form-elements'
-  <Checkbox
+  <CheckBox
     label="My Checkbox"
     isChecked={true}
     name="check"

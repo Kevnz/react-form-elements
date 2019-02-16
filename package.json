@@ -57,6 +57,7 @@
     "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development",
     "examples": "webpack --config ./webpack/webpack.config.publish.js --mode production",
+    "examples:build": "webpack --config ./webpack/webpack.config.examples.js --mode production",
     "examples:dev": "webpack-dev-server --config ./webpack/webpack.config.examples.js --mode development",
     "lint": "eslint ./src",
     "publish:site": "node ./scripts/publish.js",
