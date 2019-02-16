@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateTime component The Rendered HTML should have a label 1`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-1-1"
+  >
+    My DateTime Label for date
+  </label>
+  <input
+    id="id-1-1"
+    name="TextBox"
+    type="date"
+    value=""
+  />
+</div>
+`;
+
+exports[`DateTime component The Rendered HTML should have a label 2`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-2-1"
+  >
+    My DateTime Label for datetime
+  </label>
+  <input
+    id="id-2-1"
+    name="TextBox"
+    type="datetime"
+    value=""
+  />
+</div>
+`;
+
+exports[`DateTime component The Rendered HTML should have a label 3`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-3-1"
+  >
+    My DateTime Label for month
+  </label>
+  <input
+    id="id-3-1"
+    name="TextBox"
+    type="month"
+    value=""
+  />
+</div>
+`;
+
+exports[`DateTime component The Rendered HTML should have a label 4`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-4-1"
+  >
+    My DateTime Label for week
+  </label>
+  <input
+    id="id-4-1"
+    name="TextBox"
+    type="week"
+    value=""
+  />
+</div>
+`;
+
+exports[`DateTime component The Rendered HTML should have a label 5`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-5-1"
+  >
+    My DateTime Label for time
+  </label>
+  <input
+    id="id-5-1"
+    name="TextBox"
+    type="time"
+    value=""
+  />
+</div>
+`;
+
+exports[`DateTime component The Rendered HTML should have a label 6`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-6-1"
+  >
+    My DateTime Label for datetime
+  </label>
+  <input
+    id="id-6-1"
+    name="TextBox"
+    type="datetime"
+    value=""
+  />
+</div>
+`;
+
+exports[`DateTime component The Rendered HTML should have a label 7`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-7-1"
+  >
+    My DateTime Label for datetime-local
+  </label>
+  <input
+    id="id-7-1"
+    name="TextBox"
+    type="datetime-local"
+    value=""
+  />
+</div>
+`;

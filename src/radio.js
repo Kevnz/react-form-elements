@@ -1,42 +1,38 @@
-import React, { Component } from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import uniqueId from 'react-html-id'
+import useCheckedElement from './utils/use-checked-element'
 
-export default class Radio extends Component {
-  constructor(props) {
-    super(props)
-    uniqueId.enableUniqueIds(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.state = {
-      checked: props.initialValue,
-    }
-  }
-  handleChange(event) {
-    this.setState({ checked: !this.state.checked })
-  }
-  getValue() {
-    return this.state ? this.state.checked : false
-  }
-  isValid() {
-    return true
-  }
-  render() {
-    const { label, initialValue, ...otherProps } = this.props
+const Radio = forwardRef(
+  ({ name, isChecked, label, value, ...otherProps }, ref) => {
+    const { id, checked, handleChange, inputRef } = useCheckedElement(
+      value,
+      isChecked,
+      ref
+    )
     return (
-      <div className="form-row_container">
-        <label htmlFor={this.nextUniqueId()}>{label || ''}</label>
+      <div className="rfe-form__row">
+        <label htmlFor={id}>{label || ''}</label>
         <input
-          id={this.lastUniqueId()}
+          id={id}
+          name={name}
           type="radio"
           {...otherProps}
-          checked={this.state.checked}
-          onChange={this.handleChange}
-          value={this.state.value}
+          onChange={handleChange}
+          value={value}
+          checked={checked}
+          ref={inputRef}
         />
       </div>
     )
   }
+)
+
+Radio.propTypes = {
+  label: PropTypes.string,
+  value: PropTypes.string,
+  isChecked: PropTypes.bool,
 }
-Radio.propTypes = { label: PropTypes.string, initialValue: PropTypes.bool }
-Radio.defaultProps = { label: 'label', initialValue: false }
+Radio.defaultProps = { label: 'label', isChecked: false }
 Radio.displayName = 'ReactFormElements(Radio)'
+
+export default Radio

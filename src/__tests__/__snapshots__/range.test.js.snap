@@ -2,7 +2,7 @@
 
 exports[`Range component The Rendered HTML should have a label 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-1-1"
@@ -25,7 +25,7 @@ exports[`Range component The Rendered HTML should have a label 1`] = `
 
 exports[`Range component handling input should set a value when passed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-2-1"
@@ -48,7 +48,7 @@ exports[`Range component handling input should set a value when passed in 1`] = 
 
 exports[`Range component handling input should update a value when changed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-3-1"

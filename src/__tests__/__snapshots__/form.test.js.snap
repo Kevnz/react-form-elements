@@ -2,10 +2,11 @@
 
 exports[`The form components as a form should render and change accordingly 1`] = `
 <form
+  class="rfe-form"
   name="testForm"
 >
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-1-1"
@@ -20,7 +21,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row"
   >
     <label
       for="id-2-1"
@@ -31,11 +32,11 @@ exports[`The form components as a form should render and change accordingly 1`] 
       id="id-2-1"
       name="myCheckBox"
       type="checkbox"
-      value=""
+      value="checkbox value"
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row"
   >
     <label
       for="id-3-1"
@@ -46,11 +47,11 @@ exports[`The form components as a form should render and change accordingly 1`] 
       id="id-3-1"
       name="myRadio"
       type="radio"
-      value=""
+      value="myRadio1"
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-4-1"
@@ -65,7 +66,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row"
   >
     <label
       for="id-5-1"
@@ -76,7 +77,6 @@ exports[`The form components as a form should render and change accordingly 1`] 
       id="id-5-1"
       max="100"
       min="0"
-      name="myRange"
       step="1"
       type="range"
       value="50"
@@ -86,7 +86,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     </span>
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-6-1"
@@ -101,7 +101,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-7-1"
@@ -116,7 +116,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-8-1"
@@ -131,7 +131,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-9-1"
@@ -146,7 +146,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-10-1"
@@ -161,7 +161,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row "
   >
     <label
       for="id-11-1"
@@ -176,7 +176,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="form-row_container"
+    class="rfe-form__row"
   >
     <label
       for="id-12-1"
@@ -186,7 +186,6 @@ exports[`The form components as a form should render and change accordingly 1`] 
     <select
       data-testid="dd1"
       id="id-12-1"
-      name="myDropDown"
     >
       <optgroup
         label="First Group"
@@ -251,4 +250,21 @@ exports[`The form components as a form should render and change accordingly 1`] 
     Save
   </button>
 </form>
+`;
+
+exports[`The form components as a form should render and change accordingly 2`] = `
+Object {
+  "myCheckBox": null,
+  "myDate": "",
+  "myDateTime": "",
+  "myDateTimeLocal": "",
+  "myDropDown": "22",
+  "myMonth": "",
+  "myRadio": null,
+  "myRange": "50",
+  "myTelephone": "",
+  "myTextBox": "Changed Value",
+  "myTime": "",
+  "myWeek": "",
+}
 `;

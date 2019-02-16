@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UrlInput component The Rendered HTML should have a label 1`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-1-1"
+  >
+    My UrlInput Label
+  </label>
+  <input
+    id="id-1-1"
+    name="TextBox"
+    type="url"
+    value=""
+  />
+</div>
+`;
+
+exports[`UrlInput component handling input should set a value when passed in but not be valid 1`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-2-1"
+  >
+    My Example URL
+  </label>
+  <input
+    id="id-2-1"
+    name="TextBox"
+    type="url"
+    value="http://www.example.com"
+  />
+</div>
+`;

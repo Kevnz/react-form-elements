@@ -26,11 +26,16 @@ const App = ({ onSubmit }) => {
       <TextBox label="My Label" name="myTextBox" />
       <Checkbox
         label="My Checkbox"
-        initialValue={false}
-        checked={false}
+        value="checkbox value"
+        isChecked={false}
         name="myCheckBox"
       />
-      <Radio label="My Radio" name="myRadio" checked={false} />
+      <Radio
+        label="My Radio"
+        name="myRadio"
+        isChecked={false}
+        value="myRadio1"
+      />
       <DateTime label="My Date" name="myDate" />
       <Range label="My Range" name="myRange" />
       <Telephone label="Telephone" name="myTelephone" />
@@ -77,6 +82,7 @@ describe('The form components as a form', () => {
     const { container, getByLabelText, getByTestId, getByText } = render(
       <App
         onSubmit={e => {
+          expect(e).toMatchSnapshot()
           expect(e.myTextBox).toBe(CHANGED_TEXTBOX)
           expect(e.myDropDown).toBe('22')
         }}

@@ -2,7 +2,7 @@
 
 exports[`Checkbox component The Rendered HTML should have a label 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-1-1"
@@ -19,7 +19,7 @@ exports[`Checkbox component The Rendered HTML should have a label 1`] = `
 
 exports[`Checkbox component handling input should set a value when passed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-2-1"
@@ -30,14 +30,14 @@ exports[`Checkbox component handling input should set a value when passed in 1`]
     checked=""
     id="id-2-1"
     type="checkbox"
-    value=""
+    value="test value"
   />
 </div>
 `;
 
 exports[`Checkbox component handling input should update a value when changed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-3-1"
@@ -47,7 +47,7 @@ exports[`Checkbox component handling input should update a value when changed in
   <input
     id="id-3-1"
     type="checkbox"
-    value=""
+    value="updateval"
   />
 </div>
 `;

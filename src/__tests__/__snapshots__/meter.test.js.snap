@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Meter component Element attributes should have a value set 1`] = `
+<div
+  class="rfe-form__row rfe-meter"
+>
+  <label
+    for="id-2-1"
+  >
+    My Example Meter
+  </label>
+  <meter
+    high="80"
+    id="id-2-1"
+    low="20"
+    max="80"
+    min="0"
+    name="Progress"
+    optimum="60"
+    value="50"
+  >
+    at 
+    50
+    /
+    80
+  </meter>
+</div>
+`;
+
+exports[`Meter component The Rendered HTML should have a label 1`] = `
+<div
+  class="rfe-form__row rfe-meter"
+>
+  <label
+    for="id-1-1"
+  >
+    My Meter Element
+  </label>
+  <meter
+    high="80"
+    id="id-1-1"
+    low="20"
+    max="100"
+    min="0"
+    name="Progress"
+    optimum="60"
+    value="50"
+  >
+    at 
+    50
+    /
+    100
+  </meter>
+</div>
+`;

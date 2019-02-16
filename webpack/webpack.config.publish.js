@@ -28,13 +28,13 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Example',
+      title: 'React Form Elements',
       // Load a custom template (lodash by default see the FAQ for details)
       template: './example/src/index.html',
     }),
   ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './example/src',
     hot: true,
   },
 }

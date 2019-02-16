@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`d component The Rendered HTML should have a label 1`] = `
+exports[`Radio component The Rendered HTML should have a label 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-1-1"
@@ -12,14 +12,14 @@ exports[`d component The Rendered HTML should have a label 1`] = `
   <input
     id="id-1-1"
     type="radio"
-    value=""
+    value="myradio"
   />
 </div>
 `;
 
-exports[`d component handling input should set a value when passed in 1`] = `
+exports[`Radio component handling input should set a value when passed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-2-1"
@@ -30,14 +30,14 @@ exports[`d component handling input should set a value when passed in 1`] = `
     checked=""
     id="id-2-1"
     type="radio"
-    value=""
+    value="myradio"
   />
 </div>
 `;
 
-exports[`d component handling input should update a value when changed in 1`] = `
+exports[`Radio component handling input should update a value when changed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-3-1"
@@ -47,7 +47,7 @@ exports[`d component handling input should update a value when changed in 1`] = 
   <input
     id="id-3-1"
     type="radio"
-    value=""
+    value="myradio"
   />
 </div>
 `;

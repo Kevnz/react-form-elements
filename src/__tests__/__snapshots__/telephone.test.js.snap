@@ -2,7 +2,7 @@
 
 exports[`Telephone component The Rendered HTML should have a label 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row "
 >
   <label
     for="id-1-1"
@@ -11,6 +11,7 @@ exports[`Telephone component The Rendered HTML should have a label 1`] = `
   </label>
   <input
     id="id-1-1"
+    name="TextBox"
     type="tel"
     value=""
   />
@@ -19,7 +20,7 @@ exports[`Telephone component The Rendered HTML should have a label 1`] = `
 
 exports[`Telephone component handling input should set a value when passed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row "
 >
   <label
     for="id-2-1"
@@ -28,6 +29,7 @@ exports[`Telephone component handling input should set a value when passed in 1`
   </label>
   <input
     id="id-2-1"
+    name="TextBox"
     type="tel"
     value="0800121212"
   />

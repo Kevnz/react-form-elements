@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorInput component The Rendered HTML should have a label 1`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-1-1"
+  >
+    My ColorInput Label
+  </label>
+  <input
+    id="id-1-1"
+    name="TextBox"
+    type="color"
+    value=""
+  />
+</div>
+`;
+
+exports[`ColorInput component handling input should set the value to \`#000000\` when passed non color input 1`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-2-1"
+  >
+    My Color Value
+  </label>
+  <input
+    id="id-2-1"
+    name="TextBox"
+    type="color"
+    value="#0668fa"
+  />
+</div>
+`;
