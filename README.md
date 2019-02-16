@@ -1,12 +1,13 @@
 # React-Form-Elements
 
-Simplify form element management.
+Simplify form elements and form management.
 
 
 ## Demo & Examples
 
 * Live demo: [kevinisom.info/react-form-elements](http://kevinisom.info/react-form-elements/)
 * Code Sandbox: [Demo](https://codesandbox.io/s/ox8yvorvzq)
+
 ## Installation
 
 The easiest way to use react-form-elements is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
@@ -14,25 +15,29 @@ The easiest way to use react-form-elements is to install it from NPM and include
 You can also use the standalone build by including `dist/react-form-elements.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
 
 ```bash
-npm install react-form-elements --save
+npm install react-form-elements
 ```
-
 
 ## Usage
 
 ```js
 import React from 'react'
-import { Form,
+import {
   Button,
-  TextBox,
   Checkbox,
-  Range,
+  ColorInput,
   DateTime,
-  Telephone,
   DropDown,
+  EmailInput,
+  Form,
   Option,
-  OptionGroup
-  } from 'react-form-elements'
+  OptionGroup,
+  RadioGroup,
+  Range,
+  Telephone,
+  TextBox,
+  UrlInput,
+} from 'react-form-elements'
 
 const App = () => {
 
@@ -46,13 +51,27 @@ const App = () => {
       }}
     >
       <TextBox label="My Label" name="myTextBox" />
+      <TextBox
+        label="Passing Attributes"
+        name="inputWithNativeAttributes"
+        required
+        placeholder="Put some text here"
+      />
       <Checkbox
         label="My Checkbox"
-        initialValue={false}
-        checked={false}
-        name="myCheckBox"
+        isChecked={true}
+        name="check"
+        value="checkpoint"
       />
-      <Radio label="My Radio" name="myRadio" checked={false} />
+      <RadioGroup
+        name="rgroup"
+        label="The Radio"
+        initialChecked="first"
+        options={[
+          { value: 'first', label: 'First' },
+          { value: 'second', label: 'Second' },
+        ]}
+      />
       <DateTime label="My Date" name="myDate" />
       <Range label="My Range" name="myRange" />
       <Telephone label="Telephone" name="myTelephone" />
@@ -87,26 +106,54 @@ const App = () => {
           <Option initialValue="23" label="Third Third" />
         </OptionGroup>
       </DropDown>
-      <Button>Save</Button>
+      <ColorInput
+        label="Color"
+        name="color"
+        initialValue="#0668fa"
+        required
+      />
+      <UrlInput name="thisisaurl" label="URL" />
+      <EmailInput
+        name="emailbox"
+        label="Email"
+        initialValue="nospam@example.com"
+      />
+      <Button
+        onClick={e => {
+          console.info('The button was clicked')
+        }}
+      >
+        Check
+      </Button>
+
     </Form>
   )
 }
 ```
+### Form Data
 
-### Properties
+The `Form` component has an `onSubmit` event handler that passes the data from the form elements as an object
+
+### Elements
 
 * TextBox
+* TextArea
+* EmailInput
+* Telephone
+* UrlInput
 * DropDown
 * Option
 * OptionGroup
 * Range
 * CheckBox
-* Telephone
-
+* RadioGroup
+* ColorInput
+* Progress
+* Meter
 
 ### Notes
 
-__Still in Development__
+__Always in Development__
 
 ## Demo & Examples local
 
