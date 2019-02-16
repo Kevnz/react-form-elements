@@ -17,6 +17,19 @@ describe('TextBox component', () => {
       const label = getByText('My Label')
       expect(label.textContent).toBe('My Label')
     })
+    it('should have a placeholder when passed', () => {
+      const { getByText, container } = render(
+        <TextBox
+          label="My Label"
+          initialValue=""
+          placeholder="textbox placeholder"
+        />
+      )
+
+      expect(container.firstChild).toMatchSnapshot()
+      const label = getByText('My Label')
+      expect(label.textContent).toBe('My Label')
+    })
   })
   describe('handling input', () => {
     it('should set a value when passed in', () => {

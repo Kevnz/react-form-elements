@@ -21,7 +21,7 @@ describe('Checkbox component', () => {
   describe('handling input', () => {
     it('should set a value when passed in', () => {
       const { getByLabelText, container } = render(
-        <Checkbox label="My Label" initialValue={true} />
+        <Checkbox label="My Label" isChecked={true} value="test value" />
       )
 
       expect(container.firstChild).toMatchSnapshot()
@@ -30,7 +30,7 @@ describe('Checkbox component', () => {
     })
     it('should update a value when changed in', () => {
       const { getByLabelText, container } = render(
-        <Checkbox label="My Label" initialValue={false} />
+        <Checkbox label="My Label" isChecked={false} value="updateval" />
       )
 
       expect(container.firstChild).toMatchSnapshot()

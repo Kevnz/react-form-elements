@@ -55,7 +55,8 @@ class App extends React.Component {
           <Checkbox
             label="My Checkbox"
             ref={this.references.checkBox}
-            initialValue={true}
+            isChecked={true}
+            value="as-test-check"
           />
           <DateTime label="My Date" ref={this.references.date} />
           <Range label="My Range" ref={this.references.range} />
