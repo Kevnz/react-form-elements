@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './example/src/index.js',
+  entry: path.resolve(__dirname, '../example', 'src', 'index.js'),
   module: {
     rules: [
       {
@@ -19,22 +19,25 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      'react-form-elements': path.resolve(__dirname, '../src', 'index.js'),
+    },
   },
   output: {
-    path: path.join(__dirname, '../', '/dist'),
-    publicPath: '/react-form-elements/',
+    path: path.join(__dirname, '/dist'),
+    publicPath: '/',
     filename: 'bundle.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'React Form Elements',
+      title: 'Custom template',
       // Load a custom template (lodash by default see the FAQ for details)
-      template: './example/src/index.html',
+      template: path.resolve(__dirname, '../example', 'src', 'index.html'),
     }),
   ],
   devServer: {
-    contentBase: './example/src',
+    contentBase: '../example/src',
     hot: true,
   },
 }

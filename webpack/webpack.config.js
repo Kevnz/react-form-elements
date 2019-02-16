@@ -19,6 +19,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      'react-form-elements': path.resolve(__dirname, '../src', 'index.js'),
+    },
   },
   output: {
     path: path.join(__dirname, '/dist'),
