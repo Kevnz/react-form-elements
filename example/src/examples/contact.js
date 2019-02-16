@@ -1,7 +1,14 @@
 import React, { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
-import { Form, TextArea, TextBox, EmailInput, Fieldset } from '../../../src'
+import {
+  Form,
+  TextArea,
+  TextBox,
+  EmailInput,
+  Fieldset,
+  Button,
+} from '../../../src'
 
 const ContactForm = () => {
   const [data, setData] = useState(null)
@@ -9,7 +16,10 @@ const ContactForm = () => {
   import React, { Component, createRef } from 'react'
   import {
     Button,
+    EmailInput,
+    Fieldset,
     Form,
+    TextArea,
     TextBox,
   } from 'react-form-elements'
 
@@ -23,14 +33,16 @@ const ContactForm = () => {
         sendData({ formValues: values })
       }}
     >
-      <TextBox name="name" label="Your Name" initialValue="" />
-      <EmailInput
-        name="emailAddress"
-        label="Your Email"
-        initialValue=""
-      />
-      <TextArea label="Your Message" name="message" />
-      <Button>Send</Button>
+      <Fieldset legend="Contact Form">
+        <TextBox name="name" label="Your Name" initialValue="" />
+        <EmailInput
+          name="emailAddress"
+          label="Your Email"
+          initialValue=""
+        />
+        <TextArea label="Your Message" name="message" />
+        <Button>Send</Button>
+      </Fieldset>
     </Form>)
   `
   return (
@@ -66,7 +78,7 @@ const ContactForm = () => {
               />
               <TextArea label="Your Message" name="message" />
 
-              <button>Send</button>
+              <Button>Send</Button>
             </Fieldset>
           </Form>
         </div>
