@@ -55,11 +55,14 @@ label {
 	font-style: italic;
 	color: #999;
 }
-
-.form-row_container input, .form-row_container select {
+.rfe-form__row label {
+  min-width: 200px;
+  display: inline-block;
+}
+.rfe-form__row  input, .rfe-form__row  select {
 	margin-left:10px;
 }
-.form-row_container label span {
+.rfe-form__row  label span {
 	padding-left: 10px;
 }
 .modal-shim {
