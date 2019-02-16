@@ -1,37 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Telephone component The Rendered HTML should have a label 1`] = `
+exports[`EmailInput component The Rendered HTML should have a label 1`] = `
 <div
   class="rfe-form__row "
 >
   <label
     for="id-1-1"
   >
-    My Telephone Label
+    My EmailInput Label
   </label>
   <input
     id="id-1-1"
     name="TextBox"
-    type="tel"
+    type="email"
     value=""
   />
 </div>
 `;
 
-exports[`Telephone component handling input should set a value when passed in 1`] = `
+exports[`EmailInput component handling input should set a value when passed in but not be valid 1`] = `
 <div
   class="rfe-form__row "
 >
   <label
     for="id-2-1"
   >
-    My Label
+    My Example Email
   </label>
   <input
     id="id-2-1"
     name="TextBox"
-    type="tel"
-    value="0800121212"
+    type="email"
+    value="name@example.com"
   />
 </div>
 `;

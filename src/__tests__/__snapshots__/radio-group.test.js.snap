@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio component The Rendered HTML should have a label 1`] = `
+<div
+  class="rfe-form__row rfe-radiogroup"
+>
+  <label>
+    The Radio
+  </label>
+  <div
+    class="rfe-radiogroup__row"
+  >
+    <label
+      for="id-1-1"
+    >
+       
+      First
+       
+    </label>
+    <input
+      checked=""
+      id="id-1-1"
+      name="mygroup"
+      type="radio"
+      value="first"
+    />
+  </div>
+  <div
+    class="rfe-radiogroup__row"
+  >
+    <label
+      for="id-2-1"
+    >
+       
+      Second
+       
+    </label>
+    <input
+      id="id-2-1"
+      name="mygroup"
+      type="radio"
+      value="second"
+    />
+  </div>
+  <input
+    type="hidden"
+    value="first"
+  />
+</div>
+`;
+
+exports[`Radio component handling input should set a value when passed in 1`] = `
+<div
+  class="rfe-form__row rfe-radiogroup"
+>
+  <label>
+    The Radio
+  </label>
+  <div
+    class="rfe-radiogroup__row"
+  >
+    <label
+      for="id-3-1"
+    >
+       
+      First
+       
+    </label>
+    <input
+      checked=""
+      id="id-3-1"
+      name="mygroup"
+      type="radio"
+      value="first"
+    />
+  </div>
+  <div
+    class="rfe-radiogroup__row"
+  >
+    <label
+      for="id-4-1"
+    >
+       
+      Second
+       
+    </label>
+    <input
+      id="id-4-1"
+      name="mygroup"
+      type="radio"
+      value="second"
+    />
+  </div>
+  <input
+    type="hidden"
+    value="first"
+  />
+</div>
+`;
+
+exports[`Radio component handling input should update a value when changed in 1`] = `
+<div
+  class="rfe-form__row rfe-radiogroup"
+>
+  <label>
+    The Radio
+  </label>
+  <div
+    class="rfe-radiogroup__row"
+  >
+    <label
+      for="id-5-1"
+    >
+       
+      First
+       
+    </label>
+    <input
+      checked=""
+      id="id-5-1"
+      name="mygroup"
+      type="radio"
+      value="first"
+    />
+  </div>
+  <div
+    class="rfe-radiogroup__row"
+  >
+    <label
+      for="id-6-1"
+    >
+       
+      Second
+       
+    </label>
+    <input
+      id="id-6-1"
+      name="mygroup"
+      type="radio"
+      value="second"
+    />
+  </div>
+  <input
+    type="hidden"
+    value="first"
+  />
+</div>
+`;

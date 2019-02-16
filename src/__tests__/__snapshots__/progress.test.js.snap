@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress component The Rendered HTML should have a label 1`] = `
+<div
+  class="rfe-form__row rfe-progress"
+>
+  <label
+    for="id-1-1"
+  >
+    My Progress Element
+  </label>
+  <progress
+    id="id-1-1"
+    name="Progress"
+    value="50"
+  />
+</div>
+`;
+
+exports[`Progress component handling input should have a value set 1`] = `
+<div
+  class="rfe-form__row rfe-progress"
+>
+  <label
+    for="id-2-1"
+  >
+    My Example Progress
+  </label>
+  <progress
+    id="id-2-1"
+    max="100"
+    name="Progress"
+    value="20"
+  />
+</div>
+`;

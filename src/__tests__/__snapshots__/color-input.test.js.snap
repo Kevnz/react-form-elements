@@ -1,37 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Telephone component The Rendered HTML should have a label 1`] = `
+exports[`ColorInput component The Rendered HTML should have a label 1`] = `
 <div
   class="rfe-form__row "
 >
   <label
     for="id-1-1"
   >
-    My Telephone Label
+    My ColorInput Label
   </label>
   <input
     id="id-1-1"
     name="TextBox"
-    type="tel"
+    type="color"
     value=""
   />
 </div>
 `;
 
-exports[`Telephone component handling input should set a value when passed in 1`] = `
+exports[`ColorInput component handling input should set the value to \`#000000\` when passed non color input 1`] = `
 <div
   class="rfe-form__row "
 >
   <label
     for="id-2-1"
   >
-    My Label
+    My Color Value
   </label>
   <input
     id="id-2-1"
     name="TextBox"
-    type="tel"
-    value="0800121212"
+    type="color"
+    value="#0668fa"
   />
 </div>
 `;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextBox component The Rendered HTML should have a label 1`] = `
+<button>
+  Save
+</button>
+`;

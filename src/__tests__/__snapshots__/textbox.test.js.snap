@@ -2,7 +2,7 @@
 
 exports[`TextBox component The Rendered HTML should have a label 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row "
 >
   <label
     for="id-1-1"
@@ -11,15 +11,16 @@ exports[`TextBox component The Rendered HTML should have a label 1`] = `
   </label>
   <input
     id="id-1-1"
+    name="TextBox"
     type="text"
     value=""
   />
 </div>
 `;
 
-exports[`TextBox component handling input should set a value when passed in 1`] = `
+exports[`TextBox component The Rendered HTML should have a placeholder when passed 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row "
 >
   <label
     for="id-2-1"
@@ -28,15 +29,17 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
   </label>
   <input
     id="id-2-1"
+    name="TextBox"
+    placeholder="textbox placeholder"
     type="text"
-    value="My Input Value"
+    value=""
   />
 </div>
 `;
 
-exports[`TextBox component handling input should update a value when changed 1`] = `
+exports[`TextBox component handling input should set a value when passed in 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row "
 >
   <label
     for="id-3-1"
@@ -45,6 +48,25 @@ exports[`TextBox component handling input should update a value when changed 1`]
   </label>
   <input
     id="id-3-1"
+    name="TextBox"
+    type="text"
+    value="My Input Value"
+  />
+</div>
+`;
+
+exports[`TextBox component handling input should update a value when changed 1`] = `
+<div
+  class="rfe-form__row "
+>
+  <label
+    for="id-5-1"
+  >
+    My Label
+  </label>
+  <input
+    id="id-5-1"
+    name="TextBox"
     type="text"
     value="Updated Value"
   />

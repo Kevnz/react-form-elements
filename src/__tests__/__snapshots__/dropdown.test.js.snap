@@ -2,7 +2,7 @@
 
 exports[`DropDown component The Rendered HTML should allow a mix of OptionGroups and Options 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-3-1"
@@ -72,7 +72,7 @@ exports[`DropDown component The Rendered HTML should allow a mix of OptionGroups
 
 exports[`DropDown component The Rendered HTML should not need the OptionGroup 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-2-1"
@@ -133,7 +133,7 @@ exports[`DropDown component The Rendered HTML should not need the OptionGroup 1`
 
 exports[`DropDown component The Rendered HTML should render the full tree 1`] = `
 <div
-  class="form-row_container"
+  class="rfe-form__row"
 >
   <label
     for="id-1-1"
