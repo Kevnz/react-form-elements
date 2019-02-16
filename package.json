@@ -1,6 +1,6 @@
 {
   "name": "react-form-elements",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "description": "React Form Elements",
   "main": "lib/index.js",
   "files": [
@@ -16,22 +16,24 @@
     "url": "https://github.com/kevnz/react-form-elements/issues"
   },
   "peerDependencies": {
-    "react": "^16.5.2"
+    "react": "^16.8.1"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "prop-types": "^15.6.2",
-    "react-html-id": "^0.1.5"
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@kev_nz/eslint-config": "^3.0.1",
+    "@reach/router": "^1.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "classnames": "^2.2.6",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
     "gh-pages": "^2.0.1",
@@ -40,7 +42,9 @@
     "parcel-bundler": "^1.11.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
+    "react-github-corner": "^2.3.0",
     "react-hot-loader": "^4.6.5",
+    "react-styleguidist": "^9.0.0-beta4",
     "react-syntax-highlighter": "^10.1.2",
     "react-testing-library": "^5.5.4",
     "regenerator-runtime": "^0.13.1",
@@ -53,6 +57,7 @@
     "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development",
     "examples": "webpack --config ./webpack/webpack.config.publish.js --mode production",
+    "examples:dev": "webpack-dev-server --config ./webpack/webpack.config.examples.js --mode development",
     "lint": "eslint ./src",
     "publish:site": "node ./scripts/publish.js",
     "release": "do something to release",
@@ -60,7 +65,9 @@
     "posttranspile": "jest ./lib",
     "test": "jest",
     "prepare": "npm run examples && npm run transpile",
-    "postpublish": "npm run publish:site"
+    "postpublish": "npm run publish:site",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "keywords": [
     "react",
