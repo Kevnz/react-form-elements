@@ -1,15 +1,26 @@
 import React, { createRef } from 'react'
 import PropTypes from 'prop-types'
 const Form = ({ name, onSubmit, children }) => {
-  const mapped = children.map(child => {
-    const displayName = child.type ? child.type.displayName : false
-    if (!displayName) return child
-    return Object.assign({}, child, { ref: createRef() })
-  })
+  const mapped = Array.isArray(children)
+    ? children.map(child => {
+        const displayName = child.type ? child.type.displayName : false
+        if (!displayName) return child
+        return Object.assign({}, child, {
+          ref: createRef(),
+          displayName: displayName,
+        })
+      })
+    : [
+        Object.assign({}, children, {
+          ref: createRef(),
+          displayName: children.type.displayName,
+        }),
+      ]
 
   const formElements = mapped.map(formElement => ({
     name: formElement.props.name,
     ref: formElement.ref,
+    displayName: formElement.displayName,
   }))
 
   return (
@@ -17,13 +28,19 @@ const Form = ({ name, onSubmit, children }) => {
       name={name}
       className="rfe-form"
       onSubmit={e => {
-        const values = {}
+        let values = {}
+        if (formElements.length === 1) {
+          values = formElements[0].ref.current.getValues()
+        }
         formElements.forEach(el => {
           if (!el.name) {
             return
           }
-
-          values[el.name] = el.ref.current.getValue()
+          if (el.ref.current.isFieldset) {
+            Object.assign(values, el.ref.current.getValues())
+          } else {
+            values[el.name] = el.ref.current.getValue()
+          }
         })
         e.preventDefault()
         onSubmit(values)
