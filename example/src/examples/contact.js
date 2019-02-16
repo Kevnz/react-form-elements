@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
-import { Form, TextArea, TextBox, EmailInput } from '../../../src'
+import { Form, TextArea, TextBox, EmailInput, Fieldset } from '../../../src'
 
 const ContactForm = () => {
   const [data, setData] = useState(null)
@@ -57,15 +57,17 @@ const ContactForm = () => {
               setData({ formValues: values })
             }}
           >
-            <TextBox name="name" label="Your Name" initialValue="" />
-            <EmailInput
-              name="emailAddress"
-              label="Your Email"
-              initialValue=""
-            />
-            <TextArea label="Your Message" name="message" />
+            <Fieldset legend="Contact Form">
+              <TextBox name="name" label="Your Name" initialValue="" />
+              <EmailInput
+                name="emailAddress"
+                label="Your Email"
+                initialValue=""
+              />
+              <TextArea label="Your Message" name="message" />
 
-            <button>Send</button>
+              <button>Send</button>
+            </Fieldset>
           </Form>
         </div>
         <div className="mar-b-md mar-t-md">

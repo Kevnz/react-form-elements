@@ -29,6 +29,7 @@ import {
   DateTime,
   DropDown,
   EmailInput,
+  Fieldset,
   Form,
   Option,
   OptionGroup,
@@ -50,82 +51,83 @@ const App = () => {
         // data.<Name of Element>
       }}
     >
-      <TextBox label="My Label" name="myTextBox" />
-      <TextBox
-        label="Passing Attributes"
-        name="inputWithNativeAttributes"
-        required
-        placeholder="Put some text here"
-      />
-      <Checkbox
-        label="My Checkbox"
-        isChecked={true}
-        name="check"
-        value="checkpoint"
-      />
-      <RadioGroup
-        name="rgroup"
-        label="The Radio"
-        initialChecked="first"
-        options={[
-          { value: 'first', label: 'First' },
-          { value: 'second', label: 'Second' },
-        ]}
-      />
-      <DateTime label="My Date" name="myDate" />
-      <Range label="My Range" name="myRange" />
-      <Telephone label="Telephone" name="myTelephone" />
-      <DateTime label="My DateTime" type="datetime" name="myDateTime" />
-      <DateTime label="My Month" type="month" name="myMonth" />
-      <DateTime label="My Week" type="week" name="myWeek" />
-      <DateTime
-        label="My DateTime"
-        type="datetime-local"
-        name="myDateTimeLocal"
-      />
-      <DateTime label="My Time" type="time" name="myTime" />
-      <DropDown
-        label="My Drop Down"
-        initialValue="2"
-        data-testid="dd1"
-        name="myDropDown"
-      >
-        <OptionGroup label="First Group">
-          <Option initialValue="1">First</Option>
-          <Option initialValue="2">Second</Option>
-          <Option initialValue="3" label="Third" />
-        </OptionGroup>
-        <OptionGroup label="Second Group">
-          <Option initialValue="11">Second First</Option>
-          <Option initialValue="12">Second Second</Option>
-          <Option initialValue="13" label="Second Third" />
-        </OptionGroup>
-        <OptionGroup label="Third Group">
-          <Option initialValue="21">Third First</Option>
-          <Option initialValue="22">Third Second</Option>
-          <Option initialValue="23" label="Third Third" />
-        </OptionGroup>
-      </DropDown>
-      <ColorInput
-        label="Color"
-        name="color"
-        initialValue="#0668fa"
-        required
-      />
-      <UrlInput name="thisisaurl" label="URL" />
-      <EmailInput
-        name="emailbox"
-        label="Email"
-        initialValue="nospam@example.com"
-      />
-      <Button
-        onClick={e => {
-          console.info('The button was clicked')
-        }}
-      >
-        Check
-      </Button>
-
+      <Fieldset legend="My Form">
+        <TextBox label="My Label" name="myTextBox" />
+        <TextBox
+          label="Passing Attributes"
+          name="inputWithNativeAttributes"
+          required
+          placeholder="Put some text here"
+        />
+        <Checkbox
+          label="My Checkbox"
+          isChecked={true}
+          name="check"
+          value="checkpoint"
+        />
+        <RadioGroup
+          name="rgroup"
+          label="The Radio"
+          initialChecked="first"
+          options={[
+            { value: 'first', label: 'First' },
+            { value: 'second', label: 'Second' },
+          ]}
+        />
+        <DateTime label="My Date" name="myDate" />
+        <Range label="My Range" name="myRange" />
+        <Telephone label="Telephone" name="myTelephone" />
+        <DateTime label="My DateTime" type="datetime" name="myDateTime" />
+        <DateTime label="My Month" type="month" name="myMonth" />
+        <DateTime label="My Week" type="week" name="myWeek" />
+        <DateTime
+          label="My DateTime"
+          type="datetime-local"
+          name="myDateTimeLocal"
+        />
+        <DateTime label="My Time" type="time" name="myTime" />
+        <DropDown
+          label="My Drop Down"
+          initialValue="2"
+          data-testid="dd1"
+          name="myDropDown"
+        >
+          <OptionGroup label="First Group">
+            <Option initialValue="1">First</Option>
+            <Option initialValue="2">Second</Option>
+            <Option initialValue="3" label="Third" />
+          </OptionGroup>
+          <OptionGroup label="Second Group">
+            <Option initialValue="11">Second First</Option>
+            <Option initialValue="12">Second Second</Option>
+            <Option initialValue="13" label="Second Third" />
+          </OptionGroup>
+          <OptionGroup label="Third Group">
+            <Option initialValue="21">Third First</Option>
+            <Option initialValue="22">Third Second</Option>
+            <Option initialValue="23" label="Third Third" />
+          </OptionGroup>
+        </DropDown>
+        <ColorInput
+          label="Color"
+          name="color"
+          initialValue="#0668fa"
+          required
+        />
+        <UrlInput name="thisisaurl" label="URL" />
+        <EmailInput
+          name="emailbox"
+          label="Email"
+          initialValue="nospam@example.com"
+        />
+        <Button
+          onClick={e => {
+            console.info('The button was clicked')
+          }}
+        >
+          Check
+        </Button>
+      </Fieldset>
     </Form>
   )
 }
@@ -150,6 +152,8 @@ The `Form` component has an `onSubmit` event handler that passes the data from t
 * ColorInput
 * Progress
 * Meter
+* Form
+* Fieldset
 
 ### Notes
 

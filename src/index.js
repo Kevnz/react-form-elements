@@ -4,6 +4,7 @@ import ColorInput from './color-input'
 import DateTime from './datetime'
 import DropDown from './dropdown'
 import EmailInput from './email-input'
+import Fieldset from './fieldset'
 import Form from './form'
 import Meter from './meter'
 import Option from './option'
@@ -25,6 +26,7 @@ export {
   DateTime,
   DropDown,
   EmailInput,
+  Fieldset,
   Form,
   Meter,
   Option,
