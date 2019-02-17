@@ -155,6 +155,36 @@ The `Form` component has an `onSubmit` event handler that passes the data from t
 * Form
 * Fieldset
 
+### Hooks
+
+React Form Elements exposes the `useFormElement` hook that can be used to enable integration with your own custom elements with the form management.
+
+```jsx
+
+import React, { Component, createRef } from 'react'
+import {
+  useFormElement,
+  Button,
+  Form,
+} from 'react-form-elements'
+
+export default () => {
+  const ref = createRef()
+  const { id, value, handleChange, inputRef } = useFormElement('', ref)
+  return (<Form
+      name="sampleForm"
+      onSubmit={values => {
+        console.log('Custom', values.myCustomInput)
+        sendData({ formValues: values })
+      }}
+    >
+      <input name="myCustomInput" ref={inputRef} type="text" />
+      <Button>Send</Button>
+    </Form>)
+  }
+
+```
+
 ### Notes
 
 __Always in Development__
