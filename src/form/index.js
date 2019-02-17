@@ -28,6 +28,7 @@ const Form = ({ name, onSubmit, children }) => {
       name={name}
       className="rfe-form"
       onSubmit={e => {
+        e.preventDefault()
         let values = {}
         if (formElements.length === 1) {
           values = formElements[0].ref.current.getValues()
@@ -39,7 +40,9 @@ const Form = ({ name, onSubmit, children }) => {
           if (el.ref.current.isFieldset) {
             Object.assign(values, el.ref.current.getValues())
           } else {
-            values[el.name] = el.ref.current.getValue()
+            values[el.name] = el.ref.current.getValue
+              ? el.ref.current.getValue()
+              : el.ref.current.value
           }
         })
         e.preventDefault()

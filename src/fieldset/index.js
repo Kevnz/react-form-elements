@@ -31,7 +31,9 @@ const Fieldset = forwardRef(({ children, legend, ...props }, ref) => {
         if (!el.name) {
           return
         }
-        values[el.name] = el.ref.current.getValue()
+        values[el.name] = el.ref.current.getValue
+          ? el.ref.current.getValue()
+          : el.ref.current.value
       })
       return values
     },

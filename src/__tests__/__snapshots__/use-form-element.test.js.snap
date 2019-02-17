@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useFormElement hook handling input should set a value when passed in 1`] = `
+<input
+  data-testid="test-hook-1"
+  name="hookedInput"
+  type="text"
+  value="My Input Value"
+/>
+`;
+
+exports[`useFormElement hook handling input should update a value when changed 1`] = `
+<input
+  data-testid="test-hook-2"
+  name="hookedInput"
+  type="text"
+  value="Updated Value"
+/>
+`;

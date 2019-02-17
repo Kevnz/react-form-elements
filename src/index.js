@@ -17,6 +17,7 @@ import Telephone from './telephone'
 import TextArea from './textarea'
 import TextBox from './textbox'
 import UrlInput from './url-input'
+import useFormElement from './utils/use-form-element'
 
 export {
   Button,
@@ -40,4 +41,5 @@ export {
   TextArea,
   TextBox,
   UrlInput,
+  useFormElement,
 }
