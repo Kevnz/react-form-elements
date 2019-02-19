@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import React, { useState } from 'react'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
 import { Button, Form, Meter, Progress } from '../../../src'
 
-const ContactForm = () => {
+const OtherElementsForm = () => {
   const [data, setData] = useState(null)
   const codeString = `
   import React, { Component, createRef } from 'react'
@@ -122,4 +122,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default OtherElementsForm

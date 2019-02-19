@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   UrlInput,
 } from '../../../src'
 
-const ContactForm = () => {
+const AttributesForm = () => {
   const [data, setData] = useState(null)
   const codeString = `
   import React, { Component, createRef } from 'react'
@@ -68,11 +68,11 @@ const ContactForm = () => {
           <Form
             name="inputsForm"
             onSubmit={values => {
-              console.log('Name', values.userName)
-              console.log('Email', values.userEmail)
-              console.log('Message', values.message)
-              console.log('URL', values.webAddress)
-              console.log('Telephone', values.telephoneNumber)
+              console.info('Name', values.userName)
+              console.info('Email', values.userEmail)
+              console.info('Message', values.message)
+              console.info('URL', values.webAddress)
+              console.info('Telephone', values.telephoneNumber)
               setData({ formValues: values })
             }}
           >
@@ -109,4 +109,4 @@ const ContactForm = () => {
   )
 }
 
-export default ContactForm
+export default AttributesForm

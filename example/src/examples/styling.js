@@ -1,7 +1,7 @@
 import React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
-const Home = () => {
+const StylingInfo = () => {
   const formMarkup = `<form
     class="rfe-form"
     name="testForm"
@@ -103,4 +103,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default StylingInfo

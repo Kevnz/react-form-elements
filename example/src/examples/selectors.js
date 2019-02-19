@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
 import {
   Button,
@@ -13,8 +13,7 @@ import {
   Range,
 } from '../../../src'
 
-const InputsForm = () => {
-  console.log('InputsForm')
+const SelectorsForm = () => {
   const [data, setData] = useState(null)
   const codeString = `
   import React, { Component, createRef } from 'react'
@@ -89,11 +88,11 @@ const InputsForm = () => {
           <Form
             name="inputsForm"
             onSubmit={values => {
-              console.log('DropDown', values.dropdown)
-              console.log('RadioGroup', values.radioGroup)
-              console.log('CheckBox', values.checkbox)
-              console.log('Color', values.color)
-              console.log('Range', values.range)
+              console.info('DropDown', values.dropdown)
+              console.info('RadioGroup', values.radioGroup)
+              console.info('CheckBox', values.checkbox)
+              console.info('Color', values.color)
+              console.info('Range', values.range)
               setData({ formValues: values })
             }}
           >
@@ -158,4 +157,4 @@ const InputsForm = () => {
   )
 }
 
-export default InputsForm
+export default SelectorsForm

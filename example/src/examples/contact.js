@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
 import {
   Form,
@@ -63,9 +63,9 @@ const ContactForm = () => {
           <Form
             name="contactForm"
             onSubmit={values => {
-              console.log('Name', values.name)
-              console.log('Email', values.emailAddress)
-              console.log('Message', values.message)
+              console.info('Name', values.name)
+              console.info('Email', values.emailAddress)
+              console.info('Message', values.message)
               setData({ formValues: values })
             }}
           >
