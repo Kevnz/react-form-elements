@@ -14,10 +14,8 @@ describe('useFormElement hook', () => {
       const testId = 'test-hook-1'
       const TestInput = () => {
         const ref = createRef()
-        const { id, value, handleChange, inputRef } = useFormElement(val, ref)
+        const { value, handleChange, inputRef } = useFormElement(val, ref)
 
-        console.log('id', id)
-        console.log('test', testId)
         return (
           <input
             data-testid={testId}

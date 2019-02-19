@@ -126,4 +126,18 @@ describe('The form components as a form', () => {
     rerender(<App />)
     expect(container.firstChild).toMatchSnapshot()
   })
+  it('should render properly c2', () => {
+    const { container, getByLabelText, getByTestId, rerender } = render(<App />)
+    const textBox = getByLabelText('My Label')
+    const dd = getByTestId('dd1')
+    console.log('container parentNode', container.parentNode)
+    const dropDownValue = dd.value
+    expect(dropDownValue).toBe('2')
+    fireEvent.change(textBox, { target: { value: 'Changed Value' } })
+    fireEvent.change(dd, { target: { value: '22' } })
+    const changedDropDownValue = dd.value
+    expect(changedDropDownValue).toBe('22')
+    rerender(<App />)
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })
