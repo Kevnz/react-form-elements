@@ -37,4 +37,7 @@ module.exports = {
     contentBase: './example/src',
     hot: true,
   },
+  optimization: {
+    usedExports: true,
+  },
 }

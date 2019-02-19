@@ -1,7 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 module.exports = {
   entry: path.resolve(__dirname, '../example', 'src', 'index.js'),
   module: {
@@ -29,7 +30,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       title: 'Custom template',
       // Load a custom template (lodash by default see the FAQ for details)
@@ -39,5 +40,8 @@ module.exports = {
   devServer: {
     contentBase: '../example/src',
     hot: true,
+  },
+  optimization: {
+    usedExports: true,
   },
 }
