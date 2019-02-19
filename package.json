@@ -30,6 +30,7 @@
     "@babel/preset-react": "^7.0.0",
     "@kev_nz/eslint-config": "^3.0.1",
     "@reach/router": "^1.2.1",
+    "@sentry/browser": "^4.6.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
@@ -50,6 +51,7 @@
     "regenerator-runtime": "^0.13.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.3",
+    "webpack-bundle-analyzer": "^3.0.4",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
   },
@@ -57,7 +59,9 @@
     "build": "webpack --config ./webpack/webpack.config.js --mode production",
     "start": "webpack-dev-server --config ./webpack/webpack.config.js --mode development",
     "examples": "webpack --config ./webpack/webpack.config.publish.js --mode production",
+    "examples:debug": "webpack --config ./webpack/webpack.config.examples.js --mode production --profile",
     "examples:dev": "webpack-dev-server --config ./webpack/webpack.config.examples.js --mode development",
+    "examples:prod": "webpack --config ./webpack/webpack.config.examples.js --mode production",
     "lint": "eslint ./src",
     "publish:site": "node ./scripts/publish.js",
     "release": "do something to release",
@@ -67,7 +71,8 @@
     "prepare": "npm run examples && npm run transpile",
     "postpublish": "npm run publish:site",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "coverage": "jest ./src --coverage"
   },
   "keywords": [
     "react",
