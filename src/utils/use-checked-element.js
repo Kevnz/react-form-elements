@@ -1,4 +1,4 @@
-import React, { useState, useRef, useImperativeHandle } from 'react'
+import { useState, useRef, useImperativeHandle } from 'react'
 import useId from './use-id'
 
 const useCheckedElement = (value, initialChecked, ref) => {
