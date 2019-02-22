@@ -74,7 +74,7 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "coverage:old": "jest ./src --coverage",
-    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "coverage": "jest ./src --coverage --coverageReporters=text-lcov | coveralls"
   },
   "keywords": [
     "react",
