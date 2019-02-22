@@ -35,6 +35,7 @@
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
+    "coveralls": "^3.0.2",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
     "gh-pages": "^2.0.1",
@@ -72,10 +73,18 @@
     "postpublish": "npm run publish:site",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "coverage": "jest ./src --coverage"
+    "coverage:old": "jest ./src --coverage",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "keywords": [
     "react",
     "react-component"
-  ]
+  ],
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "html"
+    ]
+  }
 }
