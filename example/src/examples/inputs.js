@@ -5,6 +5,7 @@ import {
   Button,
   EmailInput,
   Form,
+  Password,
   Telephone,
   TextArea,
   TextBox,
@@ -28,6 +29,11 @@ const InputsForm = () => {
       }}
     >
       <TextBox name="name" label="TextBox" initialValue="" />
+      <Password
+        name="password"
+        label="Password Input"
+        initialValue=""
+      />
       <EmailInput
         name="emailAddress"
         label="Email Input"
@@ -65,6 +71,7 @@ const InputsForm = () => {
             name="inputsForm"
             onSubmit={values => {
               console.info('Name', values.userName)
+              console.info('Password', values.password)
               console.info('Email', values.userEmail)
               console.info('Message', values.message)
               console.info('URL', values.webAddress)
@@ -73,6 +80,7 @@ const InputsForm = () => {
             }}
           >
             <TextBox name="name" label="TextBox" initialValue="" />
+            <Password name="password" label="Password Input" initialValue="" />
             <EmailInput
               name="emailAddress"
               label="Email Input"

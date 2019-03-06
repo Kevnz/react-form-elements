@@ -9,6 +9,7 @@ import Form from './form'
 import Meter from './meter'
 import Option from './option'
 import OptionGroup from './option-group'
+import Password from './password'
 import Progress from './progress'
 import Radio from './radio'
 import RadioGroup from './radio-group'
@@ -33,6 +34,8 @@ export {
   Option,
   OptionGroup as OptGroup,
   OptionGroup,
+  Password,
+  Password as PasswordInput,
   Progress,
   Radio,
   RadioGroup,
