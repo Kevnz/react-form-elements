@@ -146,8 +146,8 @@ The `Form` component has an `onSubmit` event handler that passes the data from t
 * Form
 * Meter
 * Option
-* OptionGroup
-* Password
+* OptionGroup (also as OptGroup)
+* Password (also as PasswordInput)
 * Progress
 * RadioGroup
 * Range
