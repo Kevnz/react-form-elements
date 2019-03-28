@@ -16,7 +16,7 @@ const Form = ({ name, onSubmit, children }) => {
           displayName: children.type.displayName,
         }),
       ]
-
+  const fref = createRef()
   const formElements = mapped.map(formElement => ({
     name: formElement.props ? formElement.props.name : formElement.name,
     ref: formElement.ref,
@@ -27,9 +27,12 @@ const Form = ({ name, onSubmit, children }) => {
     <form
       name={name}
       className="rfe-form"
+      ref={fref}
       onSubmit={e => {
         e.preventDefault()
+        console.info('fref', fref.current.reportValidity())
         let values = {}
+        let validations = {}
         if (formElements.length === 1) {
           values = formElements[0].ref.current.getValues()
         }
@@ -43,10 +46,19 @@ const Form = ({ name, onSubmit, children }) => {
             values[el.name] = el.ref.current.getValue
               ? el.ref.current.getValue()
               : el.ref.current.value
+            validations[el.name] = {
+              isValid: el.ref.current.isValid
+                ? el.ref.current.isValid()
+                : el.ref.current.validity || true,
+            }
+            if (!validations[el.name].isValid) {
+              validations[el.name].elementRef = el.ref.current
+            }
           }
         })
         e.preventDefault()
-        onSubmit(values)
+        console.log('validations', validations)
+        onSubmit(values, validations)
       }}
     >
       {mapped}

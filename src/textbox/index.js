@@ -1,13 +1,14 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import useFormElement from '../utils/use-form-element'
-
+import useElementValidator from '../utils/use-element-validator'
 const TextBox = forwardRef(
   ({ name, initialValue, label, type, ...otherProps }, ref) => {
     const { id, value, handleChange, inputRef } = useFormElement(
       initialValue,
       ref
     )
+    useElementValidator(inputRef, otherProps.messages)
     return (
       <div className="rfe-form__row ">
         <label htmlFor={id}>{label || ''}</label>
@@ -18,6 +19,7 @@ const TextBox = forwardRef(
           onChange={handleChange}
           value={value}
           type={type}
+          required={!!otherProps.required}
           {...otherProps}
         />
       </div>
@@ -34,6 +36,9 @@ TextBox.propTypes = {
   initialValue: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
+  errorMessage: PropTypes.string,
+  required: PropTypes.bool,
+  validator: PropTypes.func,
 }
 
 TextBox.defaultProps = {
@@ -41,4 +46,5 @@ TextBox.defaultProps = {
   initialValue: '',
   type: 'text',
   label: 'label',
+  required: false,
 }

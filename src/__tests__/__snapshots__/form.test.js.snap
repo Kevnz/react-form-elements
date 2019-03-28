@@ -21,15 +21,46 @@ exports[`The form components as a form should render and change accordingly 1`] 
     />
   </div>
   <div
-    class="rfe-form__row"
+    class="rfe-form__row "
   >
     <label
       for="id-2-1"
     >
-      My Checkbox
+      My Required
     </label>
     <input
       id="id-2-1"
+      name="reqTextBox"
+      required=""
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    class="rfe-form__row "
+  >
+    <label
+      for="id-3-1"
+    >
+      My Email
+    </label>
+    <input
+      id="id-3-1"
+      name="myEmail"
+      type="email"
+      value="hi"
+    />
+  </div>
+  <div
+    class="rfe-form__row"
+  >
+    <label
+      for="id-4-1"
+    >
+      My Checkbox
+    </label>
+    <input
+      id="id-4-1"
       name="myCheckBox"
       type="checkbox"
       value="checkbox value"
@@ -39,12 +70,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row"
   >
     <label
-      for="id-3-1"
+      for="id-5-1"
     >
       My Radio
     </label>
     <input
-      id="id-3-1"
+      id="id-5-1"
       name="myRadio"
       type="radio"
       value="myRadio1"
@@ -54,12 +85,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-4-1"
+      for="id-6-1"
     >
       My Date
     </label>
     <input
-      id="id-4-1"
+      id="id-6-1"
       name="myDate"
       type="date"
       value=""
@@ -69,12 +100,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row"
   >
     <label
-      for="id-5-1"
+      for="id-7-1"
     >
       My Range
     </label>
     <input
-      id="id-5-1"
+      id="id-7-1"
       max="100"
       min="0"
       step="1"
@@ -89,12 +120,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-6-1"
+      for="id-8-1"
     >
       Telephone
     </label>
     <input
-      id="id-6-1"
+      id="id-8-1"
       name="myTelephone"
       type="tel"
       value=""
@@ -104,12 +135,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-7-1"
+      for="id-9-1"
     >
       My DateTime
     </label>
     <input
-      id="id-7-1"
+      id="id-9-1"
       name="myDateTime"
       type="datetime"
       value=""
@@ -119,12 +150,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-8-1"
+      for="id-10-1"
     >
       My Month
     </label>
     <input
-      id="id-8-1"
+      id="id-10-1"
       name="myMonth"
       type="month"
       value=""
@@ -134,12 +165,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-9-1"
+      for="id-11-1"
     >
       My Week
     </label>
     <input
-      id="id-9-1"
+      id="id-11-1"
       name="myWeek"
       type="week"
       value=""
@@ -149,12 +180,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-10-1"
+      for="id-12-1"
     >
       My DateTime
     </label>
     <input
-      id="id-10-1"
+      id="id-12-1"
       name="myDateTimeLocal"
       type="datetime-local"
       value=""
@@ -164,12 +195,12 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row "
   >
     <label
-      for="id-11-1"
+      for="id-13-1"
     >
       My Time
     </label>
     <input
-      id="id-11-1"
+      id="id-13-1"
       name="myTime"
       type="time"
       value=""
@@ -179,13 +210,13 @@ exports[`The form components as a form should render and change accordingly 1`] 
     class="rfe-form__row"
   >
     <label
-      for="id-12-1"
+      for="id-14-1"
     >
       My Drop Down
     </label>
     <select
       data-testid="dd1"
-      id="id-12-1"
+      id="id-14-1"
     >
       <optgroup
         label="First Group"
@@ -259,6 +290,7 @@ Object {
   "myDateTime": "",
   "myDateTimeLocal": "",
   "myDropDown": "22",
+  "myEmail": "hi",
   "myMonth": "",
   "myRadio": null,
   "myRange": "50",
@@ -266,5 +298,6 @@ Object {
   "myTextBox": "Changed Value",
   "myTime": "",
   "myWeek": "",
+  "reqTextBox": "",
 }
 `;

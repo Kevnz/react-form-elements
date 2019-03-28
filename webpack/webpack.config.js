@@ -22,6 +22,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
     alias: {
       'react-form-elements': path.resolve(__dirname, '../src', 'index.js'),
+      'react-dom': '@hot-loader/react-dom',
     },
   },
   output: {
@@ -38,7 +39,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: './dist',
+    contentBase: './working',
     hot: true,
   },
 }

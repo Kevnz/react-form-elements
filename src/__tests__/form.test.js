@@ -5,6 +5,7 @@ import {
   Button,
   TextBox,
   Checkbox,
+  EmailInput,
   Range,
   DateTime,
   Telephone,
@@ -19,11 +20,14 @@ const App = ({ onSubmit }) => {
   return (
     <Form
       name="testForm"
-      onSubmit={e => {
+      onSubmit={(e, v) => {
+        console.info('va', v)
         onSubmit(e)
       }}
     >
       <TextBox label="My Label" name="myTextBox" />
+      <TextBox label="My Required" name="reqTextBox" required />
+      <EmailInput label="My Email" name="myEmail" initialValue="hi" />
       <Checkbox
         label="My Checkbox"
         value="checkbox value"
