@@ -4,6 +4,10 @@
   --state-primary: tomato;
 }
 
+body {
+  border-top: 0.5rem solid #1f8dd6;
+}
+
 nav {
   margin-bottom: .5em;
 }
