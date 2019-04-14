@@ -2,6 +2,10 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import useFormElement from '../utils/use-form-element'
 
+/**
+ * Meter Component.
+ *
+ */
 const Meter = forwardRef(
   (
     { name, initialValue, label, min, max, low, high, optimum, ...otherProps },

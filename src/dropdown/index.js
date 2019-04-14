@@ -2,6 +2,10 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import useFormElement from '../utils/use-form-element'
 
+/**
+ * DropDown Component.
+ *
+ */
 const DropDown = forwardRef(
   ({ name, initialValue, label, type, children, ...otherProps }, ref) => {
     const { id, value, handleChange, inputRef } = useFormElement(

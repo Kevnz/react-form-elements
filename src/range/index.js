@@ -2,6 +2,10 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import useFormElement from '../utils/use-form-element'
 
+/**
+ * Range Component.
+ *
+ */
 const Range = forwardRef(
   ({ name, initialValue, label, ...otherProps }, ref) => {
     const { id, value, handleChange, inputRef } = useFormElement(

@@ -18,6 +18,10 @@ const useGroupedElement = (initialChecked, ref) => {
   return { checked, inputRef, handleChange }
 }
 
+/**
+ * RadioGroup Component.
+ *
+ */
 const RadioGroup = forwardRef(
   ({ name, options, label, initialChecked, ...otherProps }, ref) => {
     const { checked, inputRef, handleChange } = useGroupedElement(
