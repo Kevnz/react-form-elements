@@ -42,7 +42,7 @@ const Form = ({ name, onSubmit, children }) => {
           if (!el.name) {
             return
           }
-          if (el.ref.current.isFieldset) {
+          if (el.ref.current.isFieldset || el.ref.current.isRow) {
             Object.assign(values, el.ref.current.getValues())
           } else {
             values[el.name] = el.ref.current.getValue

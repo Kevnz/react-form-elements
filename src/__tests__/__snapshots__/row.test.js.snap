@@ -258,7 +258,6 @@ exports[`The Row components as a form should render and change accordingly 1`] =
 
 exports[`The Row components as a form should render and change accordingly 2`] = `
 Object {
-  "Row": null,
   "myCheckBox": null,
   "myDate": "",
   "myDateTime": "",
@@ -536,6 +535,17 @@ exports[`The Row components as a form should render the second 1`] = `
 
 exports[`The Row components as a form should render the second 2`] = `
 Object {
-  "Row": null,
+  "myCheckBox": null,
+  "myDate": "",
+  "myDateTime": "",
+  "myDateTimeLocal": "",
+  "myDropDown": "2",
+  "myMonth": "",
+  "myRadio": null,
+  "myRange": "50",
+  "myTelephone": "",
+  "myTextBox": "",
+  "myTime": "",
+  "myWeek": "",
 }
 `;

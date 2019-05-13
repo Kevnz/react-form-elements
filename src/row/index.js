@@ -11,7 +11,6 @@ import PropTypes from 'prop-types'
  *
  */
 const Row = forwardRef(({ children, legend, ...props }, ref) => {
-  console.log('The Row REF', ref)
   const mapped = children.map(child => {
     const displayName = child.type ? child.type.displayName : false
     if (!displayName) return child
@@ -39,7 +38,6 @@ const Row = forwardRef(({ children, legend, ...props }, ref) => {
       return values
     },
     getValue: () => {
-      console.info('this', this)
       if (!this) return null
       return this.getValues()
     },
