@@ -14,6 +14,7 @@ import Progress from './progress'
 import Radio from './radio'
 import RadioGroup from './radio-group'
 import Range from './range'
+import Row from './row'
 import Telephone from './telephone'
 import TextArea from './textarea'
 import TextBox from './textbox'
@@ -40,9 +41,11 @@ export {
   Radio,
   RadioGroup,
   Range,
+  Row,
   Telephone,
   TextArea,
   TextBox,
+  TextBox as TextInput,
   UrlInput,
   useFormElement,
 }

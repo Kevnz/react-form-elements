@@ -2,6 +2,10 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import useCheckedElement from '../utils/use-checked-element'
 
+/**
+ * CheckBox Component.
+ *
+ */
 const CheckBox = forwardRef(
   ({ name, isChecked, label, value, ...otherProps }, ref) => {
     const { id, checked, handleChange, inputRef } = useCheckedElement(

@@ -1,6 +1,10 @@
 import { useState, useRef, useImperativeHandle } from 'react'
 import useId from './use-id'
 
+/**
+ * useFormElement Hook.
+ *
+ */
 const useFormElement = (initialValue, ref) => {
   const id = useId()
   const [value, setValue] = useState(initialValue)

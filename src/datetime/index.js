@@ -2,6 +2,10 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { TextBox } from '../'
 
+/**
+ * DateTime Component.
+ *
+ */
 const DateTime = forwardRef((props, ref) => <TextBox {...props} ref={ref} />)
 
 DateTime.displayName = 'ReactFormElements(Telephone)'

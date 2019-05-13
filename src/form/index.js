@@ -1,5 +1,10 @@
 import React, { createRef } from 'react'
 import PropTypes from 'prop-types'
+
+/**
+ * Form Component.
+ *
+ */
 const Form = ({ name, onSubmit, children }) => {
   const mapped = Array.isArray(children)
     ? children.map(child => {

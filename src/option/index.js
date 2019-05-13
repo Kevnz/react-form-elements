@@ -1,5 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+/**
+ * Option Component.
+ *
+ */
 const Option = ({ label, initialValue, ...otherProps }) => {
   return <option value={initialValue}>{label || otherProps.children}</option>
 }
