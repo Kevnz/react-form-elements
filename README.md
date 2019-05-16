@@ -35,6 +35,7 @@ import {
   OptionGroup,
   RadioGroup,
   Range,
+  Row,
   Telephone,
   TextBox,
   UrlInput,
@@ -144,6 +145,7 @@ The `Form` component has an `onSubmit` event handler that passes the data from t
 * EmailInput
 * Fieldset
 * Form
+* Input
 * Meter
 * Option
 * OptionGroup (also as OptGroup)
@@ -151,9 +153,10 @@ The `Form` component has an `onSubmit` event handler that passes the data from t
 * Progress
 * RadioGroup
 * Range
+* Row
 * Telephone
 * TextArea
-* TextBox
+* TextBox (also as TextInput)
 * UrlInput
 
 ### Hooks

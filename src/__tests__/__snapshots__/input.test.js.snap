@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component The Rendered HTML should have a placeholder when passed 1`] = `
+<input
+  id="id-2-1"
+  name="Input"
+  placeholder="textbox placeholder"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`Input component The Rendered HTML should render input element 1`] = `
+<input
+  id="id-1-1"
+  name="Input"
+  type="text"
+  value=""
+/>
+`;
+
+exports[`Input component handling input should set a value when passed in 1`] = `
+<input
+  id="id-3-1"
+  name="Input"
+  type="text"
+  value="My Input Value"
+/>
+`;
+
+exports[`Input component handling input should update a value when changed 1`] = `
+<input
+  id="id-5-1"
+  name="Input"
+  type="text"
+  value="Updated Value"
+/>
+`;
