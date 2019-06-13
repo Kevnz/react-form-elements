@@ -75,11 +75,13 @@
     "posttranspile": "jest ./lib",
     "test": "jest",
     "prepare": "npm run examples && npm run transpile",
-    "postpublish": "npm run publish:site",
+    "postpublish": "git push origin --all --follow-tags && npm run publish:site",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "coverage:old": "jest ./src --coverage",
-    "coverage": "jest ./src --coverage --coverageReporters=text-lcov | coveralls"
+    "coverage": "jest ./src --coverage --coverageReporters=text-lcov | coveralls",
+    "preversion": "npm run prepare",
+    "postversion": "npm publish"
   },
   "keywords": [
     "react",
