@@ -12,7 +12,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       My Form
     </legend>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-1-1"
@@ -57,7 +57,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-4-1"
@@ -92,7 +92,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       </span>
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-6-1"
@@ -107,7 +107,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-7-1"
@@ -122,7 +122,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-8-1"
@@ -137,7 +137,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-9-1"
@@ -152,7 +152,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-10-1"
@@ -167,7 +167,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-11-1"
@@ -288,7 +288,7 @@ exports[`The form components as a form should render the second 1`] = `
       My Form
     </legend>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-15-1"
@@ -333,7 +333,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-18-1"
@@ -368,7 +368,7 @@ exports[`The form components as a form should render the second 1`] = `
       </span>
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-20-1"
@@ -383,7 +383,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-21-1"
@@ -398,7 +398,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-22-1"
@@ -413,7 +413,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-23-1"
@@ -428,7 +428,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-24-1"
@@ -443,7 +443,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-25-1"

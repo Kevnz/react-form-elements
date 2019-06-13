@@ -2,7 +2,7 @@
 
 exports[`DateTime component The Rendered HTML should have a label 1`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-1-1"
@@ -20,7 +20,7 @@ exports[`DateTime component The Rendered HTML should have a label 1`] = `
 
 exports[`DateTime component The Rendered HTML should have a label 2`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-2-1"
@@ -38,7 +38,7 @@ exports[`DateTime component The Rendered HTML should have a label 2`] = `
 
 exports[`DateTime component The Rendered HTML should have a label 3`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-3-1"
@@ -56,7 +56,7 @@ exports[`DateTime component The Rendered HTML should have a label 3`] = `
 
 exports[`DateTime component The Rendered HTML should have a label 4`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-4-1"
@@ -74,7 +74,7 @@ exports[`DateTime component The Rendered HTML should have a label 4`] = `
 
 exports[`DateTime component The Rendered HTML should have a label 5`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-5-1"
@@ -92,7 +92,7 @@ exports[`DateTime component The Rendered HTML should have a label 5`] = `
 
 exports[`DateTime component The Rendered HTML should have a label 6`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-6-1"
@@ -110,7 +110,7 @@ exports[`DateTime component The Rendered HTML should have a label 6`] = `
 
 exports[`DateTime component The Rendered HTML should have a label 7`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-7-1"

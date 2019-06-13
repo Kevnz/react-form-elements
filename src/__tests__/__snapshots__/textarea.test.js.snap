@@ -2,7 +2,7 @@
 
 exports[`TextBox component The Rendered HTML should have a label 1`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-1-1"
@@ -17,7 +17,7 @@ exports[`TextBox component The Rendered HTML should have a label 1`] = `
 
 exports[`TextBox component The Rendered HTML should support children 1`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-2-1"
@@ -34,7 +34,7 @@ exports[`TextBox component The Rendered HTML should support children 1`] = `
 
 exports[`TextBox component handling input should set a value when passed in 1`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-3-1"
@@ -51,7 +51,7 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
 
 exports[`TextBox component handling input should update a value when changed 1`] = `
 <div
-  class="rfe-form__row "
+  class="rfe-form__row"
 >
   <label
     for="id-5-1"

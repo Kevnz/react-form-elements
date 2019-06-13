@@ -7,7 +7,7 @@ exports[`The form components as a form should render properly 1`] = `
   </h1>
   <form>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-1-1"
@@ -37,7 +37,7 @@ exports[`The form components as a form should render properly 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-3-1"
@@ -72,7 +72,7 @@ exports[`The form components as a form should render properly 1`] = `
       </span>
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-5-1"
@@ -87,7 +87,7 @@ exports[`The form components as a form should render properly 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-6-1"
@@ -102,7 +102,7 @@ exports[`The form components as a form should render properly 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-7-1"
@@ -117,7 +117,7 @@ exports[`The form components as a form should render properly 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-8-1"
@@ -132,7 +132,7 @@ exports[`The form components as a form should render properly 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-9-1"
@@ -147,7 +147,7 @@ exports[`The form components as a form should render properly 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-10-1"
@@ -282,7 +282,7 @@ exports[`The form components as a form should render properly 2`] = `
   </h1>
   <form>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-14-1"
@@ -312,7 +312,7 @@ exports[`The form components as a form should render properly 2`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-16-1"
@@ -347,7 +347,7 @@ exports[`The form components as a form should render properly 2`] = `
       </span>
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-18-1"
@@ -362,7 +362,7 @@ exports[`The form components as a form should render properly 2`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-19-1"
@@ -377,7 +377,7 @@ exports[`The form components as a form should render properly 2`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-20-1"
@@ -392,7 +392,7 @@ exports[`The form components as a form should render properly 2`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-21-1"
@@ -407,7 +407,7 @@ exports[`The form components as a form should render properly 2`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-22-1"
@@ -422,7 +422,7 @@ exports[`The form components as a form should render properly 2`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-23-1"
@@ -557,7 +557,7 @@ exports[`The form components as a form should render properly c2 1`] = `
   </h1>
   <form>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-38-1"
@@ -587,7 +587,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-40-1"
@@ -622,7 +622,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       </span>
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-42-1"
@@ -637,7 +637,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-43-1"
@@ -652,7 +652,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-44-1"
@@ -667,7 +667,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-45-1"
@@ -682,7 +682,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-46-1"
@@ -697,7 +697,7 @@ exports[`The form components as a form should render properly c2 1`] = `
       />
     </div>
     <div
-      class="rfe-form__row "
+      class="rfe-form__row"
     >
       <label
         for="id-47-1"

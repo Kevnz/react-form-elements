@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import useFormElement from '../utils/use-form-element'
 
@@ -7,14 +8,40 @@ import useFormElement from '../utils/use-form-element'
  *
  */
 const TextBox = forwardRef(
-  ({ name, initialValue, label, type, className, ...otherProps }, ref) => {
+  (
+    {
+      name,
+      initialValue,
+      label,
+      type,
+      className,
+      labelClassName,
+      inputClassName,
+      ...otherProps
+    },
+    ref
+  ) => {
     const { id, value, handleChange, inputRef } = useFormElement(
       initialValue,
       ref
     )
+    const labelStyleProp =
+      labelClassName === ''
+        ? {}
+        : {
+            className: labelClassName,
+          }
+    const inputStyleProp =
+      inputClassName === ''
+        ? {}
+        : {
+            className: inputClassName,
+          }
     return (
-      <div className={`rfe-form__row ${className}`}>
-        <label htmlFor={id}>{label || ''}</label>
+      <div className={classNames(`rfe-form__row`, className)}>
+        <label htmlFor={id} {...labelStyleProp}>
+          {label || ''}
+        </label>
         <input
           id={id}
           ref={inputRef}
@@ -22,6 +49,7 @@ const TextBox = forwardRef(
           onChange={handleChange}
           value={value}
           type={type}
+          {...inputStyleProp}
           {...otherProps}
         />
       </div>
@@ -39,6 +67,8 @@ TextBox.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,
   className: PropTypes.string,
+  inputClassName: PropTypes.string,
+  labelClassName: PropTypes.string,
 }
 
 TextBox.defaultProps = {
@@ -47,4 +77,6 @@ TextBox.defaultProps = {
   type: 'text',
   label: 'label',
   className: '',
+  inputClassName: '',
+  labelClassName: '',
 }
