@@ -6,6 +6,7 @@ import DropDown from './dropdown'
 import EmailInput from './email-input'
 import Fieldset from './fieldset'
 import Form from './form'
+import Input from './input'
 import Meter from './meter'
 import Option from './option'
 import OptionGroup from './option-group'
@@ -31,6 +32,7 @@ export {
   EmailInput,
   Fieldset,
   Form,
+  Input,
   Meter,
   Option,
   OptionGroup as OptGroup,
