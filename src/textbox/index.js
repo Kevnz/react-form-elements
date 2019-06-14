@@ -37,11 +37,14 @@ const TextBox = forwardRef(
         : {
             className: inputClassName,
           }
+    const hasLabel = label.length > 0
     return (
       <div className={classNames(`rfe-form__row`, className)}>
-        <label htmlFor={id} {...labelStyleProp}>
-          {label || ''}
-        </label>
+        {hasLabel && (
+          <label htmlFor={id} {...labelStyleProp}>
+            {label || ''}
+          </label>
+        )}
         <input
           id={id}
           ref={inputRef}

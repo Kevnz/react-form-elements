@@ -30,6 +30,12 @@ describe('TextBox component', () => {
       const label = getByText('My Label')
       expect(label.textContent).toBe('My Label')
     })
+    it('should have a no label when passed an empty string as label', () => {
+      const { container } = render(
+        <TextBox label="" initialValue="" placeholder="textbox placeholder" />
+      )
+      expect(container.firstChild).toMatchSnapshot()
+    })
   })
   describe('handling input', () => {
     it('should set a value when passed in', () => {
