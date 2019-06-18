@@ -77,6 +77,70 @@ const App = ({ onSubmit }) => {
     </Form>
   )
 }
+const NestedApp = ({ onSubmit }) => {
+  return (
+    <Form
+      name="testForm"
+      onSubmit={e => {
+        onSubmit(e)
+      }}
+    >
+      <Row>
+        <></>
+        <Row>
+          <TextBox label="My Label" name="myTextBox" />
+          <CheckBox
+            label="My Checkbox"
+            value="checkbox value"
+            isChecked={false}
+            name="myCheckBox"
+          />
+          <Radio
+            label="My Radio"
+            name="myRadio"
+            isChecked={false}
+            value="myRadio1"
+          />
+          <DateTime label="My Date" name="myDate" />
+          <Range label="My Range" name="myRange" />
+          <Telephone label="Telephone" name="myTelephone" />
+          <DateTime label="My DateTime" type="datetime" name="myDateTime" />
+          <DateTime label="My Month" type="month" name="myMonth" />
+          <DateTime label="My Week" type="week" name="myWeek" />
+          <DateTime
+            label="My DateTime"
+            type="datetime-local"
+            name="myDateTimeLocal"
+          />
+          <DateTime label="My Time" type="time" name="myTime" />
+          <DropDown
+            label="My Drop Down"
+            initialValue="2"
+            data-testid="dd1"
+            name="myDropDown"
+          >
+            <OptionGroup label="First Group">
+              <Option initialValue="1">First</Option>
+              <Option initialValue="2">Second</Option>
+              <Option initialValue="3" label="Third" />
+            </OptionGroup>
+            <OptionGroup label="Second Group">
+              <Option initialValue="11">Second First</Option>
+              <Option initialValue="12">Second Second</Option>
+              <Option initialValue="13" label="Second Third" />
+            </OptionGroup>
+            <OptionGroup label="Third Group">
+              <Option initialValue="21">Third First</Option>
+              <Option initialValue="22">Third Second</Option>
+              <Option initialValue="23" label="Third Third" />
+            </OptionGroup>
+          </DropDown>
+          <Button>Save</Button>
+        </Row>
+      </Row>
+    </Form>
+  )
+}
 const AppMulti = ({ onSubmit }) => {
   return (
     <Form
@@ -175,6 +239,46 @@ describe('The Row components as a form', () => {
     const button = getByText('Save')
     expect(container.firstChild).toMatchSnapshot()
 
+    fireEvent.click(button)
+  })
+  it('should render and change accordingly nested row', () => {
+    const CHANGED_TEXTBOX = 'Changed Value'
+    const { container, getByLabelText, getByTestId, getByText } = render(
+      <NestedApp
+        onSubmit={values => {
+          expect(values).toMatchSnapshot()
+          const clean = Object.keys(values).reduce((obj, current) => {
+            if (values[current] !== undefined) {
+              obj[current] = values[current]
+            }
+            return obj
+          }, {})
+          expect(clean).toMatchSnapshot()
+          const result = Object.assign(
+            {},
+            ...(function _flatten(o) {
+              if (o) {
+                return [].concat(
+                  ...Object.keys(o).map(k =>
+                    typeof o[k] === 'object' ? _flatten(o[k]) : { [k]: o[k] }
+                  )
+                )
+              }
+            })(clean)
+          )
+          expect(result).toMatchSnapshot()
+          expect(result.myDropDown).toBe('22')
+        }}
+      />
+    )
+    const textBox = getByLabelText('My Label')
+    const dd = getByTestId('dd1')
+    const button = getByText('Save')
+    expect(container.firstChild).toMatchSnapshot()
+    const dropDownValue = dd.value
+    expect(dropDownValue).toBe('2')
+    fireEvent.change(textBox, { target: { value: CHANGED_TEXTBOX } })
+    fireEvent.change(dd, { target: { value: '22' } })
     fireEvent.click(button)
   })
 })
