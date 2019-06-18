@@ -6,21 +6,16 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 
+import { childMapper, formElementMapper } from '../utils/children'
 /**
  * Fieldset Component.
  *
  */
 const Fieldset = forwardRef(({ children, legend, ...props }, ref) => {
-  const mapped = children.map(child => {
-    const displayName = child.type ? child.type.displayName : false
-    if (!displayName) return child
-    return Object.assign({}, child, { ref: createRef() })
-  })
+  const kids = Array.isArray(children) ? children : [children]
 
-  const formElements = mapped.map(formElement => ({
-    name: formElement.props.name,
-    ref: formElement.ref,
-  }))
+  const mapped = kids.map(childMapper)
+  const formElements = mapped.map(formElementMapper)
 
   const inputRef = useRef()
   useImperativeHandle(ref, () => ({
