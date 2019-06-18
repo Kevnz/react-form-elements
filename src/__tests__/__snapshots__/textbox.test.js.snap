@@ -23,7 +23,7 @@ exports[`TextBox component The Rendered HTML should have a no label when passed 
   class="rfe-form__row"
 >
   <input
-    id="id-3-1"
+    id="id-4-1"
     name="TextBox"
     placeholder="textbox placeholder"
     type="text"
@@ -37,12 +37,12 @@ exports[`TextBox component The Rendered HTML should have a placeholder when pass
   class="rfe-form__row"
 >
   <label
-    for="id-2-1"
+    for="id-3-1"
   >
     My Label
   </label>
   <input
-    id="id-2-1"
+    id="id-3-1"
     name="TextBox"
     placeholder="textbox placeholder"
     type="text"
@@ -56,12 +56,12 @@ exports[`TextBox component handling input should set a value when passed in 1`] 
   class="rfe-form__row"
 >
   <label
-    for="id-4-1"
+    for="id-5-1"
   >
     My Label
   </label>
   <input
-    id="id-4-1"
+    id="id-5-1"
     name="TextBox"
     type="text"
     value="My Input Value"
@@ -74,12 +74,12 @@ exports[`TextBox component handling input should update a value when changed 1`]
   class="rfe-form__row"
 >
   <label
-    for="id-6-1"
+    for="id-7-1"
   >
     My Label
   </label>
   <input
-    id="id-6-1"
+    id="id-7-1"
     name="TextBox"
     type="text"
     value="Updated Value"

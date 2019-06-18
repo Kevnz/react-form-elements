@@ -1,5 +1,5 @@
 import React, { createRef } from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { render, fireEvent, cleanup } from '@testing-library/react'
 
 import useFormElement from '../utils/use-form-element'
 

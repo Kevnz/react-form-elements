@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { render, fireEvent, cleanup } from '@testing-library/react'
 
 import {
   TextBox,
@@ -130,7 +130,6 @@ describe('The form components as a form', () => {
     const { container, getByLabelText, getByTestId, rerender } = render(<App />)
     const textBox = getByLabelText('My Label')
     const dd = getByTestId('dd1')
-    console.log('container parentNode', container.parentNode)
     const dropDownValue = dd.value
     expect(dropDownValue).toBe('2')
     fireEvent.change(textBox, { target: { value: 'Changed Value' } })

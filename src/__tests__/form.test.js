@@ -1,6 +1,7 @@
 import React from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
-
+import { render, fireEvent, cleanup } from '@testing-library/react'
+import { axe, toHaveNoViolations } from 'jest-axe'
+import ReactDOMServer from 'react-dom/server'
 import {
   Button,
   TextBox,
@@ -14,6 +15,8 @@ import {
   Radio,
   Form,
 } from '../index'
+
+expect.extend(toHaveNoViolations)
 
 const App = ({ onSubmit }) => {
   return (
@@ -97,5 +100,10 @@ describe('The form components as a form', () => {
     fireEvent.change(textBox, { target: { value: CHANGED_TEXTBOX } })
     fireEvent.change(dd, { target: { value: '22' } })
     fireEvent.click(button)
+  })
+  it('should not have a11y violations', async () => {
+    const html = ReactDOMServer.renderToString(<App onSubmit={() => {}} />)
+    const results = await axe(html)
+    expect(results).toHaveNoViolations()
   })
 })

@@ -1,14 +1,17 @@
 import React from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
-
+import { axe, toHaveNoViolations } from 'jest-axe'
+import { render, fireEvent, cleanup } from '@testing-library/react'
+import ReactDOMServer from 'react-dom/server'
 import TextBox from '../textbox'
+
+expect.extend(toHaveNoViolations)
 
 describe('TextBox component', () => {
   afterEach(() => {
     cleanup()
   })
   describe('The Rendered HTML', () => {
-    it('should have a label', () => {
+    it('should have a label', async () => {
       const { getByText, container } = render(
         <TextBox label="My Label" initialValue="" />
       )
@@ -16,6 +19,13 @@ describe('TextBox component', () => {
       expect(container.firstChild).toMatchSnapshot()
       const label = getByText('My Label')
       expect(label.textContent).toBe('My Label')
+    })
+    it('should not violate', async () => {
+      const html = ReactDOMServer.renderToString(
+        <TextBox label="My Label" initialValue="" />
+      )
+      const results = await axe(html)
+      expect(results).toHaveNoViolations()
     })
     it('should have a placeholder when passed', () => {
       const { getByText, container } = render(
