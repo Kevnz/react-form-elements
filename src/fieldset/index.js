@@ -21,16 +21,15 @@ const Fieldset = forwardRef(({ children, legend, ...props }, ref) => {
   useImperativeHandle(ref, () => ({
     isFieldset: true,
     getValues: function() {
-      const values = {}
-      formElements.forEach(el => {
+      return formElements.reduce((accumulator, el) => {
         if (!el.name) {
-          return
+          return accumulator
         }
-        values[el.name] = el.ref.current.getValue
+        accumulator[el.name] = el.ref.current.getValue
           ? el.ref.current.getValue()
           : el.ref.current.value
-      })
-      return values
+        return accumulator
+      }, {})
     },
     getValue: function() {
       return this.getValues()

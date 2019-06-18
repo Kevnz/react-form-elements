@@ -22,10 +22,10 @@ const Form = ({ name, onSubmit, children }) => {
         }),
       ]
 
-  const formElements = mapped.map(formElement => ({
-    name: formElement.props ? formElement.props.name : formElement.name,
-    ref: formElement.ref,
-    displayName: formElement.displayName,
+  const formElements = mapped.map((fEl, index) => ({
+    name: fEl.props ? fEl.props.name : `${fEl.name}-${index}`,
+    ref: fEl.ref,
+    displayName: fEl.displayName,
   }))
 
   return (

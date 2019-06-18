@@ -5,7 +5,7 @@ export const childMapper = child => {
   if (!displayName) return child
   return Object.assign({}, child, { ref: createRef() })
 }
-export const formElementMapper = formElement => ({
-  name: formElement.props.name,
-  ref: formElement.ref,
+export const formElementMapper = (formEl, index) => ({
+  name: formEl.props ? formEl.props.name : `${formEl.name}-${index}`,
+  ref: formEl.ref,
 })

@@ -5,9 +5,7 @@ exports[`The Row components as a form should render and change accordingly 1`] =
   class="rfe-form"
   name="testForm"
 >
-  <div
-    name="Row"
-  >
+  <div>
     <div
       class="rfe-form__row"
     >
@@ -278,12 +276,8 @@ exports[`The Row components as a form should render and change accordingly neste
   class="rfe-form"
   name="testForm"
 >
-  <div
-    name="Row"
-  >
-    <div
-      name="Row"
-    >
+  <div>
+    <div>
       <div
         class="rfe-form__row"
       >
@@ -587,9 +581,7 @@ exports[`The Row components as a form should render the second 1`] = `
   class="rfe-form"
   name="testForm"
 >
-  <div
-    name="Row"
-  >
+  <div>
     <div
       class="rfe-form__row"
     >
@@ -761,9 +753,7 @@ exports[`The Row components as a form should render the second 1`] = `
       />
     </div>
   </div>
-  <div
-    name="Row"
-  >
+  <div>
     <div
       class="rfe-form__row"
     >

@@ -11,7 +11,7 @@ import { childMapper, formElementMapper } from '../utils/children'
  * Row Component.
  *
  */
-const Row = forwardRef(({ children, legend, ...props }, ref) => {
+const Row = forwardRef(({ children, legend, name, ...props }, ref) => {
   const kids = Array.isArray(children) ? children : [children]
   const mapped = kids.map(childMapper)
 
@@ -21,16 +21,16 @@ const Row = forwardRef(({ children, legend, ...props }, ref) => {
   useImperativeHandle(ref, () => ({
     isRow: true,
     getValues: function() {
-      const values = {}
-      formElements.forEach(el => {
+      return formElements.reduce((accumulator, el) => {
         if (!el.name) {
-          return
+          return accumulator
         }
-        values[el.name] = el.ref.current.getValue
+        accumulator[el.name] = el.ref.current.getValue
           ? el.ref.current.getValue()
           : el.ref.current.value
-      })
-      return values
+
+        return accumulator
+      }, {})
     },
     getValue: function() {
       if (!this) return null
