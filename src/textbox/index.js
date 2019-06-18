@@ -46,12 +46,12 @@ const TextBox = forwardRef(
           </label>
         )}
         <input
+          type={type}
           id={id}
           ref={inputRef}
           name={name}
           onChange={handleChange}
           value={value}
-          type={type}
           {...inputStyleProp}
           {...otherProps}
         />
