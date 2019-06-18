@@ -55,9 +55,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
     </div>
   </div>
   <div>
-    <fieldset
-      name="Fieldset"
-    >
+    <fieldset>
       <legend>
         legend
       </legend>

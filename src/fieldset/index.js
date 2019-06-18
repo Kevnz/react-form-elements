@@ -11,7 +11,7 @@ import { childMapper, formElementMapper } from '../utils/children'
  * Fieldset Component.
  *
  */
-const Fieldset = forwardRef(({ children, legend, ...props }, ref) => {
+const Fieldset = forwardRef(({ children, legend, name, ...props }, ref) => {
   const kids = Array.isArray(children) ? children : [children]
 
   const mapped = kids.map(childMapper)

@@ -5,9 +5,7 @@ exports[`The form components as a form should render and change accordingly 1`] 
   class="rfe-form"
   name="testForm"
 >
-  <fieldset
-    name="Fieldset"
-  >
+  <fieldset>
     <legend>
       My Form
     </legend>
@@ -281,9 +279,7 @@ exports[`The form components as a form should render the second 1`] = `
   class="rfe-form"
   name="testForm"
 >
-  <fieldset
-    name="Fieldset"
-  >
+  <fieldset>
     <legend>
       My Form
     </legend>
@@ -458,9 +454,7 @@ exports[`The form components as a form should render the second 1`] = `
       />
     </div>
   </fieldset>
-  <fieldset
-    name="Fieldset"
-  >
+  <fieldset>
     <legend>
       My Form part 2
     </legend>
