@@ -25,7 +25,7 @@ const Fieldset = forwardRef(({ children, legend, ...props }, ref) => {
   const inputRef = useRef()
   useImperativeHandle(ref, () => ({
     isFieldset: true,
-    getValues: () => {
+    getValues: function() {
       const values = {}
       formElements.forEach(el => {
         if (!el.name) {
@@ -37,7 +37,7 @@ const Fieldset = forwardRef(({ children, legend, ...props }, ref) => {
       })
       return values
     },
-    getValue: () => {
+    getValue: function() {
       return this.getValues()
     },
   }))

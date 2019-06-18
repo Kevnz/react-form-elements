@@ -25,7 +25,7 @@ const Row = forwardRef(({ children, legend, ...props }, ref) => {
   const inputRef = useRef()
   useImperativeHandle(ref, () => ({
     isRow: true,
-    getValues: () => {
+    getValues: function() {
       const values = {}
       formElements.forEach(el => {
         if (!el.name) {
@@ -37,7 +37,7 @@ const Row = forwardRef(({ children, legend, ...props }, ref) => {
       })
       return values
     },
-    getValue: () => {
+    getValue: function() {
       if (!this) return null
       return this.getValues()
     },
