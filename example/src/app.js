@@ -29,9 +29,6 @@ export default () => {
           <Link to="react-form-elements/styling" className="sublink">
             Styling
           </Link>
-          <Link to="react-form-elements/hook" className="sublink">
-            Hook
-          </Link>
         </nav>
         <React.Suspense fallback={<div>Loading</div>}>
           <App />
