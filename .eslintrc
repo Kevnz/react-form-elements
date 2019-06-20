@@ -1,3 +1,5 @@
 {
-	"extends": ["@kev_nz/eslint-config"]
+  "extends": [
+    "@kev_nz"
+  ]
 }
