@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:11.9
-    working_directory: ~/creature-features
+    working_directory: ~/forms
     steps:
       - checkout
 
