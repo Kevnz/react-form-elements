@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import useFormElement from '../utils/use-form-element'
 
@@ -8,17 +9,46 @@ import useFormElement from '../utils/use-form-element'
  */
 const Meter = forwardRef(
   (
-    { name, initialValue, label, min, max, low, high, optimum, ...otherProps },
+    {
+      name,
+      initialValue,
+      label,
+      min,
+      max,
+      low,
+      high,
+      optimum,
+      className,
+      labelClassName,
+      meterClassName,
+      ...otherProps
+    },
     ref
   ) => {
     const { id, value, handleChange, inputRef } = useFormElement(
       initialValue,
       ref
     )
-
+    const labelStyleProp =
+      labelClassName === ''
+        ? {}
+        : {
+            className: labelClassName,
+          }
+    const meterStyleProp =
+      meterClassName === ''
+        ? {}
+        : {
+            className: meterClassName,
+          }
+    const hasLabel = label.length > 0
     return (
-      <div className="rfe-form__row rfe-meter">
-        <label htmlFor={id}>{label || ''}</label>
+      <div className={classNames(`rfe-form__row`, 'rfe-meter', className)}>
+        {hasLabel && (
+          <label htmlFor={id} {...labelStyleProp}>
+            {label || ''}
+          </label>
+        )}
         <meter
           id={id}
           name={name}
@@ -29,6 +59,7 @@ const Meter = forwardRef(
           optimum={optimum}
           value={value}
           ref={inputRef}
+          {...meterStyleProp}
         >
           at {value}/{max}
         </meter>
@@ -50,6 +81,9 @@ Meter.propTypes = {
   low: PropTypes.number,
   high: PropTypes.number,
   optimum: PropTypes.number,
+  className: PropTypes.string,
+  meterClassName: PropTypes.string,
+  labelClassName: PropTypes.string,
 }
 
 Meter.defaultProps = {
@@ -61,4 +95,7 @@ Meter.defaultProps = {
   low: 20,
   high: 80,
   optimum: 60,
+  className: '',
+  meterClassName: '',
+  labelClassName: '',
 }
