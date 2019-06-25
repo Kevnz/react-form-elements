@@ -6,6 +6,7 @@ import DropDown from './dropdown'
 import EmailInput from './email-input'
 import Fieldset from './fieldset'
 import Form from './form'
+import Hidden from './hidden'
 import Input from './input'
 import Meter from './meter'
 import Option from './option'
@@ -32,6 +33,7 @@ export {
   EmailInput,
   Fieldset,
   Form,
+  Hidden,
   Input,
   Meter,
   Option,

@@ -139,12 +139,15 @@ The `Form` component has an `onSubmit` event handler that passes the data from t
 
 ### Elements
 
+* Button
 * CheckBox
 * ColorInput
+* DateTime
 * DropDown
 * EmailInput
 * Fieldset
 * Form
+* Hidden
 * Input
 * Meter
 * Option
