@@ -1,4 +1,4 @@
-import React, { createRef } from 'react'
+import React, { createRef, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import './style.css'
 import {
@@ -21,13 +21,15 @@ import {
 } from 'react-form-elements'
 
 const App = () => {
-  const ref = createRef()
+  const ref = useRef()
+  const formRef = useRef()
   const { id, value, handleChange, inputRef } = useFormElement('', ref)
 
   return (
     <div>
       <h1>React Form Elements</h1>
       <Form
+        ref={formRef}
         name="WorkingForm"
         onSubmit={e => {
           console.info('form data', e)
@@ -104,6 +106,15 @@ const App = () => {
             }}
           >
             Check
+          </Button>
+          <Button
+            onClick={e => {
+              e.preventDefault()
+              console.info('The button was clicked', formRef)
+              formRef.current.reset()
+            }}
+          >
+            Cancel
           </Button>
         </Fieldset>
       </Form>

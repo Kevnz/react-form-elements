@@ -1,11 +1,17 @@
-import React, { createRef } from 'react'
+import React, {
+  createRef,
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+} from 'react'
 import PropTypes from 'prop-types'
 
 /**
  * Form Component.
  *
  */
-const Form = ({ name, onSubmit, children }) => {
+
+const Form = forwardRef(({ name, onSubmit, children }, ref) => {
   const mapped = Array.isArray(children)
     ? children.map(child => {
         const displayName = child.type ? child.type.displayName : false
@@ -28,8 +34,19 @@ const Form = ({ name, onSubmit, children }) => {
     displayName: fEl.displayName,
   }))
 
+  const formRef = useRef()
+
+  useImperativeHandle(ref, () => ({
+    reset: () => {
+      formRef.current.reset()
+      const ins = formRef.current.querySelectorAll('input')
+      const els = Array.from(ins)
+      els.forEach(e => (e.value = ''))
+    },
+  }))
   return (
     <form
+      ref={formRef}
       name={name}
       className="rfe-form"
       onSubmit={e => {
@@ -72,7 +89,7 @@ const Form = ({ name, onSubmit, children }) => {
       {mapped}
     </form>
   )
-}
+})
 
 Form.displayName = 'ReactFormElements(Form)'
 
