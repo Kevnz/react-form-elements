@@ -2,7 +2,7 @@ import React from 'react'
 import Highlight from '../utils/highlighter'
 const Home = () => {
   const codeString = `
-  import React, { Component, createRef } from 'react'
+  import React from 'react'
   import {
     Button,
     Form,
