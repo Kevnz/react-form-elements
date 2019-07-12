@@ -1,0 +1,169 @@
+:root {
+  --body-color: #131313;
+  --body-bg-color: #f9f9f9;
+  --state-primary: tomato;
+}
+
+body {
+  border-top: 0.5rem solid #1f8dd6;
+}
+nav {
+  margin-bottom: .5em;
+}
+nav a, nav span {
+  margin: .2rem;
+  padding: .2rem;
+
+}
+nav span {
+  display: none
+}
+nav a[aria-current="page"] {
+  background: #e7e7e7;
+}
+
+label {
+  display: inline-block;
+  min-width: 150px;
+	margin: 1em 0;
+}
+
+.rfe-form__row span {
+  margin-left:5px;
+}
+
+.leader {
+  margin-bottom: 15px;
+  margin-left: 8px;
+}
+
+form {
+  background: #e7e7e7;
+  padding-left: 1rem;
+  padding-bottom: .5rem;
+}
+footer {
+  margin-top: 1rem;
+}
+input[type="color"] {
+  width: 50px!important;
+}
+
+.app-container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+@media only screen and (min-width:576px){
+  .app-container{
+    max-width:540px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width:768px){
+  .app-container{
+    max-width:720px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media only screen and (min-width:992px){
+  .app-container{
+    max-width:960px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media only screen and (min-width:1200px){
+  .app-container{
+    max-width:1140px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #002b36;
+  color: #839496;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #586e75;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #073642;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
