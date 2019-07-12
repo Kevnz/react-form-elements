@@ -1,6 +1,6 @@
 import React from 'react'
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
+import Highlight from '../utils/highlighter'
+
 const StylingInfo = () => {
   const formMarkup = `<form
     class="rfe-form"
@@ -64,9 +64,7 @@ const StylingInfo = () => {
         </div>
         <div className="mar-b-md mar-t-md">
           <h3 className="mar-b-md">Form Markup</h3>
-          <SyntaxHighlighter language="jsx" style={tomorrow}>
-            {formMarkup}
-          </SyntaxHighlighter>
+          <Highlight>{formMarkup}</Highlight>
         </div>
         <hr />
         <div className=" mar-t-md">
@@ -79,9 +77,7 @@ const StylingInfo = () => {
         </div>
         <div className="mar-b-md mar-t-md">
           <h3 className="mar-b-md">TextBox Markup</h3>
-          <SyntaxHighlighter language="jsx" style={tomorrow}>
-            {textBox}
-          </SyntaxHighlighter>
+          <Highlight>{textBox}</Highlight>
         </div>
         <hr />
         <div className=" mar-t-md">
@@ -94,9 +90,7 @@ const StylingInfo = () => {
         </div>
         <div className="mar-b-md mar-t-md">
           <h3 className="mar-b-md">RadioGroup Markup</h3>
-          <SyntaxHighlighter language="jsx" style={tomorrow}>
-            {radio}
-          </SyntaxHighlighter>
+          <Highlight>{radio}</Highlight>
         </div>
       </section>
     </main>

@@ -1,8 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const TerserPlugin = require('terser-webpack-plugin')
 module.exports = {
   entry: path.resolve(__dirname, '../example', 'src', 'index.js'),
   module: {
@@ -30,7 +30,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      generateStatsFile: true,
+    }),
     new HtmlWebpackPlugin({
       title: 'Custom template',
       // Load a custom template (lodash by default see the FAQ for details)
@@ -38,10 +41,11 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: '../example/src',
+    contentBase: path.resolve(__dirname, '../example', 'src'),
     hot: true,
   },
   optimization: {
     usedExports: true,
+    minimizer: [new TerserPlugin()],
   },
 }

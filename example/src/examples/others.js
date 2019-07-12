@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
+import Highlight from '../utils/highlighter'
 import { Button, Form, Meter, Progress } from '../../../src'
 
 const OtherElementsForm = () => {
@@ -112,9 +111,7 @@ const OtherElementsForm = () => {
           </div>
           <div className="mar-b-md mar-t-md">
             <h3 className="mar-b-md">Code from Example</h3>
-            <SyntaxHighlighter language="jsx" style={tomorrow}>
-              {codeString}
-            </SyntaxHighlighter>
+            <Highlight>{codeString}</Highlight>
           </div>
         </div>
       </section>

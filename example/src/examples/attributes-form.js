@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { tomorrow } from 'react-syntax-highlighter/dist/styles/prism'
 import {
   Button,
   EmailInput,
@@ -10,6 +8,7 @@ import {
   TextBox,
   UrlInput,
 } from '../../../src'
+import Highlight from '../utils/highlighter'
 
 const AttributesForm = () => {
   const [data, setData] = useState(null)
@@ -100,9 +99,7 @@ const AttributesForm = () => {
           </Form>
         </div>
         <div className="mar-b-md mar-t-md">
-          <SyntaxHighlighter language="jsx" style={tomorrow}>
-            {codeString}
-          </SyntaxHighlighter>
+          <Highlight>{codeString}</Highlight>
         </div>
       </section>
     </main>
