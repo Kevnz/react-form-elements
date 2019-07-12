@@ -12,7 +12,7 @@ import {
 const ContactForm = () => {
   const [data, setData] = useState(null)
   const codeString = `
-  import React, { Component, createRef } from 'react'
+  import React  from 'react'
   import {
     Button,
     EmailInput,

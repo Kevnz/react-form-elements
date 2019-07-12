@@ -5,7 +5,7 @@ import { Button, Form, Meter, Progress } from '../../../src'
 const OtherElementsForm = () => {
   const [data, setData] = useState(null)
   const codeString = `
-  import React, { Component, createRef } from 'react'
+  import React from 'react'
   import {
     Form,
     Meter,
