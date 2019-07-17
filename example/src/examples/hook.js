@@ -1,4 +1,4 @@
-import React, { useState, createRef } from 'react'
+import React, { useState } from 'react'
 import Highlight from '../utils/highlighter'
 import { Button, Form, useFormElement } from '../../../src'
 import ErrorBoundry from '../utils/boundry'
@@ -6,7 +6,7 @@ import ErrorBoundry from '../utils/boundry'
 const HookedForm = () => {
   const [data, setData] = useState(null)
   const codeString = `
-  import React, { createRef } from 'react'
+  import React from 'react'
   import {
     useFormElement,
     Button,
@@ -14,8 +14,8 @@ const HookedForm = () => {
   } from 'react-form-elements'
 
   export default () => {
-    const ref = createRef()
-    const { id, value, handleChange, inputRef } = useFormElement('', ref)
+
+    const { id, value, handleChange, inputRef } = useFormElement('')
     return (<Form
         name="sampleForm"
         onSubmit={values => {
@@ -34,8 +34,9 @@ const HookedForm = () => {
       </Form>)
     }
   `
-  const ref = createRef()
-  const { id, value, handleChange, inputRef } = useFormElement('', ref)
+
+  const { id, value, handleChange, inputRef } = useFormElement('')
+
   return (
     <ErrorBoundry>
       <main>

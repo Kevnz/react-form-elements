@@ -34,6 +34,9 @@ export default () => {
             <Link to="styling" className="sublink">
               Styling
             </Link>
+            <Link to="hooks" className="sublink">
+              Hooks
+            </Link>
           </nav>
           <React.Suspense fallback={<div>Loading</div>}>
             <App />

@@ -15,7 +15,7 @@ const Form = forwardRef(({ name, onSubmit, children }, ref) => {
   const mapped = Array.isArray(children)
     ? children.map(child => {
         const displayName = child.type ? child.type.displayName : false
-        if (!displayName) return child
+        if (!displayName && !child.ref) return child
         return Object.assign({}, child, {
           ref: createRef(),
           displayName: displayName,
@@ -28,11 +28,13 @@ const Form = forwardRef(({ name, onSubmit, children }, ref) => {
         }),
       ]
 
-  const formElements = mapped.map((fEl, index) => ({
-    name: fEl.props ? fEl.props.name : `${fEl.name}-${index}`,
-    ref: fEl.ref,
-    displayName: fEl.displayName,
-  }))
+  const formElements = mapped.map((fEl, index) => {
+    return {
+      name: fEl.props ? fEl.props.name : `${fEl.name}-${index}`,
+      ref: fEl.ref,
+      displayName: fEl.displayName,
+    }
+  })
 
   const formRef = useRef()
 
@@ -59,7 +61,10 @@ const Form = forwardRef(({ name, onSubmit, children }, ref) => {
           if (!el.name) {
             return
           }
-          if (el.ref.current.isFieldset || el.ref.current.isRow) {
+          if (!el.ref) {
+            return
+          }
+          if (el.ref && (el.ref.current.isFieldset || el.ref.current.isRow)) {
             Object.assign(values, el.ref.current.getValues())
           } else {
             values[el.name] = el.ref.current.getValue

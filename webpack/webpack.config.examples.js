@@ -41,7 +41,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, '../example', 'src'),
+    contentBase: path.join(process.cwd(), './example', '/src', '/public'),
     hot: true,
   },
   optimization: {

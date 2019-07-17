@@ -21,7 +21,7 @@ export default () => {
       <AttributesForm path="attributes" />
       <SelectorsForm path="selectors" />
       <Others path="others" />
-      <Hooks path="hook" />
+      <Hooks path="hooks" />
     </Router>
   )
 }
