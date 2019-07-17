@@ -1,11 +1,11 @@
-import { useState, useRef, useImperativeHandle } from 'react'
+import { useState, useRef, useImperativeHandle, createRef } from 'react'
 import useId from './use-id'
 
 /**
  * useFormElement Hook.
  *
  */
-const useFormElement = (initialValue, ref) => {
+const useFormElement = (initialValue, ref = createRef()) => {
   const id = useId()
   const [value, setValue] = useState(initialValue)
   const handleChange = e => {
