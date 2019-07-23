@@ -1,4 +1,4 @@
-import React, { createRef, useRef } from 'react'
+import React, { useRef } from 'react'
 import ReactDOM from 'react-dom'
 import './style.css'
 import {
@@ -24,7 +24,12 @@ const App = () => {
   const ref = useRef()
   const formRef = useRef()
   const { id, value, handleChange, inputRef } = useFormElement('', ref)
-
+  const validator = value => {
+    if (value === 'smooth') {
+      return true
+    }
+    return false
+  }
   return (
     <div>
       <h1>React Form Elements</h1>
@@ -44,7 +49,12 @@ const App = () => {
             onChange={handleChange}
             ref={inputRef}
           />
-          <TextBox label="My Label" name="tbox" placeholder="The Placeholder" />
+          <TextBox
+            label="My Label"
+            name="tbox"
+            placeholder="The Placeholder"
+            validator={validator}
+          />
           <Checkbox
             label="My Checkbox"
             isChecked={true}

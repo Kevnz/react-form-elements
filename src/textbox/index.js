@@ -17,6 +17,8 @@ const TextBox = forwardRef(
       className,
       labelClassName,
       inputClassName,
+      validator,
+      children,
       ...otherProps
     },
     ref
@@ -51,10 +53,15 @@ const TextBox = forwardRef(
           ref={inputRef}
           name={name}
           onChange={handleChange}
+          onBlur={e => {
+            console.log('e blur', e)
+            validator(value)
+          }}
           value={value}
           {...inputStyleProp}
           {...otherProps}
         />
+        {children}
       </div>
     )
   }
@@ -82,4 +89,5 @@ TextBox.defaultProps = {
   className: '',
   inputClassName: '',
   labelClassName: '',
+  validator: () => true,
 }
