@@ -17,6 +17,7 @@ const TextBox = forwardRef(
       className,
       labelClassName,
       inputClassName,
+      children,
       ...otherProps
     },
     ref
@@ -55,6 +56,7 @@ const TextBox = forwardRef(
           {...inputStyleProp}
           {...otherProps}
         />
+        {children}
       </div>
     )
   }
