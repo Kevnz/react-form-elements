@@ -5,13 +5,13 @@ import React, {
   useRef,
 } from 'react'
 import PropTypes from 'prop-types'
-
+import classnames from 'classnames'
 /**
  * Form Component.
  *
  */
 
-const Form = forwardRef(({ name, onSubmit, children }, ref) => {
+const Form = forwardRef(({ name, onSubmit, children, className }, ref) => {
   const mapped = Array.isArray(children)
     ? children.map(child => {
         const displayName = child.type ? child.type.displayName : false
@@ -50,7 +50,7 @@ const Form = forwardRef(({ name, onSubmit, children }, ref) => {
     <form
       ref={formRef}
       name={name}
-      className="rfe-form"
+      className={classnames('rfe-form', className)}
       onSubmit={e => {
         e.preventDefault()
         let values = {}
@@ -101,5 +101,7 @@ Form.displayName = 'ReactFormElements(Form)'
 Form.propTypes = {
   name: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired,
+  className: PropTypes.string,
 }
+
 export default Form
