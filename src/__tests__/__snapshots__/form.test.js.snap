@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`The form components as a form should render and Submit one single item 1`] = `
+<form
+  class="rfe-form"
+  name="testForm"
+>
+  <div
+    class="rfe-form__row"
+  >
+    <label
+      for="id-27-1"
+    >
+      My Label
+    </label>
+    <input
+      id="id-27-1"
+      name="myTextBox"
+      type="text"
+      value=""
+    />
+  </div>
+  <button>
+    Save
+  </button>
+</form>
+`;
+
+exports[`The form components as a form should render and Submit one single item 2`] = `
+Object {
+  "myTextBox": "Changed Value",
+}
+`;
+
 exports[`The form components as a form should render and change accordingly 1`] = `
 <form
   class="rfe-form"
@@ -266,5 +298,13 @@ Object {
   "myTextBox": "Changed Value",
   "myTime": "",
   "myWeek": "",
+}
+`;
+
+exports[`The form components as a form should reset the form 1`] = `<div />`;
+
+exports[`The form components as a form should reset the form 2`] = `
+Object {
+  "myTextBox": "Changed Value To Reset",
 }
 `;

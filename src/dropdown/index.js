@@ -18,6 +18,7 @@ const DropDown = forwardRef(
       labelClassName,
       inputClassName,
       children,
+      onChange,
       ...otherProps
     },
     ref
@@ -45,7 +46,10 @@ const DropDown = forwardRef(
         </label>
         <select
           id={id}
-          onChange={handleChange}
+          onChange={e => {
+            handleChange(e)
+            onChange(e)
+          }}
           onSelect={handleChange}
           value={value}
           ref={inputRef}
@@ -66,6 +70,7 @@ DropDown.propTypes = {
   className: PropTypes.string,
   inputClassName: PropTypes.string,
   labelClassName: PropTypes.string,
+  onChange: PropTypes.func,
 }
 DropDown.defaultProps = {
   label: 'label',
@@ -73,6 +78,7 @@ DropDown.defaultProps = {
   className: '',
   inputClassName: '',
   labelClassName: '',
+  onChange: () => {},
 }
 DropDown.displayName = 'ReactFormElements(DropDown)'
 

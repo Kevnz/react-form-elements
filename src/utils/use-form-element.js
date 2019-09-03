@@ -8,6 +8,7 @@ import useId from './use-id'
 const useFormElement = (initialValue, ref = createRef()) => {
   const id = useId()
   const [value, setValue] = useState(initialValue)
+
   const handleChange = e => {
     if (typeof initialValue === 'boolean') {
       return setValue(!value)
@@ -16,6 +17,8 @@ const useFormElement = (initialValue, ref = createRef()) => {
   }
   const inputRef = useRef()
   useImperativeHandle(ref, () => ({
+    clear: () => setValue(''),
+    reset: () => setValue(''),
     getValue: () => inputRef.current.value,
     getValidity: () => inputRef.current.validity,
     isValid: () => inputRef.current.validity.valid,

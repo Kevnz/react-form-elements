@@ -42,6 +42,11 @@ const Form = forwardRef(({ name, onSubmit, children, className }, ref) => {
     reset: () => {
       formRef.current.reset()
       const ins = formRef.current.querySelectorAll('input')
+      formElements.forEach(fe => {
+        if (fe.ref.current && fe.ref.current.reset) {
+          fe.ref.current.reset()
+        }
+      })
       const els = Array.from(ins)
       els.forEach(e => (e.value = ''))
     },
@@ -55,7 +60,9 @@ const Form = forwardRef(({ name, onSubmit, children, className }, ref) => {
         e.preventDefault()
         let values = {}
         if (formElements.length === 1) {
-          values = formElements[0].ref.current.getValues()
+          values =
+            formElements[0].ref.current.getValues() ||
+            formElements[0].ref.current.getValue()
         }
         formElements.forEach(el => {
           if (!el.name) {

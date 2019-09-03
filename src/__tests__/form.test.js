@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { render, fireEvent, cleanup } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import ReactDOMServer from 'react-dom/server'
@@ -77,7 +77,41 @@ const App = ({ onSubmit }) => {
     </Form>
   )
 }
+const SingleItem = ({ onSubmit }) => {
+  return (
+    <Form
+      name="testForm"
+      onSubmit={e => {
+        onSubmit(e)
+      }}
+    >
+      <TextBox label="My Label" name="myTextBox" />
+      <Button>Save</Button>
+    </Form>
+  )
+}
+const ClearOnSubmit = ({ onSubmit }) => {
+  const [mess, setMess] = useState('')
+  const ref = useRef()
+  return (
+    <>
+      <div>{mess}</div>
+      <Form
+        ref={ref}
+        name="testForm"
+        onSubmit={e => {
+          onSubmit(e)
+          setMess(e.myTextBox + ' set')
 
+          ref.current.reset()
+        }}
+      >
+        <TextBox label="My Label" name="myTextBox" />
+        <Button>Save</Button>
+      </Form>
+    </>
+  )
+}
 describe('The form components as a form', () => {
   afterEach(cleanup)
   it('should render and change accordingly', () => {
@@ -105,5 +139,48 @@ describe('The form components as a form', () => {
     const html = ReactDOMServer.renderToString(<App onSubmit={() => {}} />)
     const results = await axe(html)
     expect(results).toHaveNoViolations()
+  })
+
+  it('should render and Submit one single item', () => {
+    const CHANGED_TEXTBOX = 'Changed Value'
+    const { container, getByLabelText, getByText } = render(
+      <SingleItem
+        onSubmit={e => {
+          expect(e).toMatchSnapshot()
+          expect(e.myTextBox).toBe(CHANGED_TEXTBOX)
+        }}
+      />
+    )
+    const textBox = getByLabelText('My Label')
+    const button = getByText('Save')
+    expect(container.firstChild).toMatchSnapshot()
+
+    fireEvent.change(textBox, { target: { value: CHANGED_TEXTBOX } })
+
+    fireEvent.keyPress(textBox, { key: 'Enter', code: 13 })
+    fireEvent.keyDown(textBox, { key: 'Enter', code: 13 })
+    fireEvent.keyUp(textBox, { key: 'Enter', code: 13 })
+    fireEvent.click(button)
+  })
+  it('should reset the form', async () => {
+    const CHANGED_TEXTBOX = 'Changed Value To Reset'
+    const { container, getByLabelText, getByText, findByText } = render(
+      <ClearOnSubmit
+        onSubmit={e => {
+          expect(e).toMatchSnapshot()
+          expect(e.myTextBox).toBe(CHANGED_TEXTBOX)
+        }}
+      />
+    )
+    const textBox = getByLabelText('My Label')
+    const button = getByText('Save')
+    expect(container.firstChild).toMatchSnapshot()
+
+    fireEvent.change(textBox, { target: { value: CHANGED_TEXTBOX } })
+
+    fireEvent.click(button)
+    await findByText(/Changed Value To Reset set/)
+
+    expect(textBox.value).toBe('')
   })
 })
