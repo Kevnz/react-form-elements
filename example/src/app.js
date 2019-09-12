@@ -13,32 +13,34 @@ export default () => {
     <Fragment>
       <LocationProvider history={history}>
         <ErrorBoundry>
-          <nav>
-            <Link to="/">Home</Link>
-            <span>Examples</span>
-            <Link to="contact" className="sublink">
-              Contact Form
-            </Link>
-            <Link to="inputs" className="sublink">
-              Text Inputs
-            </Link>
-            <Link to="attributes" className="sublink">
-              Element Attributes
-            </Link>
-            <Link to="selectors" className="sublink">
-              Selectors
-            </Link>
-            <Link to="others" className="sublink">
-              Other Elements
-            </Link>
-            <Link to="styling" className="sublink">
-              Styling
-            </Link>
-            <Link to="hooks" className="sublink">
-              Hooks
-            </Link>
-          </nav>
-          <React.Suspense fallback={<div>Loading</div>}>
+          <div className="tabs">
+            <nav className="tabs-nav">
+              <Link to="/">Home</Link>
+              <span>Examples</span>
+              <Link to="contact" className="sublink">
+                Contact Form
+              </Link>
+              <Link to="inputs" className="sublink">
+                Text Inputs
+              </Link>
+              <Link to="attributes" className="sublink">
+                Element Attributes
+              </Link>
+              <Link to="selectors" className="sublink">
+                Selectors
+              </Link>
+              <Link to="others" className="sublink">
+                Other Elements
+              </Link>
+              <Link to="styling" className="sublink">
+                Styling
+              </Link>
+              <Link to="hooks" className="sublink">
+                Hooks
+              </Link>
+            </nav>
+          </div>
+          <React.Suspense fallback={<div>Loading</React.Suspense>}>
             <App />
           </React.Suspense>
           <GithubCorner
