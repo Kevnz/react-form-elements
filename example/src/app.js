@@ -40,7 +40,7 @@ export default () => {
               </Link>
             </nav>
           </div>
-          <React.Suspense fallback={<div>Loading</React.Suspense>}>
+          <React.Suspense fallback={<div>Loading</div>}>
             <App />
           </React.Suspense>
           <GithubCorner
