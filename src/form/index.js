@@ -23,7 +23,7 @@ const elementsMapper = (fEl, index) => {
   }
 }
 const resetElements = fe => {
-  if (fe.ref.current && fe.ref.current.reset) {
+  if (fe.ref && fe.ref.current && fe.ref.current.reset) {
     fe.ref.current.reset()
   }
 }
