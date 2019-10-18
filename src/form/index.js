@@ -97,13 +97,8 @@ const Form = forwardRef(({ name, onSubmit, children, className }, ref) => {
       elements.forEach(defaultElements)
     },
     submit: () => {
-      console.log('form ref', formRef.current)
-      console.log('form ref syb', formRef.current.submit)
-      console.log('synthetic submission')
       formSubmission({
-        preventDefault: () => {
-          console.log('synthetic submission preventDefault')
-        },
+        preventDefault: () => {},
       })
     },
   }))
