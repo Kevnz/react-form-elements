@@ -45,6 +45,7 @@ const TextArea = forwardRef(
         <textarea
           {...otherProps}
           id={id}
+          name={name}
           onChange={handleChange}
           value={value}
           ref={inputRef}
