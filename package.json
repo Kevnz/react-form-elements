@@ -44,7 +44,8 @@
     "hash-source": "^1.0.4",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.8.0",
-    "jest-axe": "^3.1.1",
+    "jest-axe": "^3.2.0",
+    "jest-junit": "^10.0.0",
     "jsdoc-api": "^5.0.2",
     "jsdoc-parse": "^3.0.1",
     "jsdoc-to-markdown": "^5.0.0",
@@ -55,7 +56,7 @@
     "react-styleguidist": "^9.1.11",
     "react-syntax-highlighter": "^10.3.0",
     "regenerator-runtime": "^0.13.2",
-    "showdown": "^1.9.0",
+    "showdown": "^1.9.1",
     "showdown-highlight": "^2.1.3",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.3.0",
@@ -77,6 +78,7 @@
     "transpile": "babel src -d lib --copy-files",
     "posttranspile": "jest ./lib",
     "test": "jest",
+    "test:ci": "jest --reporters=jest-junit",
     "prepare": "npm run examples && npm run transpile",
     "postpublish": "git push origin --all --follow-tags && npm run publish:site",
     "styleguide": "styleguidist server",
@@ -96,5 +98,15 @@
       "lcov",
       "html"
     ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "./reports",
+    "outputName": "junit.xml",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{classname}-{title}",
+    "titleTemplate": "{classname}-{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
   }
 }

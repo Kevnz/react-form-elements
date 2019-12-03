@@ -33,3 +33,4 @@ example/dist
 dist
 lib
 .cache
+junit.xml
