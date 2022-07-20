@@ -22,7 +22,7 @@ import TextArea from './textarea'
 import TextBox from './textbox'
 import UrlInput from './url-input'
 import useFormElement from './utils/use-form-element'
-
+import useForm from './utils/use-form'
 export {
   Button,
   Checkbox as CheckBox,
@@ -52,4 +52,5 @@ export {
   TextBox as TextInput,
   UrlInput,
   useFormElement,
+  useForm,
 }

@@ -50,11 +50,7 @@ const Form = forwardRef(({ name, onSubmit, children, className }, ref) => {
   const formSubmission = e => {
     e.preventDefault()
     let values = {}
-    if (formElements.length === 1) {
-      values =
-        formElements[0].ref.current.getValues() ||
-        formElements[0].ref.current.getValue()
-    }
+
     formElements.forEach(el => {
       if (!el.name) {
         return

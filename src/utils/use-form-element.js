@@ -19,6 +19,7 @@ const useFormElement = (initialValue, ref = createRef()) => {
   useImperativeHandle(ref, () => ({
     clear: () => setValue(''),
     reset: () => setValue(''),
+    getName: () => inputRef.current.name,
     getValue: () => inputRef.current.value,
     getValidity: () => inputRef.current.validity,
     isValid: () => inputRef.current.validity.valid,

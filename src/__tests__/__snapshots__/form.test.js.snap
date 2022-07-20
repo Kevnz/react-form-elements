@@ -32,6 +32,35 @@ Object {
 }
 `;
 
+exports[`The form components as a form should render and Submit one single text box 1`] = `
+<form
+  class="rfe-form"
+  name="testForm"
+>
+  <div
+    class="rfe-form__row"
+  >
+    <label
+      for="id-32-1"
+    >
+      My Label
+    </label>
+    <input
+      id="id-32-1"
+      name="myTextBox"
+      type="text"
+      value=""
+    />
+  </div>
+</form>
+`;
+
+exports[`The form components as a form should render and Submit one single text box 2`] = `
+Object {
+  "myTextBox": "Changed Value",
+}
+`;
+
 exports[`The form components as a form should render and change accordingly 1`] = `
 <form
   class="rfe-form"

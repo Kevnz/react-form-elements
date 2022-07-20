@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { createRef, useRef, useState } from 'react'
 import { render, fireEvent, cleanup } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import ReactDOMServer from 'react-dom/server'
@@ -87,6 +87,20 @@ const SingleItem = ({ onSubmit }) => {
     >
       <TextBox label="My Label" name="myTextBox" />
       <Button>Save</Button>
+    </Form>
+  )
+}
+
+const SingleTextBox = ({ onSubmit, formRef }) => {
+  return (
+    <Form
+      ref={formRef}
+      name="testForm"
+      onSubmit={e => {
+        onSubmit(e)
+      }}
+    >
+      <TextBox label="My Label" name="myTextBox" />
     </Form>
   )
 }
@@ -182,5 +196,28 @@ describe('The form components as a form', () => {
     await findByText(/Changed Value To Reset set/)
 
     expect(textBox.value).toBe('')
+  })
+  it('should render and Submit one single text box', () => {
+    const CHANGED_TEXTBOX = 'Changed Value'
+    const formRef = createRef(null)
+    const { container, getByLabelText } = render(
+      <SingleTextBox
+        formRef={formRef}
+        onSubmit={e => {
+          expect(e).toMatchSnapshot()
+          expect(e.myTextBox).toBe(CHANGED_TEXTBOX)
+        }}
+      />
+    )
+    const textBox = getByLabelText('My Label')
+
+    expect(container.firstChild).toMatchSnapshot()
+
+    fireEvent.change(textBox, { target: { value: CHANGED_TEXTBOX } })
+
+    fireEvent.keyPress(textBox, { key: 'Enter', code: 13 })
+    fireEvent.keyDown(textBox, { key: 'Enter', code: 13 })
+    fireEvent.keyUp(textBox, { key: 'Enter', code: 13 })
+    formRef.current.submit()
   })
 })

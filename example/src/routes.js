@@ -10,7 +10,7 @@ const SelectorsForm = React.lazy(() => import('./examples/selectors'))
 const Others = React.lazy(() => import('./examples/others'))
 const Styling = React.lazy(() => import('./examples/styling'))
 const Hooks = React.lazy(() => import('./examples/hook'))
-
+const FormRef = React.lazy(() => import('./examples/refs'))
 export default () => {
   return (
     <Router>
@@ -22,6 +22,7 @@ export default () => {
       <SelectorsForm path="selectors" />
       <Others path="others" />
       <Hooks path="hooks" />
+      <FormRef path="refs" />
     </Router>
   )
 }

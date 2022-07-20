@@ -18,16 +18,87 @@ import {
   TextBox,
   UrlInput,
   useFormElement,
+  useForm,
 } from 'react-form-elements'
-
+let renderCount = 0
 const App = () => {
   const ref = useRef()
   const formRef = useRef()
   const { id, value, handleChange, inputRef } = useFormElement('', ref)
+  const { addToForm, onSubmit } = useForm('sample')
+  renderCount++
 
   return (
     <div>
       <h1>React Form Elements</h1>
+      <h2>Renders - {renderCount}</h2>
+      <form
+        onSubmit={onSubmit(data => {
+          console.info('onsubmit handler', data)
+        })}
+      >
+        <fieldset>
+          <legend>Form Hook</legend>
+          <TextBox
+            label="My Label"
+            name="tbox"
+            placeholder="The Placeholder"
+            ref={addToForm}
+          />
+          <input
+            name="firstName"
+            type="text"
+            ref={addToForm}
+            defaultValue="Kevin"
+          />
+          <input
+            name="lastName"
+            type="text"
+            ref={addToForm}
+            defaultValue="Isom"
+          />
+          <br />
+          <select ref={addToForm} name="dropdown" defaultValue="13">
+            <optgroup label="First Group">
+              <option value="1">First</option>
+              <option value="2">Second</option>
+              <option value="3">Third</option>
+            </optgroup>
+            <optgroup label="Second Group">
+              <option value="11">Second First</option>
+              <option value="12">Second Second</option>
+              <option value="13">Second Third</option>
+            </optgroup>
+            <optgroup label="Third Group">
+              <option value="21">Third First</option>
+              <option value="22">Third Second</option>
+              <option value="23">Third Third</option>
+            </optgroup>
+          </select>
+          <br />
+          <input type="checkbox" name="check" defaultChecked ref={addToForm} />
+          <br />
+          <div>
+            <label>The Radio</label>
+            <div>
+              <label> First </label>
+              <input name="rgroup" type="radio" value="first" ref={addToForm} />
+            </div>
+            <div>
+              <label> Second </label>
+              <input
+                name="rgroup"
+                type="radio"
+                value="second"
+                ref={addToForm}
+              />
+            </div>
+          </div>
+          <br />
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+      <hr />
       <Form
         ref={formRef}
         name="WorkingForm"
